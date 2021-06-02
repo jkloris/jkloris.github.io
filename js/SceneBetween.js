@@ -11,7 +11,7 @@ class SceneBetween extends Scene{
     }
 
     loop(){
-        if(timer.stopTimer() > 1){
+        if(timer.stopTimer() > 3){
             nextScene();
             return;
         }

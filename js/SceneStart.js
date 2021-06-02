@@ -20,7 +20,7 @@ class SceneStart extends Scene{
             nextScene();
         });
 
-        this.testButton = new Button(this.canvas.canvas,this.canvas.canvas.width / 2-100, this.canvas.canvas.height / 2 + 100, 200, 100);
+        this.testButton = new Button(this.canvas.canvas,this.canvas.canvas.width / 2-100, this.canvas.canvas.height / 2 + 120, 200, 100);
         this.testButton.setText("Tutorial");
         this.testButton.addClickAction(()=>{
             this.testButton.active = false;

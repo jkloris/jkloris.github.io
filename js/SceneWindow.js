@@ -26,17 +26,17 @@ class SceneWindow extends Scene{
     }
 
     drawPicture(){
-        var height = this.canvas.ctx.canvas.height;
-        var width = this.canvas.ctx.canvas.width;
-        this.canvas.ctx.drawImage(this.img, width / 4 + height / 6, height  / 4 - 100, height / 2, height  /2);
+        var height = this.canvas.canvas.height;
+        var width = this.canvas.canvas.width ;
+        this.canvas.ctx.drawImage(this.img, width / 2 - (height / 4) , height  / 2 - (height / 4), height / 2, height  /2);
 
     }
 
     setButtons(btn1_text, btn2_text, btn3_text, btn4_text){
         var height = this.canvas.ctx.canvas.height;
         var width = this.canvas.ctx.canvas.width;
-        var size = {x :width / 8, y : height  / 8}
-        var space = {x : width  / 20, y : 100}
+        var size = {x :width / 8, y : height  / 12}
+        var space = {x : width  / 20, y : height / 10}
 
         console.log("dsaa");
 

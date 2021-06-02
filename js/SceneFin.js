@@ -19,12 +19,12 @@ class SceneFin extends Scene{
             if( this.scenes[s].answer.chosen  == this.scenes[s].answer.correct) truth = "correct";
             else truth = "incorrect";
 
-            answer += "time:" + this.scenes[s].answer.time + ", answer: " + this.scenes[s].answer.chosen + ", "+ truth + '\n';
+            answer += "time: " + this.scenes[s].answer.time + "s, answer: " + this.scenes[s].answer.chosen + ", "+ truth + '\n';
             
         }
         alert(answer);
 
-        this.buttonBck = new Button(this.canvas.canvas,this.canvas.canvas.width / 2-100, this.canvas.canvas.height / 2 + 100, 200, 100);
+        this.buttonBck = new Button(this.canvas.canvas,this.canvas.canvas.width / 2-100, this.canvas.canvas.height / 2 + 120, 200, 100);
         this.buttonBck.setText("Menu");
         this.buttonBck.addClickAction(()=>{
             this.buttonBck.active = false;

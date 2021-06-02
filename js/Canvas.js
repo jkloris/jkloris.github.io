@@ -2,7 +2,7 @@ class Canvas{
     constructor(canvasID){
         this.canvas = document.getElementById(canvasID);
         this.ctx = this.canvas.getContext("2d");
-        this.ctx.canvas.height = window.innerHeight *0.9;
+        this.ctx.canvas.height = window.innerHeight *0.99;
         this.ctx.canvas.width = window.innerWidth*1;
 
         
@@ -16,10 +16,7 @@ class Canvas{
         this.ctx.restore();
     }
 
-    drawButtons(){
-
-    }
-
+   
     
 }
 
