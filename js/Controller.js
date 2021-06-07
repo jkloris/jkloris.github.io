@@ -46,6 +46,6 @@ class Controller{
     
 }
 
-const controller = new Controller();
+//const controller = new Controller();
 
-document.onload = loadAssets( controller.init );
+//document.onload = loadAssets( controller.init );
