@@ -39,7 +39,14 @@ for(var i in teamsA){
     div.appendChild(input1);
     div.appendChild(p);
     div.appendChild(input2);
-    div.style.marginLeft = "50%";
+    if(  window.innerHeight / window.innerWidth > 1 && window.innerHeight / window.innerWidth < 4/3)
+        div.style.marginLeft = "30%";
+    else if(window.innerHeight / window.innerWidth <= 1)
+        div.style.marginLeft = "40%";
+    else
+        div.style.marginLeft = "10%";
+
+
     listDiv.appendChild(div);
 }
 
