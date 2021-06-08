@@ -1,59 +1,72 @@
 class Match{
-    constructor(teamA, teamB){
+    constructor(teamH, teamA){
+        this.teamH = teamH;
         this.teamA = teamA;
-        this.teamB = teamB;
+        this.results = {H: null, A: null};
+    }
+    setResult(H, A){
+        this.results.H = H;
+        this.results.A = A;
+    }
+
+    getWinner(){
+        if(this.results.H > this.results.A)
+            return 1;
+        if(this.results.H < this.results.A)
+            return 2;
+        return 0;
+    }
+
+    
+}
+
+
+class Competitor{
+    constructor(name){
+        this.name = name;
+        this.score = 0;
+        this.tips = {w1: null, w2: null, m:[]};
+    }
+
+    calcScore(matchResults){
+        var sum = 0, a, b, score;
+        for(var i in matchResults){
+
+            if(matchResults[i].results.H == null)
+                return sum;
+
+            score = 4;
+            a = Math.abs(matchResults[i].results.H - this.tips.m[i].results.H);
+            b = Math.abs(matchResults[i].results.A - this.tips.m[i].results.A);
+            score = (score - a - b ) > 0 ? (score - a - b) : 0;
+            
+            if(this.tips.m[i].getWinner == matchResults[i].getWinner)
+                score++;
+
+            sum+=score;
+            //console.log(score);
+        }
+        return sum;
     }
 }
 
 var teamsA = ["Turkey", "Wales", "Denmark", "Belgium", "England", "Austria", "Netherlands", "Scotland", "Poland", "Spain", "Hungary", "France", "Finland", "Turkey", "Italy", "Ukraine", "Denmark", "Netherlands", "Sweden", "Croatia", "England", "Hungary", "Portugal", "Spain", "Italy", "Switzerland", "Ukraine", "North Macedonia", "Finland", "Russia", "Czech Republic", "Croatia", "Sweden", "Slovakia", "Germany", "Portugal"];
 var teamsB = ["Italy", "Switzerland", "Finland", "Russia", "Croatia", "North Macedonia", "Ukraine", "Czech Republic", "Slovakia", "Sweden", "Portugal", "Germany", "Russia", "Wales", "Switzerland", "North Macedonia", "Belgium", "Austria", "Slovakia", "Czech Republic", "Scotland", "France", "Germany", "Poland", "Wales", "Turkey", "Austria", "Netherlands", "Belgium", "Denmark", "England", "Scotland", "Poland", "Spain", "Hungary", "France"];
 
-var scoreA = [];
-var scoreB = [];
-
-var listDiv = document.getElementById("list");
-var p;
-var node;
-var submitBtn = document.getElementById("submitBtn");
-
-for(var i in teamsA){
-    p = document.createElement("p");
-    node = document.createTextNode(teamsA[i] + " vs " + teamsB[i]);
-    input1 = document.createElement("input");
-    input2 = document.createElement("input");
-    div = document.createElement("div");
-    input1.type  = "number";
-    input1.min  = 0;
-    input1.style.width = "30px";
-    input2.type  = "number";
-    input2.min  = 0;
-    input2.style.width = "30px";
-
-    scoreA.push(input1);
-    scoreB.push(input2);
-
-    p.appendChild(node);
-    p.style.display = "inline-block";
-    p.style.margin = "5px";
-    p.style.fontWeight = "bold";
-    div.appendChild(input1);
-    div.appendChild(p);
-    div.appendChild(input2);
-    if(  window.innerHeight / window.innerWidth > 1 && window.innerHeight / window.innerWidth < 4/3)
-        div.style.marginLeft = "30%";
-    else if(window.innerHeight / window.innerWidth <= 1)
-        div.style.marginLeft = "40%";
-    else
-        div.style.marginLeft = "10%";
-
-
-    listDiv.appendChild(div);
-}
-
-submitBtn.onclick = ()=>{
-    var a,b;
-    for(var i in scoreA){
-        a = (scoreA[i].value != "") ? scoreA[i].value:0  ;
-        b = (scoreB[i].value != "") ? scoreB[i].value:0  ;
+function setMatches(teamsA, teamsB){
+    var matchResults = [];
+    for(i in teamsA){
+        matchResults.push(new Match(teamsA[i], teamsB[i]));
     }
+    
+    return matchResults;
 }
+
+//manulane nasvavovanie vysledkov zapasu
+matchResults = setMatches(teamsA, teamsB);
+
+matchResults[0].setResult(1,4);
+matchResults[1].setResult(1,1);
+matchResults[2].setResult(2,4);
+
+console.log(matchResults[2].results);
