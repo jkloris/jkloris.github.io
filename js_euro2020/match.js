@@ -31,7 +31,7 @@ class Competitor{
     calcScore(matchResults){
         var sum = 0, a, b, score;
         for(var i in matchResults){
-
+            this.score = sum;
             if(matchResults[i].results.H == null)
                 return sum;
 
@@ -44,14 +44,29 @@ class Competitor{
                 score++;
 
             sum+=score;
-            //console.log(score);
+            
         }
+        
         return sum;
     }
 }
 
+
+
+
+//zapasy zakladnej skupiny
 var teamsA = ["Turkey", "Wales", "Denmark", "Belgium", "England", "Austria", "Netherlands", "Scotland", "Poland", "Spain", "Hungary", "France", "Finland", "Turkey", "Italy", "Ukraine", "Denmark", "Netherlands", "Sweden", "Croatia", "England", "Hungary", "Portugal", "Spain", "Italy", "Switzerland", "Ukraine", "North Macedonia", "Finland", "Russia", "Czech Republic", "Croatia", "Sweden", "Slovakia", "Germany", "Portugal"];
 var teamsB = ["Italy", "Switzerland", "Finland", "Russia", "Croatia", "North Macedonia", "Ukraine", "Czech Republic", "Slovakia", "Sweden", "Portugal", "Germany", "Russia", "Wales", "Switzerland", "North Macedonia", "Belgium", "Austria", "Slovakia", "Czech Republic", "Scotland", "France", "Germany", "Poland", "Wales", "Turkey", "Austria", "Netherlands", "Belgium", "Denmark", "England", "Scotland", "Poland", "Spain", "Hungary", "France"];
+
+//osemfinale
+var teamsA8 = ["Wales", "Denmark", "Belgium", "England"]
+var teamsB8 = ["Switzerland", "Finland", "Russia", "Croatia"]
+
+//teamsA = teamsA.concat(teamsA8);
+
+
+
+
 
 function setMatches(teamsA, teamsB){
     var matchResults = [];
@@ -62,11 +77,44 @@ function setMatches(teamsA, teamsB){
     return matchResults;
 }
 
-//manulane nasvavovanie vysledkov zapasu
-matchResults = setMatches(teamsA, teamsB);
 
-matchResults[0].setResult(1,4);
-matchResults[1].setResult(1,1);
-matchResults[2].setResult(2,4);
 
-console.log(matchResults[2].results);
+
+
+
+
+
+function download(filename, text){
+    var e = document.createElement("a");
+    e.style.display = "none";
+    e.setAttribute("href", 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    e.setAttribute('download', filename);
+
+    document.body.appendChild(e);
+
+    e.click();
+
+    document.body.removeChild(e);
+}
+
+
+
+
+
+
+
+//sutaziaci
+let competitors = [];
+let nike = new Competitor("NIKE");
+let test1 = new Competitor("test1");
+let test2 = new Competitor("test2");
+competitors.push(nike, test1, test2);
+
+
+
+
+
+
+
+
+
