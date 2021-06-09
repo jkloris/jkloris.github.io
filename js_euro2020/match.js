@@ -106,9 +106,9 @@ function download(filename, text){
 //sutaziaci
 let competitors = [];
 let nike = new Competitor("NIKE");
-let test1 = new Competitor("test1");
-let test2 = new Competitor("test2");
-competitors.push(nike, test1, test2);
+let ondro = new Competitor("Ondro");
+let jergi = new Competitor("Jergi");
+competitors.push(nike, ondro, jergi);
 
 
 
