@@ -108,7 +108,11 @@ let competitors = [];
 let nike = new Competitor("NIKE");
 let ondro = new Competitor("Ondro");
 let jergi = new Competitor("Jergi");
-competitors.push(nike, ondro, jergi);
+let juro = new Competitor("Plcho");
+let jakub = new Competitor("Kubo");
+let rio = new Competitor("Rio");
+let mato = new Competitor("Mato");
+competitors.push(nike, ondro, jergi, juro, jakub, rio, mato);
 
 
 
