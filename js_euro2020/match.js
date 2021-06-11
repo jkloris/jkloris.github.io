@@ -10,6 +10,7 @@ class Match{
     }
 
     getWinner(){
+
         if(this.results.H > this.results.A)
             return 1;
         if(this.results.H < this.results.A)
@@ -30,6 +31,8 @@ class Competitor{
 
     calcScore(matchResults){
         var sum = 0, a, b, score;
+        var tmpM;
+
         for(var i in matchResults){
             this.score = sum;
             if(matchResults[i].results.H == null)
@@ -40,7 +43,8 @@ class Competitor{
             b = Math.abs(matchResults[i].results.A - this.tips.m[i].results.A);
             score = (score - a - b ) > 0 ? (score - a - b) : 0;
             
-            if(this.tips.m[i].getWinner == matchResults[i].getWinner)
+            tmpM = this.objToMatch(this.tips.m[i]);
+            if(tmpM.getWinner() == matchResults[i].getWinner())
                 score++;
 
             sum+=score;
@@ -48,6 +52,14 @@ class Competitor{
         }
         
         return sum;
+    }
+
+    objToMatch(matchPattern){
+        var m = new Match(matchPattern.teamH, matchPattern.teamA);
+        m.results.H = matchPattern.results.H;
+        m.results.A = matchPattern.results.A;
+
+        return m;
     }
 }
 
