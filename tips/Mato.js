@@ -1,4 +1,5 @@
 mato.tips = {
+  "topScorer": "Kane",
   "w1": "England",
   "w2": null,
   "m": [

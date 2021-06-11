@@ -1,4 +1,5 @@
 ondro.tips = {
+  "topScorer": "Mbappe",
   "w1": "France",
   "w2": null,
   "m": [

@@ -1,4 +1,5 @@
 jergi.tips = {
+  "topScorer": "Griezman",
   "w1": "France",
   "w2": null,
   "m": [

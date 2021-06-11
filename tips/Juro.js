@@ -1,4 +1,5 @@
 juro.tips = {
+  "topScorer": "Lukaku",
   "w1": "France",
   "w2": null,
   "m": [

@@ -1,5 +1,5 @@
-jakub.tips = {
-  "topScorer": "Lukaku",
+ivo.tips = {
+  "topScorer": "Benzema",
   "w1": "France",
   "w2": null,
   "m": [
@@ -8,14 +8,14 @@ jakub.tips = {
       "teamA": "Italy",
       "results": {
         "H": "1",
-        "A": "1"
+        "A": "3"
       }
     },
     {
       "teamH": "Wales",
       "teamA": "Switzerland",
       "results": {
-        "H": "1",
+        "H": "0",
         "A": "2"
       }
     },
@@ -32,7 +32,7 @@ jakub.tips = {
       "teamA": "Russia",
       "results": {
         "H": "2",
-        "A": "0"
+        "A": "1"
       }
     },
     {
@@ -48,14 +48,14 @@ jakub.tips = {
       "teamA": "North Macedonia",
       "results": {
         "H": "1",
-        "A": "0"
+        "A": "1"
       }
     },
     {
       "teamH": "Netherlands",
       "teamA": "Ukraine",
       "results": {
-        "H": "2",
+        "H": "1",
         "A": "1"
       }
     },
@@ -64,30 +64,30 @@ jakub.tips = {
       "teamA": "Czech Republic",
       "results": {
         "H": "1",
-        "A": "3"
+        "A": "2"
       }
     },
     {
       "teamH": "Poland",
       "teamA": "Slovakia",
       "results": {
-        "H": "2",
-        "A": "1"
+        "H": "1",
+        "A": "0"
       }
     },
     {
       "teamH": "Spain",
       "teamA": "Sweden",
       "results": {
-        "H": "2",
-        "A": "0"
+        "H": "3",
+        "A": "1"
       }
     },
     {
       "teamH": "Hungary",
       "teamA": "Portugal",
       "results": {
-        "H": "0",
+        "H": "1",
         "A": "2"
       }
     },
@@ -95,7 +95,7 @@ jakub.tips = {
       "teamH": "France",
       "teamA": "Germany",
       "results": {
-        "H": "2",
+        "H": "3",
         "A": "1"
       }
     },
@@ -104,7 +104,7 @@ jakub.tips = {
       "teamA": "Russia",
       "results": {
         "H": "1",
-        "A": "3"
+        "A": "2"
       }
     },
     {
@@ -119,7 +119,7 @@ jakub.tips = {
       "teamH": "Italy",
       "teamA": "Switzerland",
       "results": {
-        "H": "3",
+        "H": "2",
         "A": "1"
       }
     },
@@ -127,7 +127,7 @@ jakub.tips = {
       "teamH": "Ukraine",
       "teamA": "North Macedonia",
       "results": {
-        "H": "2",
+        "H": "1",
         "A": "0"
       }
     },
@@ -136,7 +136,7 @@ jakub.tips = {
       "teamA": "Belgium",
       "results": {
         "H": "1",
-        "A": "3"
+        "A": "2"
       }
     },
     {
@@ -144,7 +144,7 @@ jakub.tips = {
       "teamA": "Austria",
       "results": {
         "H": "2",
-        "A": "1"
+        "A": "0"
       }
     },
     {
@@ -159,8 +159,8 @@ jakub.tips = {
       "teamH": "Croatia",
       "teamA": "Czech Republic",
       "results": {
-        "H": "1",
-        "A": "1"
+        "H": "2",
+        "A": "2"
       }
     },
     {
@@ -168,22 +168,22 @@ jakub.tips = {
       "teamA": "Scotland",
       "results": {
         "H": "3",
-        "A": "0"
+        "A": "1"
       }
     },
     {
       "teamH": "Hungary",
       "teamA": "France",
       "results": {
-        "H": "0",
-        "A": "2"
+        "H": "1",
+        "A": "4"
       }
     },
     {
       "teamH": "Portugal",
       "teamA": "Germany",
       "results": {
-        "H": "2",
+        "H": "1",
         "A": "2"
       }
     },
@@ -191,7 +191,7 @@ jakub.tips = {
       "teamH": "Spain",
       "teamA": "Poland",
       "results": {
-        "H": "1",
+        "H": "2",
         "A": "1"
       }
     },
@@ -208,22 +208,22 @@ jakub.tips = {
       "teamA": "Turkey",
       "results": {
         "H": "1",
-        "A": "1"
+        "A": 0
       }
     },
     {
       "teamH": "Ukraine",
       "teamA": "Austria",
       "results": {
-        "H": "1",
-        "A": "1"
+        "H": "2",
+        "A": "0"
       }
     },
     {
       "teamH": "North Macedonia",
       "teamA": "Netherlands",
       "results": {
-        "H": "0",
+        "H": "1",
         "A": "2"
       }
     },
@@ -231,8 +231,8 @@ jakub.tips = {
       "teamH": "Finland",
       "teamA": "Belgium",
       "results": {
-        "H": "1",
-        "A": "4"
+        "H": "0",
+        "A": "2"
       }
     },
     {
@@ -240,7 +240,7 @@ jakub.tips = {
       "teamA": "Denmark",
       "results": {
         "H": "1",
-        "A": "1"
+        "A": "2"
       }
     },
     {
@@ -248,7 +248,7 @@ jakub.tips = {
       "teamA": "England",
       "results": {
         "H": "1",
-        "A": "2"
+        "A": "3"
       }
     },
     {
@@ -256,23 +256,23 @@ jakub.tips = {
       "teamA": "Scotland",
       "results": {
         "H": "2",
-        "A": "0"
+        "A": "1"
       }
     },
     {
       "teamH": "Sweden",
       "teamA": "Poland",
       "results": {
-        "H": "1",
-        "A": "2"
+        "H": "0",
+        "A": "1"
       }
     },
     {
       "teamH": "Slovakia",
       "teamA": "Spain",
       "results": {
-        "H": "1",
-        "A": "2"
+        "H": "0",
+        "A": "3"
       }
     },
     {
@@ -280,7 +280,7 @@ jakub.tips = {
       "teamA": "Hungary",
       "results": {
         "H": "3",
-        "A": "1"
+        "A": "0"
       }
     },
     {
@@ -288,7 +288,7 @@ jakub.tips = {
       "teamA": "France",
       "results": {
         "H": "1",
-        "A": "1"
+        "A": "2"
       }
     }
   ]

@@ -25,7 +25,7 @@ class Competitor{
     constructor(name){
         this.name = name;
         this.score = 0;
-        this.tips = {w1: null, w2: null, m:[]};
+        this.tips = {topScorer: null, w1: null, w2: null, m:[]};
     }
 
     calcScore(matchResults){
@@ -112,7 +112,9 @@ let juro = new Competitor("Plcho");
 let jakub = new Competitor("Kubo");
 let rio = new Competitor("Rio");
 let mato = new Competitor("Mato");
-competitors.push(nike, ondro, jergi, juro, jakub, rio, mato);
+let tabak = new Competitor("Tabak");
+let ivo = new Competitor("Ivo");
+competitors.push(nike, ondro, jergi, juro, jakub, rio, mato, tabak, ivo);
 
 
 
