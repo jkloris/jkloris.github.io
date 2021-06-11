@@ -8,6 +8,17 @@ var submitBtn = document.getElementById("submitBtn");
 
 //generovanie inputov a p k zapasom
 function generateMatches(teamsA, teamsB) {
+    h2 = document.createElement("h2");
+    h2.appendChild(document.createTextNode("Zápasy na tiket:"));
+    h2.style.fontSize = "30px";
+    h2.style.fontWeight = "bold";
+    h2.style.fontFamily = "verdana";
+    h2.style.color = "#720a91";
+    h2.style.margin = "10px";
+    h2.style.marginTop = "5%";
+    listDiv.appendChild(h2);
+    listDiv.style.textAlign = "center";
+
     for(var i in teamsA){
         p = document.createElement("p");
         node = document.createTextNode(teamsA[i] + " vs " + teamsB[i]);
@@ -32,19 +43,138 @@ function generateMatches(teamsA, teamsB) {
         div.appendChild(input1);
         div.appendChild(p);
         div.appendChild(input2);
-        if(  window.innerHeight / window.innerWidth > 1 && window.innerHeight / window.innerWidth < 4/3)
-            div.style.marginLeft = "30%";
-        else if(window.innerHeight / window.innerWidth <= 1)
-            div.style.marginLeft = "40%";
-        else
-            div.style.marginLeft = "10%";
-    
+        // if(  window.innerHeight / window.innerWidth > 1 && window.innerHeight / window.innerWidth < 4/3)
+        //     div.style.marginLeft = "30%";
+        // else if(window.innerHeight / window.innerWidth <= 1)
+        //     div.style.marginLeft = "40%";
+        // else
+        //     div.style.marginLeft = "10%";
+        
     
         listDiv.appendChild(div);
     }
+    listDiv.appendChild(document.createElement("hr"));
+
 }
 
-generateMatches(teamsA, teamsB)
+function printMResults(matchResults) {
+    h2 = document.createElement("h2");
+    h2.appendChild(document.createTextNode("Výsledky zápasov:"));
+    h2.style.fontSize = "30px";
+    h2.style.fontWeight = "bold";
+    h2.style.fontFamily = "verdana";
+    h2.style.color = "#720a91";
+    h2.style.margin = "10px";
+    h2.style.marginTop = "5%";
+    listDiv.appendChild(h2);
+    listDiv.style.textAlign = "center";
+
+    for(var i in matchResults){
+        p = document.createElement("p");
+        if(matchResults[i].results.H == null)
+            node = document.createTextNode(matchResults[i].teamH + " -- : -- " + matchResults[i].teamA);
+        else
+            node = document.createTextNode(matchResults[i].teamH + " " + matchResults[i].results.H + " : " + matchResults[i].results.A + " " + matchResults[i].teamA);
+            
+        p.appendChild(node);
+        
+       //p.style.display = "inline-block";
+        p.style.margin = "5px";
+        p.style.fontWeight = "bold";
+        p.style.color = "#fce8dd";
+        p.style.fontSize = "20px"
+        
+        hr = document.createElement("hr");
+        div = document.createElement("div");
+        div.appendChild(p);
+        div.appendChild(hr);  
+        
+        div.style.width = "80%";
+        div.style.textAlign = "center";
+        div.style.margin = "auto";
+
+        listDiv.appendChild(div);
+
+    }
+}
+
+function printScoreTable(competitors) {
+   
+        // get the reference for the body
+        var div = document.getElementById("tableDiv");
+        div.style.width = "50%";
+        div.style.textAlign = "center";
+        div.style.margin = "auto";
+        div.style.paddingBottom = "10%";
+
+        h2 = document.createElement("h2");
+        h2.appendChild(document.createTextNode("Tabuľka bodov:"));
+        h2.style.fontSize = "30px";
+        h2.style.fontWeight = "bold";
+        h2.style.fontFamily = "verdana";
+        h2.style.color = "#720a91";
+        h2.style.margin = "10px";
+        h2.style.marginLeft = "10%";
+        div.appendChild(h2);
+      
+        // creates a <table> element and a <tbody> element
+        var tbl = document.createElement("table");
+        tbl.style.width  = "100%";
+        var tblBody = document.createElement("tbody");
+      
+        // creating all cells
+        for (var i = 0; i <=competitors.length ; i++) {
+          // creates a table row
+          var row = document.createElement("tr");
+      
+          for (var j = 0; j < 3; j++) {
+            // Create a <td> element and a text node, make the text
+            // node the contents of the <td>, and put the <td> at
+            // the end of the table row
+            var cell = document.createElement("td");
+            cell.style.fontSize = "20px";
+            cell.style.color = "Black";
+            cell.style.fontWeight = "bold";
+            var cellText =  document.createTextNode("");
+            if(j == 0 && i > 0){
+                cellText = document.createTextNode(i+".");
+                cell.style.color = "white";
+            }
+            else if(j == 1 && i > 0)
+                cellText = document.createTextNode(competitors[i-1].name);
+            else if(j == 2 && i > 0)
+                cellText = document.createTextNode(competitors[i-1].score);
+            else if(j == 1 && i == 0){
+                cellText = document.createTextNode("Meno");
+                cell.style.fontSize = "25px";
+                cell.style.color = "white";
+            }
+            else if(j == 2 && i == 0){
+                cellText = document.createTextNode("Body");
+                cell.style.fontSize = "25px";
+                cell.style.color = "white";
+            }
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            
+          }
+      
+          // add the row to the end of the table body
+          tblBody.appendChild(row);
+        }
+      
+        // put the <tbody> in the <table>
+        tbl.appendChild(tblBody);
+        // appends <table> into <body>
+        div.appendChild(tbl);
+        // sets the border attribute of tbl to 2;
+        tbl.setAttribute("border", "1");
+      
+}
+
+//generateMatches(teamsA8, teamsB)
+
+
 
 
 

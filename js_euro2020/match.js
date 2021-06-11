@@ -111,10 +111,10 @@ let jergi = new Competitor("Jergi");
 let juro = new Competitor("Plcho");
 let jakub = new Competitor("Kubo");
 let rio = new Competitor("Rio");
-let mato = new Competitor("Mato");
+let mato = new Competitor("Maťo");
 let tabak = new Competitor("Tabak");
 let ivo = new Competitor("Ivo");
-competitors.push(nike, ondro, jergi, juro, jakub, rio, mato, tabak, ivo);
+competitors.push( ondro, jergi, juro, jakub, rio, mato, tabak, ivo);
 
 
 
