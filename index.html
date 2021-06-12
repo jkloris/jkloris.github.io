@@ -26,6 +26,29 @@
     <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px;visibility: hidden ;">Stiahni tiket</button>
     <!-- <button id="calcBtn" style="margin-left:50%">Calc</button> -->
 
+    <div id="tipsDiv" style="text-align: center; color:white;">
+        <hr>
+        <br>
+        <br>
+       
+            <label for="man">Vyber si hráča, ktorého tiket chceš zobraziť:</label>
+            <select name="man" id="tips">
+                <option value="Ondro">Ondro</option>
+                <option value="Jergi">Jergi</option>
+                <option value="Plcho">Plcho</option>
+                <option value="Rio">Rio</option>
+                <option value="Maťo">Maťo</option>
+                <option value="Tabak">Tabak</option>
+                <option value="Ivo">Ivo</option>
+                <option value="Kubo">Kubo</option>
+            </select>
+            
+            <a id="tiketLink" onclick="showTiket()" target="_blank" style="font-size: 20px; text-decoration: underline; font-weight: bold; color: rgb(4, 16, 88); font-style: italic;">Potvrdiť</a>
+            <br>
+            <textarea id="textareaTicket" style="visibility: hidden;" rows = "20" cols="40"></textarea>
+        
+    </div>
+
     <script src="./js_euro2020/match.js"></script>
     
     <script src="./tips/NIKE.js"></script>

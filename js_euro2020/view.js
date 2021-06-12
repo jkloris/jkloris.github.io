@@ -6,6 +6,7 @@ var p;
 var node;
 var submitBtn = document.getElementById("submitBtn");
 
+
 //generovanie inputov a p k zapasom
 function generateMatches(teamsA, teamsB) {
     h2 = document.createElement("h2");
@@ -97,6 +98,61 @@ function printMResults(matchResults) {
 
     }
 }
+
+function matchToString(match) {
+    var s = match.teamH + " " + match.results.H + " : " + match.results.A + " " + match.teamA;
+    return s;
+}
+
+function tipsToString(man) {
+    var s = "";
+    for(var i in jergi.tips.m){
+        s+=matchToString(man.tips.m[i]) + '\n';
+    }
+    return s;
+}
+
+function showTiket() {
+    var man = document.getElementById("tips");
+    var div = document.getElementById("tipsDiv");
+    var ta = document.getElementById("textareaTicket");
+    ta.style.visibility = "visible";
+   // ta.value = "";
+    
+    switch (man.value) {
+        case "Ondro":
+            ta.value = tipsToString(ondro);
+            break;
+        case "Jergi":
+            ta.value = tipsToString(jergi);
+            break;
+        case "Mato":
+            ta.value = tipsToString(mato);
+            break;
+        case "Tabak":
+            ta.value = tipsToString(tabak);
+            break;
+        case "Plcho":
+            ta.value = tipsToString(juro);
+            break;
+        case "Rio":
+            ta.value = tipsToString(rio);
+            break;
+        case "Kubo":
+            ta.value = tipsToString(jakub);
+            break;
+        case "Ivo":
+            ta.value = tipsToString(ivo);
+            break;
+    
+        default:
+            break;
+    }
+    // ta.appendChild(text);
+    div.appendChild(ta);
+}
+
+
 
 function printScoreTable(competitors) {
    
