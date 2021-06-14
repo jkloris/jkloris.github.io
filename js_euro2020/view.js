@@ -126,7 +126,7 @@ function showTiket() {
         case "Jergi":
             ta.value = tipsToString(jergi);
             break;
-        case "Mato":
+        case "Maťo":
             ta.value = tipsToString(mato);
             break;
         case "Tabak":
@@ -148,6 +148,7 @@ function showTiket() {
         default:
             break;
     }
+    console.log(man.value);
     // ta.appendChild(text);
     div.appendChild(ta);
 }
