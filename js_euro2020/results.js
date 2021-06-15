@@ -12,6 +12,8 @@ matchResults[6].setResult(3,2);
 matchResults[7].setResult(0,2);
 matchResults[8].setResult(1,2);
 matchResults[9].setResult(0,0);
+matchResults[10].setResult(0,3);
+matchResults[11].setResult(1,0);
 
 //matchResults = nike.tips.m;
 //pocitanie bodov
@@ -25,4 +27,4 @@ competitors.forEach((e)=>console.log(e.name + ": "+e.score));
 printMResults(matchResults);
 printScoreTable(competitors);
 
-alert("NOVINKA! Pozri si tikety ostatných jednym kliknutím. Stačí ísť na spodok stránky")
+//alert("NOVINKA! Pozri si tikety ostatných jednym kliknutím. Stačí ísť na spodok stránky")
