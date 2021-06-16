@@ -14,6 +14,9 @@ matchResults[8].setResult(1,2);
 matchResults[9].setResult(0,0);
 matchResults[10].setResult(0,3);
 matchResults[11].setResult(1,0);
+matchResults[12].setResult(0,1);
+matchResults[13].setResult(0,2);
+matchResults[14].setResult(3,0);
 
 //matchResults = nike.tips.m;
 //pocitanie bodov

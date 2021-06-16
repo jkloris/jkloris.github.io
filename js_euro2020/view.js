@@ -148,7 +148,7 @@ function showTiket() {
         default:
             break;
     }
-    console.log(man.value);
+
     // ta.appendChild(text);
     div.appendChild(ta);
 }
