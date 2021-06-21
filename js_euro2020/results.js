@@ -28,9 +28,15 @@ matchResults[22].setResult(2,4);
 matchResults[23].setResult(1,1);
 matchResults[24].setResult(1,0);
 matchResults[25].setResult(3,1);
+matchResults[26].setResult(0,1);
+matchResults[27].setResult(0,3);
+matchResults[28].setResult(0,2);
+matchResults[29].setResult(1,4);
 
+console.log(matchResults);
 //matchResults = nike.tips.m;
 //pocitanie bodov
+
 
 
 
@@ -42,3 +48,19 @@ printMResults(matchResults);
 printScoreTable(competitors);
 
 //alert("NOVINKA! Pozri si tikety ostatných jednym kliknutím. Stačí ísť na spodok stránky")
+
+//posutpova calkulacka
+function fillTables() {
+    for(var i in matchResults){
+        groupA.checkMatch(matchResults[i]);
+        groupB.checkMatch(matchResults[i]);
+        groupC.checkMatch(matchResults[i]);
+        groupD.checkMatch(matchResults[i]);
+        groupE.checkMatch(matchResults[i]);
+        groupF.checkMatch(matchResults[i]);
+    }
+}
+
+fillTables();
+
+promotionCalc.simulateMatches(matchResults);
