@@ -32,6 +32,8 @@ matchResults[26].setResult(0,1);
 matchResults[27].setResult(0,3);
 matchResults[28].setResult(0,2);
 matchResults[29].setResult(1,4);
+matchResults[30].setResult(0,1);
+matchResults[31].setResult(3,1);
 
 console.log(matchResults);
 //matchResults = nike.tips.m;
