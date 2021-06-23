@@ -1,4 +1,3 @@
-
 //manulane nasvavovanie vysledkov zapasu
 matchResults = setMatches(teamsA, teamsB);
 
@@ -34,8 +33,12 @@ matchResults[28].setResult(0,2);
 matchResults[29].setResult(1,4);
 matchResults[30].setResult(0,1);
 matchResults[31].setResult(3,1);
+matchResults[32].setResult(3,2);
+matchResults[33].setResult(0,5);
+matchResults[34].setResult(2,2);
+matchResults[35].setResult(2,2);
 
-console.log(matchResults);
+//console.log(matchResults);
 //matchResults = nike.tips.m;
 //pocitanie bodov
 
@@ -63,6 +66,10 @@ function fillTables() {
     }
 }
 
-fillTables();
+//fillTables();
 
-promotionCalc.simulateMatches(matchResults);
+//promotionCalc.simulateMatches(matchResults);
+
+alert("Vypln novy tiket. Podobne ako naposledy. (meno, viťaz, zapasy) Stiahnuty tiket pošli mne...")
+alert("..Víťaz môže byť ten istý alebo aj iný ako pri prvom tipovaní. Tento tip je za ďalších 15b. To znamená, že ak dáš toho istého ako pred tým, môžeš získať 45b (30+15) za víťaza. Alebo dáš na niekoho iného ako pred tým, čím zväčšíš šancu na výhru, ale za menej celkových bodov..")
+alert("Ak vam nie je niečo jasne, dajte mi vedieť. Deadline je do prvého zápasu (26.6. tuším)")

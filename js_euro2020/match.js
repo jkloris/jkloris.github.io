@@ -32,11 +32,10 @@ class Competitor{
     calcScore(matchResults){
         var sum = 0, a, b, score;
         var tmpM;
-
         for(var i in matchResults){
             this.score = sum;
             if(matchResults[i].results.H == null)
-                return sum;
+            return sum;
 
             score = 4;
             a = Math.abs(matchResults[i].results.H - this.tips.m[i].results.H);
@@ -45,12 +44,12 @@ class Competitor{
             
             tmpM = this.objToMatch(this.tips.m[i]);
             if(tmpM.getWinner() == matchResults[i].getWinner())
-                score++;
-
+            score++;
+            
             sum+=score;
+            this.score = sum;
             
         }
-        
         return sum;
     }
 
@@ -71,10 +70,12 @@ var teamsA = ["Turkey", "Wales", "Denmark", "Belgium", "England", "Austria", "Ne
 var teamsB = ["Italy", "Switzerland", "Finland", "Russia", "Croatia", "North Macedonia", "Ukraine", "Czech Republic", "Slovakia", "Sweden", "Portugal", "Germany", "Russia", "Wales", "Switzerland", "North Macedonia", "Belgium", "Austria", "Slovakia", "Czech Republic", "Scotland", "France", "Germany", "Poland", "Wales", "Turkey", "Austria", "Netherlands", "Belgium", "Denmark", "England", "Scotland", "Poland", "Spain", "Hungary", "France"];
 
 //osemfinale
-var teamsA8 = ["Wales", "Denmark", "Belgium", "England"]
-var teamsB8 = ["Switzerland", "Finland", "Russia", "Croatia"]
+var teamsA8 = ["Wales", "Italy", "Netherlands", "Belgium", "Croatia", "France", "England", "Sweden"]
+var teamsB8 = ["Denmark", "Austria", "Czech Republic", "Portugal", "Spain", "Switzerland", "Germany", "Ukraine"]
 
-//teamsA = teamsA.concat(teamsA8);
+
+teamsA = teamsA.concat(teamsA8);
+teamsB = teamsB.concat(teamsB8);
 
 
 

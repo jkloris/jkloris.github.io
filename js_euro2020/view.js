@@ -57,6 +57,8 @@ function generateMatches(teamsA, teamsB) {
     listDiv.appendChild(document.createElement("hr"));
 
 }
+generateMatches(teamsA8, teamsB8)
+
 
 function printMResults(matchResults) {
     h2 = document.createElement("h2");
@@ -229,7 +231,7 @@ function printScoreTable(competitors) {
       
 }
 
-//generateMatches(teamsA8, teamsB)
+
 
 
 
@@ -245,18 +247,19 @@ submitBtn.onclick = ()=>{
         a = (scoreA[i].value != "") ? scoreA[i].value:0  ;
         b = (scoreB[i].value != "") ? scoreB[i].value:0  ;
         
-        m = new Match(teamsA[i], teamsB[i]);
+        //set team array
+        m = new Match(teamsA8[i], teamsB8[i]);
         m.setResult(a,b);
         Jergo.tips.m.push(m);
     }
 
-    Jergo.tips.w1 = document.getElementById("winner").value;
+    Jergo.tips.w2 = document.getElementById("winner").value;
 
     var text = JSON.stringify(Jergo.tips, null, 2);
     var filename = document.getElementById("name").value;
     console.log(filename);
 
-    download(filename, text);
+    download(filename+'_2', text);
 }
 
 
