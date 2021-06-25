@@ -73,3 +73,4 @@ function fillTables() {
 alert("Vypln novy tiket. Podobne ako naposledy. (meno, viťaz, zapasy) Stiahnuty tiket pošli mne...")
 alert("..Víťaz môže byť ten istý alebo aj iný ako pri prvom tipovaní. Tento tip je za ďalších 15b. To znamená, že ak dáš toho istého ako pred tým, môžeš získať 45b (30+15) za víťaza. Alebo dáš na niekoho iného ako pred tým, čím zväčšíš šancu na výhru, ale za menej celkových bodov..")
 alert("Ak vam nie je niečo jasne, dajte mi vedieť. Deadline je do prvého zápasu (26.6. tuším)")
+

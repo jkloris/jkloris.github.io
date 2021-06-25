@@ -1,7 +1,7 @@
 tabak.tips = {
   "topScorer": "CR7",
   "w1": "Portugal",
-  "w2": null,
+  "w2": "Portugal",
   "m": [
     {
       "teamH": "Turkey",
@@ -289,6 +289,70 @@ tabak.tips = {
       "results": {
         "H": "1",
         "A": "1"
+      }
+    },
+    {
+      "teamH": "Wales",
+      "teamA": "Denmark",
+      "results": {
+        "H": "1",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "Austria",
+      "results": {
+        "H": "1",
+        "A": "0"
+      }
+    },
+    {
+      "teamH": "Netherlands",
+      "teamA": "Czech Republic",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Belgium",
+      "teamA": "Portugal",
+      "results": {
+        "H": "2",
+        "A": "3"
+      }
+    },
+    {
+      "teamH": "Croatia",
+      "teamA": "Spain",
+      "results": {
+        "H": "0",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "France",
+      "teamA": "Switzerland",
+      "results": {
+        "H": "3",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "England",
+      "teamA": "Germany",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Sweden",
+      "teamA": "Ukraine",
+      "results": {
+        "H": "1",
+        "A": "2"
       }
     }
   ]

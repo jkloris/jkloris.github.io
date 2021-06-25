@@ -1,7 +1,7 @@
 jergi.tips = {
   "topScorer": "Lukaku",
   "w1": "France",
-  "w2": null,
+  "w2": "Italy",
   "m": [
     {
       "teamH": "Turkey",
@@ -288,6 +288,70 @@ jergi.tips = {
       "teamA": "France",
       "results": {
         "H": "1",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "Wales",
+      "teamA": "Denmark",
+      "results": {
+        "H": "1",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "Austria",
+      "results": {
+        "H": "2",
+        "A": 0
+      }
+    },
+    {
+      "teamH": "Netherlands",
+      "teamA": "Czech Republic",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Belgium",
+      "teamA": "Portugal",
+      "results": {
+        "H": "1",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Croatia",
+      "teamA": "Spain",
+      "results": {
+        "H": "1",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "France",
+      "teamA": "Switzerland",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "England",
+      "teamA": "Germany",
+      "results": {
+        "H": "1",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Sweden",
+      "teamA": "Ukraine",
+      "results": {
+        "H": "2",
         "A": "2"
       }
     }

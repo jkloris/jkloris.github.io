@@ -108,7 +108,7 @@ function matchToString(match) {
 
 function tipsToString(man) {
     var s = "";
-    for(var i in jergi.tips.m){
+    for(var i in man.tips.m){
         s+=i*1+1+": "+ matchToString(man.tips.m[i]) + '\n';
     }
     return s;

@@ -1,7 +1,7 @@
 ondro.tips = {
   "topScorer": "Mbappe",
   "w1": "France",
-  "w2": null,
+  "w2": "Netherlands",
   "m": [
     {
       "teamH": "Turkey",
@@ -289,6 +289,70 @@ ondro.tips = {
       "results": {
         "H": "1",
         "A": "1"
+      }
+    },
+    {
+      "teamH": "Wales",
+      "teamA": "Denmark",
+      "results": {
+        "H": "1",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "Austria",
+      "results": {
+        "H": "3",
+        "A": "0"
+      }
+    },
+    {
+      "teamH": "Netherlands",
+      "teamA": "Czech Republic",
+      "results": {
+        "H": "2",
+        "A": "0"
+      }
+    },
+    {
+      "teamH": "Belgium",
+      "teamA": "Portugal",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Croatia",
+      "teamA": "Spain",
+      "results": {
+        "H": "1",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "France",
+      "teamA": "Switzerland",
+      "results": {
+        "H": "3",
+        "A": "0"
+      }
+    },
+    {
+      "teamH": "England",
+      "teamA": "Germany",
+      "results": {
+        "H": "1",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "Sweden",
+      "teamA": "Ukraine",
+      "results": {
+        "H": "2",
+        "A": "0"
       }
     }
   ]
