@@ -57,7 +57,7 @@ function generateMatches(teamsA, teamsB) {
     listDiv.appendChild(document.createElement("hr"));
 
 }
-//generateMatches(teamsA8, teamsB8)
+generateMatches(teamsA4, teamsB4)
 
 
 function printMResults(matchResults) {
@@ -253,13 +253,13 @@ submitBtn.onclick = ()=>{
         Jergo.tips.m.push(m);
     }
 
-    Jergo.tips.w2 = document.getElementById("winner").value;
+  //  Jergo.tips.w2 = document.getElementById("winner").value;
 
-    var text = JSON.stringify(Jergo.tips, null, 2);
+    var text = JSON.stringify(Jergo.tips.m, null, 2);
     var filename = document.getElementById("name").value;
     console.log(filename);
 
-    download(filename+'_2', text);
+    download(filename+'_3', text);
 }
 
 
