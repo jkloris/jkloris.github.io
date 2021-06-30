@@ -248,7 +248,7 @@ submitBtn.onclick = ()=>{
         b = (scoreB[i].value != "") ? scoreB[i].value:0  ;
         
         //set team array
-        m = new Match(teamsA8[i], teamsB8[i]);
+        m = new Match(teamsA4[i], teamsB4[i]);
         m.setResult(a,b);
         Jergo.tips.m.push(m);
     }
