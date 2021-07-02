@@ -354,6 +354,38 @@ ondro.tips = {
         "H": "2",
         "A": "0"
       }
+    },
+    {
+      "teamH": "Switzerland",
+      "teamA": "Spain",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Belgium",
+      "teamA": "Italy",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Czech Republic",
+      "teamA": "Denmark",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Ukraine",
+      "teamA": "England",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
     }
   ]
 }

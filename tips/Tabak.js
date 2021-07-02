@@ -354,6 +354,38 @@ tabak.tips = {
         "H": "1",
         "A": "2"
       }
+    },
+    {
+      "teamH": "Switzerland",
+      "teamA": "Spain",
+      "results": {
+        "H": "1",
+        "A": "4"
+      }
+    },
+    {
+      "teamH": "Belgium",
+      "teamA": "Italy",
+      "results": {
+        "H": "0",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "Czech Republic",
+      "teamA": "Denmark",
+      "results": {
+        "H": "0",
+        "A": "3"
+      }
+    },
+    {
+      "teamH": "Ukraine",
+      "teamA": "England",
+      "results": {
+        "H": "1",
+        "A": "1"
+      }
     }
   ]
 }

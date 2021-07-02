@@ -78,6 +78,4 @@ function fillTables() {
 
 //promotionCalc.simulateMatches(matchResults);
 
-alert("Vypln novy tiket. MENO a Zápasy. Stiahnuty tiket pošli mne...")
-alert("Ak vam nie je niečo jasne, dajte mi vedieť. Deadline je do prvého zápasu (2.7.)")
 

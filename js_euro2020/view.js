@@ -57,7 +57,7 @@ function generateMatches(teamsA, teamsB) {
     listDiv.appendChild(document.createElement("hr"));
 
 }
-generateMatches(teamsA4, teamsB4)
+//generateMatches(teamsA4, teamsB4)
 
 
 function printMResults(matchResults) {

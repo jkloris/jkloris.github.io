@@ -354,6 +354,38 @@ jakub.tips = {
         "H": "1",
         "A": "0"
       }
+    },
+    {
+      "teamH": "Switzerland",
+      "teamA": "Spain",
+      "results": {
+        "H": "1",
+        "A": "2"
+      }
+    },
+    {
+      "teamH": "Belgium",
+      "teamA": "Italy",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Czech Republic",
+      "teamA": "Denmark",
+      "results": {
+        "H": "1",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "Ukraine",
+      "teamA": "England",
+      "results": {
+        "H": "1",
+        "A": "1"
+      }
     }
   ]
 }
