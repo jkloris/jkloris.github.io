@@ -5,6 +5,59 @@ var listDiv = document.getElementById("list");
 var p;
 var node;
 var submitBtn = document.getElementById("submitBtn");
+var canvas = new Canvas("canvas");
+
+function randomColor() {
+    var color = 'rgb(';
+    color += randomRGB() + ',';
+    color += randomRGB() + ',';
+    color += randomRGB() + ')';
+  
+    return color;
+}
+
+
+
+function randomRGB() {
+    return Math.floor(Math.random() * 256 );
+}
+
+function drawPoints(matchResults_, competitors) {
+    canvas.clear();
+    var x=0, y = 50;
+    var a;
+    var cpyResults ;
+
+    for(var i in competitors){            
+        canvas.ctx.beginPath();
+        var clr = randomColor();
+        canvas.ctx.font = "20px arial";
+        canvas.ctx.strokeStyle = clr;
+        canvas.ctx.fillStyle = clr;
+        canvas.ctx.lineWidth = 3;
+        canvas.ctx.fillText(competitors[i].name, x+=60, y);
+
+        console.log(canvas.ctx.strokeStyle)
+        cpyResults = JSON.parse(JSON.stringify(matchResults_));
+        
+        a = competitors[i].calcScore(cpyResults)
+        var e = matchResults_.length;
+        var offset = 10;
+        canvas.ctx.moveTo(e * 18, canvas.ctx.canvas.height - a*4 + offset);
+        e--;
+        
+        for(e; e>0; e-- ){
+            a = competitors[i].calcScore(cpyResults)
+            canvas.ctx.lineTo(e * 18, canvas.ctx.canvas.height -  a*4+offset);
+            cpyResults[e].results.H = null;
+            if(e == 36)
+                canvas.ctx.rect(e * 18, canvas.ctx.canvas.height -2-  a*4 + offset, 3,3)
+
+        }
+        canvas.ctx.stroke();
+    }
+    
+}
 
 
 //generovanie inputov a p k zapasom

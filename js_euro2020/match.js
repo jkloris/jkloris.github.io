@@ -31,7 +31,7 @@ class Competitor{
 
     calcScore(matchResults){
         var sum = 0, a, b, score;
-        var tmpM;
+        var tmpM, tmpMR;
         for(var i in matchResults){
             this.score = sum;
             if(matchResults[i].results.H == null)
@@ -43,8 +43,15 @@ class Competitor{
             score = (score - a - b ) > 0 ? (score - a - b) : 0;
             
             tmpM = this.objToMatch(this.tips.m[i]);
-            if(tmpM.getWinner() == matchResults[i].getWinner())
-            score++;
+            try {
+                if(tmpM.getWinner() == matchResults[i].getWinner())
+                    score++;
+            } catch (error) {
+                tmpMR = this.objToMatch(matchResults[i]);
+                if(tmpM.getWinner() == tmpMR.getWinner())
+                    score++;
+            }
+            
             
             sum+=score;
             this.score = sum;
@@ -73,8 +80,8 @@ var teamsB = ["Italy", "Switzerland", "Finland", "Russia", "Croatia", "North Mac
 var teamsA8 = ["Wales", "Italy", "Netherlands", "Belgium", "Croatia", "France", "England", "Sweden"]
 var teamsB8 = ["Denmark", "Austria", "Czech Republic", "Portugal", "Spain", "Switzerland", "Germany", "Ukraine"]
 
-var teamsA4 = ["Switzerland", "Belgium", "Czech Republic", "Ukraine"];
-var teamsB4 = ["Spain", "Italy", "Denmark", "England"];
+var teamsA4 = ["Switzerland", "Belgium", "Czech Republic", "Ukraine", "Italy", "England"];
+var teamsB4 = ["Spain", "Italy", "Denmark", "England", "Spain", "Denmark"];
 
 teamsA = teamsA.concat(teamsA8);
 teamsB = teamsB.concat(teamsB8);

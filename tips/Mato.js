@@ -386,6 +386,22 @@ mato.tips = {
         "H": "1",
         "A": "2"
       }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "Spain",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
+    },
+    {
+      "teamH": "England",
+      "teamA": "Denmark",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
     }
   ]
 }

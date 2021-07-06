@@ -386,6 +386,22 @@ rio.tips = {
         "H": "1",
         "A": "3"
       }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "Spain",
+      "results": {
+        "H": "2",
+        "A": "0"
+      }
+    },
+    {
+      "teamH": "England",
+      "teamA": "Denmark",
+      "results": {
+        "H": "3",
+        "A": "1"
+      }
     }
   ]
 }
