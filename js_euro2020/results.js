@@ -88,4 +88,4 @@ function fillTables() {
 
 //drawPoints(matchResults, competitors)
 
-alert("It's comming to ROME!")
+alert("It's coming to ROME!")
