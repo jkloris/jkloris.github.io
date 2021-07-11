@@ -51,6 +51,7 @@ matchResults[46].setResult(1,2);
 matchResults[47].setResult(0,4);
 matchResults[48].setResult(1,1);
 matchResults[49].setResult(1,1);
+matchResults[50].setResult(1,1);
 
 //console.log(matchResults);
 //matchResults = nike.tips.m;
@@ -58,8 +59,9 @@ matchResults[49].setResult(1,1);
 
 
 
-
 competitors.forEach((e)=>e.calcScore(matchResults));
+tabak.score+=15;
+jergi.score+=15;
 competitors.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0));
 competitors.forEach((e)=>console.log(e.name + ": "+e.score));
 
@@ -85,3 +87,5 @@ function fillTables() {
 //promotionCalc.simulateMatches(matchResults);
 
 //drawPoints(matchResults, competitors)
+
+alert("It's comming to ROME!")

@@ -402,6 +402,14 @@ ivo.tips = {
         "H": "2",
         "A": "1"
       }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "England",
+      "results": {
+        "H": "3",
+        "A": "1"
+      }
     }
   ]
 }

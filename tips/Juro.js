@@ -402,6 +402,14 @@ juro.tips = {
         "H": "2",
         "A": "0"
       }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "England",
+      "results": {
+        "H": "1",
+        "A": "1"
+      }
     }
   ]
 }

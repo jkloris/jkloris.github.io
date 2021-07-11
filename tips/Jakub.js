@@ -402,6 +402,14 @@ jakub.tips = {
         "H": "1",
         "A": "2"
       }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "England",
+      "results": {
+        "H": "2",
+        "A": "1"
+      }
     }
   ]
 }

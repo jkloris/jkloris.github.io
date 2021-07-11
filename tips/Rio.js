@@ -402,6 +402,14 @@ rio.tips = {
         "H": "3",
         "A": "1"
       }
+    },
+    {
+      "teamH": "Italy",
+      "teamA": "England",
+      "results": {
+        "H": "1",
+        "A": "2"
+      }
     }
   ]
 }
