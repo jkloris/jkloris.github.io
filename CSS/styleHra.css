@@ -1,0 +1,50 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.fullView{
+    width: 100%;
+    height: 100vh;
+    padding: 20vw;
+    font-size: 1.5em;
+    
+}
+
+#game1p1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+    overflow: hidden;
+    
+
+}
+
+#game1p1 p{
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+}
+
+
+#game1p1 div button{
+    width: 15vw;
+    height: 30vh;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: rgb(21, 194, 21);
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}

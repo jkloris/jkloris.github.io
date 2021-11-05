@@ -1,0 +1,66 @@
+:root{
+    --borderRadius: 5px;
+    --backroundColor: #F7DFBB
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-color: white;
+}
+header{
+    padding: 5em 0px 5em 0px;
+    background-color: var(--backroundColor);
+}
+h1{
+    text-align: center;
+    background-color: var(--backroundColor);
+}
+
+#container{
+    background-color: var(--backroundColor);
+    height:100%;
+    text-align: center;
+}
+#buttonContainer{
+    background-color: var(--backroundColor);
+    height: 30vh;
+    padding-top: 10vh;
+    display: none;
+}
+#buttonContainer :nth-child(1){
+    background-image: url(/imgs/stroop.jpg);
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+
+.button{
+    margin: 1em;
+    width: 9em;
+    height: 6em;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: var(--borderRadius);
+}
+
+#submitBut{
+    margin: 5%;
+    padding: 30px;
+    width: 20rem;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgb(253, 163, 89);
+    border-radius: var(--borderRadius);
+}
+#endGame{
+    width: 3em;
+    height: 3em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    display: none;
+}

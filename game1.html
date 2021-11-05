@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/styleHra.css">
+</head>
+<body>
+    
+
+    <button class="fullView" id="buttonInstr" onclick="startGame1()">Táto hra bude mať 3 časti. Teraz skúsime
+        prvú časť. Hore v strede na obrazovke uvidíš napísané slovo, napríklad červená. Tvojou
+        úlohou je, aby si čo najrýchlejšie klikol na jeden zo štvorcov zobrazených dole na obrazovke,
+        pričom každý z týchto štvorcov bude inej farby – červený, zelený, modrý a žltý. Ak sa hore na
+        obrazovke zobrazí teda slovo červená, musíš kliknúť na červený štvorec. Ak sa zobrazí slovo
+        modrá, musíš kliknúť na modrý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
+        obrazovku
+    </button>
+
+    <button class="fullView" id="buttonInstr2" style="display: none;" onclick="startGame1Part2()">Teraz prejdeme na
+        druhú časť. Teraz bude tvojou úlohou kliknúť na ten zo štvorcov, ktorý bude mať rovnakú
+        farbu ako kruh, ktorý sa na malú chvíľu zobrazí v strede hornej časti obrazovky. Ak sa hore na
+        obrazovke zobrazí teda červený kruh, musíš kliknúť na červený štvorec. Ak sa zobrazí modrý
+        kruh, musíš kliknúť na modrý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
+        obrazovku.        
+    </button>
+    <button class="fullView" id="buttonInstr3" style="display: none;" onclick="startGame1Part3()">Prejdeme na poslednú časť. Teraz bude tvojou úlohou
+        kliknúť na ten zo štvorcov, ktorý bude mať rovnakú farbu akou bude napísané slovo, ktoré sa
+        zobrazí v strede hornej časti obrazovky. Ak sa hore na obrazovke zobrazí teda slovo červená
+        napísané zelenou farbou, musíš kliknúť na zelený štvorec. Ak sa zobrazí slovo modrá napísané
+        žltou farbou, musíš kliknúť na žltý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
+        obrazovku.     
+    </button>
+
+    <div id="game1p1" >
+        <p id="colorText">FARBA</p>
+        <div>
+
+            <button id="redBut" class="red"></button>
+            <button id="greenBut" class="green"></button>
+            <button id="blueBut" class="blue"></button>
+            <button id="yellowBut" class="yellow"></button>
+        </div>
+    </div>
+    <script src="./js_game/cotroller.js"></script>
+</body>
+</html>
