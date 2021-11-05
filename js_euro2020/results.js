@@ -86,6 +86,6 @@ function fillTables() {
 
 //promotionCalc.simulateMatches(matchResults);
 
-//drawPoints(matchResults, competitors)
+drawPoints(matchResults, competitors)
 
 alert("It's coming to ROME!")
