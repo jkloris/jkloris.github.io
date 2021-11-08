@@ -10,7 +10,7 @@ body{
     width: 100%;
     height: 100vh;
     padding: 20vw;
-    font-size: 1.5em;
+    font-size: 25px
     
 }
 
@@ -27,14 +27,14 @@ body{
 }
 
 #game1p1 p{
-    margin-top: 10vh;
-    margin-bottom: 30vh;
+    margin-top: 20vh;
+    margin-bottom: 15vh;
 }
 
 
 #game1p1 div button{
     width: 15vw;
-    height: 30vh;
+    height: 15vw;
 }
 .red{
     background-color: red;

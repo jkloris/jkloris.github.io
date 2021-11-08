@@ -39,8 +39,11 @@ h1{
 
 .button{
     margin: 1em;
-    width: 9em;
-    height: 6em;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 18vw;
+    min-width: 6em;
+    height: 20vh;
     font-weight: bold;
     font-size: 30px;
     border-radius: var(--borderRadius);

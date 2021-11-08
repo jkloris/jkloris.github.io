@@ -49,6 +49,20 @@ class ColorManager{
                 break;
         }
     }
+    returnFarba(num){
+        switch (num) {
+            case 1:
+                return "ČERVENÁ"
+            case 2:
+                return "MODRÁ"
+            case 3:
+                return "ŽLTÁ"
+            case 4:
+                return "ZELENÁ"     
+            default:
+                break;
+        }
+    }
 
     returnSeq(){
         var r = Math.floor(Math.random() * 9) + 1;
@@ -122,9 +136,12 @@ function startGame1() {
     instrBut.style.display = "none"
     game1p1.style.display="block"
     colorText.style.color="black"
+    colorText.style.height = "16vw"
+    colorText.style.background = "none"
+
     gameManager.colorManager.selected[0] = gameManager.colorManager.returnSeq() 
     gameManager.colorManager.selected[1] = 0
-    colorText.innerHTML = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][0])
+    colorText.innerHTML = gameManager.colorManager.returnFarba(gameManager.colorManager.selected[0][0])
     setButtonOnClickGame1p1()
     gameManager.score.time1 = Date.now()
 }
@@ -148,7 +165,7 @@ function startGame1Part2() {
     colorText.style.height = "16vw"
     colorText.style.width = colorText.style.height
     colorText.style.marginLeft ="42%"
-    colorText.style.marginBottom ="10vh"
+    // colorText.style.marginBottom ="10vh"
     colorText.style.borderRadius = "100%"
     colorText.innerHTML = ""
 
@@ -173,12 +190,12 @@ function startGame1Part3() {
 
     colorText.style.color = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][0])
 
-    colorText.style.background = "white"
+    colorText.style.background = "none"
     colorText.style.width = "100%"
     colorText.style.marginLeft = "0%"
-    colorText.style.marginBottom ="10vh"
+    // colorText.style.marginBottom ="10vh"
     colorText.style.borderRadius = "0%"
-    colorText.innerHTML = gameManager.colorManager.returnColor(retOther(gameManager.colorManager.selected[0][0]))
+    colorText.innerHTML = gameManager.colorManager.returnFarba(retOther(gameManager.colorManager.selected[0][0]))
 
     setButtonOnClickGame1p3()
     gameManager.score.time3 = Date.now()
@@ -204,7 +221,7 @@ function redClicked1() {
         game1part2instr()
         return
     }
-    colorText.innerHTML = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
+    colorText.innerHTML = gameManager.colorManager.returnFarba(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
 }
 function blueClicked1() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 2){
@@ -218,7 +235,7 @@ function blueClicked1() {
         game1part2instr()
         return
     }
-    colorText.innerHTML = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
+    colorText.innerHTML = gameManager.colorManager.returnFarba(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
 }
 function greenClicked1() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 4){
@@ -232,7 +249,7 @@ function greenClicked1() {
         game1part2instr()
         return
     }
-    colorText.innerHTML = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
+    colorText.innerHTML = gameManager.colorManager.returnFarba(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
 }
 function yellowClicked1() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] ==3){
@@ -246,7 +263,7 @@ function yellowClicked1() {
         game1part2instr()
         return
     }
-    colorText.innerHTML = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
+    colorText.innerHTML = gameManager.colorManager.returnFarba(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
 }
 
 //#########
@@ -321,7 +338,7 @@ function redClicked3() {
         return
     }
     colorText.style.color = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
-    colorText.innerHTML = gameManager.colorManager.returnColor(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
+    colorText.innerHTML = gameManager.colorManager.returnFarba(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
 }
 function blueClicked3() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 2){
@@ -336,7 +353,7 @@ function blueClicked3() {
         return
     }
     colorText.style.color = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
-    colorText.innerHTML = gameManager.colorManager.returnColor(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
+    colorText.innerHTML = gameManager.colorManager.returnFarba(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
 }
 function greenClicked3() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 4){
@@ -351,7 +368,7 @@ function greenClicked3() {
         return
     }
     colorText.style.color = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
-    colorText.innerHTML = gameManager.colorManager.returnColor(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
+    colorText.innerHTML = gameManager.colorManager.returnFarba(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
 }
 function yellowClicked3() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] ==3){
@@ -366,7 +383,7 @@ function yellowClicked3() {
         return
     }
     colorText.style.color = gameManager.colorManager.returnColor(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]])
-    colorText.innerHTML = gameManager.colorManager.returnColor(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
+    colorText.innerHTML = gameManager.colorManager.returnFarba(retOther(gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]]))
 }
 //###########
 
