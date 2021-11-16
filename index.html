@@ -7,10 +7,11 @@
     <title>Emka Bakalarka</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/styleHra.css">
+    <link rel="stylesheet" href="./CSS/styleHra3.css">
 </head>
 <body>
     <div id="container">
-        
+
         <header>
             <h1>Ema Štánerová - Bakalárska práca</h1>
         </header>
@@ -22,11 +23,11 @@
         <div>
             <button id="submitBut" onclick="submitUserId()">Potvrdiť</button>
         </div>
-        
+
         <div id="buttonContainer">
-            <button class="button" onclick="game1part1instr()">Stroop</button>
+            <button class="button" onclick="game1part1instr()">Stroop </button>
             <button class="button">hra2</button>
-            <button class="button">hra3</button>
+            <button class="button" onclick="game3part1instr()">Processing Speed</button>
             <button class="button">hra4</button>
         </div>
     </div>
@@ -35,7 +36,7 @@
     </div>
     <div id="game1Div" style="display: none;">
 
-    
+
         <button class="fullView" id="buttonInstr" style="display: none;" onclick="startGame1()">Táto hra bude mať 3 časti. Teraz skúsime
             prvú časť. Hore v strede na obrazovke uvidíš napísané slovo, napríklad červená. Tvojou
             úlohou je, aby si čo najrýchlejšie klikol na jeden zo štvorcov zobrazených dole na obrazovke,
@@ -50,14 +51,14 @@
             farbu ako kruh, ktorý sa na malú chvíľu zobrazí v strede hornej časti obrazovky. Ak sa hore na
             obrazovke zobrazí teda červený kruh, musíš kliknúť na červený štvorec. Ak sa zobrazí modrý
             kruh, musíš kliknúť na modrý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
-            obrazovku.        
+            obrazovku.
         </button>
-        <button class="fullView" id="buttonInstr3" style="display: none;" onclick="startGame1Part3()">Prejdeme na poslednú časť. Teraz bude tvojou úlohou
+        <button class="fullView" id="buttonInstr3" style="display: none;" onclick="game3part1instr()">Prejdeme na poslednú časť. Teraz bude tvojou úlohou
             kliknúť na ten zo štvorcov, ktorý bude mať rovnakú farbu akou bude napísané slovo, ktoré sa
             zobrazí v strede hornej časti obrazovky. Ak sa hore na obrazovke zobrazí teda slovo červená
             napísané zelenou farbou, musíš kliknúť na zelený štvorec. Ak sa zobrazí slovo modrá napísané
             žltou farbou, musíš kliknúť na žltý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
-            obrazovku.     
+            obrazovku.
         </button>
 
         <div id="game1p1" >
@@ -71,7 +72,99 @@
             </div>
         </div>
     </div>
-    <script src="./js_game/cotroller.js"></script>
+
+<!-- _______________________________________________GAME procesing speed_______________________ -->
+    <button class="fullView" id="buttonInstrGame3" style="display: none;" onclick="startGame3()">
+        Zahráme si hru, ktorá sa niekedy nazýva aj kódovanie. .......  ... Ak rozumieš a môžeme začať, klikni kdekoľvek na obrazovku.
+    </button>
+    <div id="game3">
+      
+        <div id="keys">
+            <table class="tg">
+            <thead>
+                <tr>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                    <th class="th_key"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                    <td class="td_key"></td>
+                </tr>
+              </tbody>
+              </table>
+        </div>
+        <div id="sifra">
+            <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                    <th class="th_sifra"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                    <td class="td_sifra"></td>
+                  </tr>
+                </tbody>
+                </table>
+        </div>
+        <div id=numKeyboard>
+            <button class="keyButton">1</button>
+            <button class="keyButton">2</button>
+            <button class="keyButton">3</button>
+            <button class="keyButton">4</button>
+            <button class="keyButton">5</button>
+            <button class="keyButton">6</button>
+            <button class="keyButton">7</button>
+            <button class="keyButton">8</button>
+            <button class="keyButton">9</button>
+        </div>
+    </div>
+    <script src="./js_game/cotrollerStroop.js"></script>
+    <script src="./js_game/controllerProcSpeed.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,89 @@
+#game3{
+    background: rgb(1, 1, 65);
+    height: 100%;
+    display: none;
+}
+
+#keys{
+    display: block;
+    height: 30vh;
+    text-align: center;
+    padding-top: 10vh;
+
+}
+
+#sifra{
+    display: block;
+    height: 40vh;
+    text-align: center;
+}
+
+
+.tg  {
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse:collapse;
+    border-spacing:0;
+    font-size:25px;
+    font-weight: bold;
+}
+.tg td
+{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family:'Times New Roman', Times, serif;
+    padding:10px 5px;
+    word-break:normal;
+    overflow:hidden;
+    width:5vw;
+    height: 4vw;
+}
+.tg th{
+    border-style:solid;
+    border-width:1px;
+    font-family:'Times New Roman', Times, serif;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+    border-color:black;
+    width:5vw;
+    height: 4vw;
+}
+/* .tg .tg-k7le{
+    color:#ffffff;
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    border-color:inherit;
+    vertical-align:top;
+}
+.tg .tg-qo0q{
+    color:#ffffff;
+    font-family:"Times New Roman", Times, serif !important;
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    border-color:inherit;
+vertical-align:top}
+.tg .tg-0pky{border-color:inherit;
+text-align:left;
+vertical-align:top} */
+
+#numKeyboard{
+    display: block;
+    height: 15vh;
+    text-align: center;
+}
+
+#numKeyboard button{
+    width: 10vw;
+    height: 10vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: rgb(2, 157, 247);
+    border-radius: 10%;
+    
+}

@@ -117,6 +117,10 @@ class Score{
             time2 : null,
             time3 : null
         }
+        this.game3 = {
+            part1 : [],
+            time : null
+        }
 
     }
 }
@@ -419,9 +423,9 @@ function finishGame1() {
     var text = "" + gameManager.score.name + " " + gameManager.score.age
     console.log(text)
     text += "\nHra Stroop:\n"
-    text +="Časť1: " + calcSuccess(gameManager.score.game1.part1, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part1, QSIZE)/QSIZE*100) + "%); priemerný čas: " + Math.floor(gameManager.score.time1/QSIZE) + "ms \n" 
-    text +="Časť2: " + calcSuccess(gameManager.score.game1.part2, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part2, QSIZE)/QSIZE*100) + "%); priemerný čas: " + Math.floor(gameManager.score.time2/QSIZE) + "ms \n" 
-    text +="Časť3: " + calcSuccess(gameManager.score.game1.part3, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part3, QSIZE)/QSIZE*100) + "%); priemerný čas: " + Math.floor(gameManager.score.time3/QSIZE) + "ms \n" 
+    text +="Casť2: " + calcSuccess(gameManager.score.game1.part2, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part2, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time2/QSIZE) + "ms \n" 
+    text +="Casť3: " + calcSuccess(gameManager.score.game1.part3, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part3, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time3/QSIZE) + "ms \n" 
+    text +="Casť1: " + calcSuccess(gameManager.score.game1.part1, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part1, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time1/QSIZE) + "ms \n" 
     
     download(gameManager.score.name+"_Stroop", text)
     goHome()
@@ -441,11 +445,12 @@ function calcSuccess(array, size) {
 
 function goHome() {
     game1Div.style.display = "none"
+    document.getElementById("game3").style.display = "none"
     homepageDiv.style.display = "block"
 }
 
 function submitUserId() {
-    buttonContainer.style.display = "block"
+    buttonContainer.style.display = "flex"
     submitBtn.style.display = "none"
     document.getElementById("inputDiv").style.display = "none";
     var name = document.getElementById("nameInput").value;
