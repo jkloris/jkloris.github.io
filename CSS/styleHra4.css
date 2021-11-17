@@ -1,0 +1,30 @@
+#game3{
+    height: 100vh;
+}
+#game4_vzor{
+    height: 40vh;
+    padding-top: 20vh;
+}
+#game4_vzor div{
+    width: 30vh;
+    height: 30vh;
+    /* background-color: blue; */
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#game4_choices{
+    height: 40vh;
+    text-align: center;
+}
+
+#game4_choices button{
+    width: 20vh;
+    height: 20vh;
+    /* background-color: red; *tmp */
+    background-size: contain;
+    position: flex;
+    margin: 3vw;
+}

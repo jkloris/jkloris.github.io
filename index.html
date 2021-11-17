@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/styleHra.css">
     <link rel="stylesheet" href="./CSS/styleHra3.css">
+    <link rel="stylesheet" href="./CSS/styleHra4.css">
 </head>
 <body>
     <div id="container">
@@ -28,7 +29,7 @@
             <button class="button" onclick="game1part1instr()">Stroop </button>
             <button class="button">hra2</button>
             <button class="button" onclick="game3part1instr()">Processing Speed</button>
-            <button class="button">hra4</button>
+            <button class="button" onclick="game4instr()">Block Design</button>
         </div>
     </div>
     <div>
@@ -163,8 +164,26 @@
             <button class="keyButton">9</button>
         </div>
     </div>
+    <!-- ______________game 4____________________________________________- -->
+    <button class="fullView" id="buttonInstrGame4" style="display: none;" onclick="startGame4()">
+        Táto hra sa niekedy nazýva Kocky. Hore na obrazovke uvidíš obrázok, ktorý bude vytvorený použitím niekoľkých kociek. Tvojou úlohou bude vybrať také kocky, ktoré keby sme naspäť zložili, vytvárali by rovnaký obrázok ako ten hore. Najprv ti to však názorne ukážem. Prosím, klikni kdekoľvek na obrazovku. 
+    </button>
+    <div id="game4" style="display: none;">
+        
+        <div id="game4_vzor">
+            <div id="game4_vzorA"></div>
+        </div>
+        <div id="game4_choices">
+
+            <button class="game4_button" ></button>
+            <button class="game4_button" ></button>
+            <button class="game4_button" ></button>
+            <button class="game4_button" ></button>
+        </div>
+    </div>
     <script src="./js_game/cotrollerStroop.js"></script>
     <script src="./js_game/controllerProcSpeed.js"></script>
+    <script src="./js_game/controllerBlock.js"></script>
 </body>
 </html>
 

@@ -121,6 +121,10 @@ class Score{
             part1 : [],
             time : null
         }
+        this.game4 = {
+            part1 : [],
+            time : null
+        }
 
     }
 }
@@ -423,9 +427,9 @@ function finishGame1() {
     var text = "" + gameManager.score.name + " " + gameManager.score.age
     console.log(text)
     text += "\nHra Stroop:\n"
-    text +="Casť2: " + calcSuccess(gameManager.score.game1.part2, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part2, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time2/QSIZE) + "ms \n" 
-    text +="Casť3: " + calcSuccess(gameManager.score.game1.part3, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part3, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time3/QSIZE) + "ms \n" 
-    text +="Casť1: " + calcSuccess(gameManager.score.game1.part1, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part1, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time1/QSIZE) + "ms \n" 
+    text +="Cast2: " + calcSuccess(gameManager.score.game1.part2, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part2, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time2/QSIZE) + "ms \n" 
+    text +="Cast3: " + calcSuccess(gameManager.score.game1.part3, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part3, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time3/QSIZE) + "ms \n" 
+    text +="Cast1: " + calcSuccess(gameManager.score.game1.part1, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part1, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time1/QSIZE) + "ms \n" 
     
     download(gameManager.score.name+"_Stroop", text)
     goHome()

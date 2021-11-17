@@ -141,6 +141,7 @@ function startGame3() {
     data.sifraN = 0
     keyButtons = new Buttons()
     gameManager.score.game3.time = Date.now()
+    gameManager.score.game3.part1 =  []
 }
 
 function generateSifra(num, seq) {
@@ -163,7 +164,7 @@ function fillSifra(num) {
 }
 function checkGame3(num) {
    
-    if( Date.now() - gameManager.score.game3.time  > 1000 * 10){
+    if( Date.now() - gameManager.score.game3.time  > 1000 * 120){
         console.log(gameManager.score.game3.part1)
         console.log("Game Over")
         finishGame2()
@@ -187,7 +188,7 @@ function finishGame2() {
     text += "\nHra Processing Speed:\n"
     text +="Uspesnost " + succ + "/"+gameManager.score.game3.part1.length+" (" + Math.floor(succ/gameManager.score.game3.part1.length*100) + "%); \n" 
     
-    download(gameManager.score.name+"_Stroop", text)
+    download(gameManager.score.name+"_ProcessingSpeed", text)
     goHome()
 }
 

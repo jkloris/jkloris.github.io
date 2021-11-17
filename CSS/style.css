@@ -43,7 +43,12 @@ h1{
     background-position: center center; 
     color: white;
 }
-
+#buttonContainer :nth-child(4){
+    background-image: url(/imgs/blockDesign.jpg);
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
 .button{
     margin: 1em;
     margin-top: 3vh;
