@@ -108,6 +108,7 @@ function startGame4() {
     blockData.setImgs(blockData.parts.p1[0])
 }
 
+
 function finishGame4() {
     time = (Date.now() - gameManager.score.game4.time -17*500)
     alert("Koniec hryl!\nVýsledky budú stiahnuté")

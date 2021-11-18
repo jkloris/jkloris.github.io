@@ -36,6 +36,16 @@ h1{
     background-repeat:   no-repeat;
     background-position: center center; 
 }
+
+#buttonContainer :nth-child(2){
+    background-image: url(/imgs/soundIcon.png);
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    -webkit-text-stroke: 1px white;
+    color: black;
+}
+
 #buttonContainer :nth-child(3){
     background-image: url(/imgs/procesingSpeed.jpg);
     background-size: cover;

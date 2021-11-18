@@ -7,6 +7,7 @@
     <title>Emka Bakalarka</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/styleHra.css">
+    <link rel="stylesheet" href="./CSS/styleHra2.css">
     <link rel="stylesheet" href="./CSS/styleHra3.css">
     <link rel="stylesheet" href="./CSS/styleHra4.css">
 </head>
@@ -27,7 +28,7 @@
 
         <div id="buttonContainer">
             <button class="button" onclick="game1part1instr()">Stroop </button>
-            <button class="button">hra2</button>
+            <button class="button" onclick="game2instr()">Digit Span</button>
             <button class="button" onclick="game3part1instr()">Processing Speed</button>
             <button class="button" onclick="game4instr()">Block Design</button>
         </div>
@@ -73,6 +74,22 @@
             </div>
         </div>
     </div>
+    <!-- _______________________________Game 2 Digit Span__________________________________________ -->
+    
+    <button class="fullView" id="buttonInstrGame2" style="display: none;" onclick="startGame2()">
+        V tejto úlohe budem nahlas hovoriť nejaké čísla. Prosím, skús si ich zapamätať. Akonáhle ich dopoviem, tvojou úlohou bude ich povedať v opačnom poradí. Napríklad, ak poviem 5-6, musíš povedať 6-5. Ak poviem 1-8-2, musíš povedať 2-8-1. Ak rozumieš a môžeme začať, klikni kdekoľvek na obrazovku
+    </button>
+    
+    <div id="game2" style="display: none;">
+        <div class="view50">
+            <div id="soundIcon"></div>
+        </div>
+        <div class="view50">
+            <button id="butContinue">Pokračovat</button>
+        </div>
+    </div>
+
+
 
 <!-- _______________________________________________GAME procesing speed_______________________ -->
     <button class="fullView" id="buttonInstrGame3" style="display: none;" onclick="startGame3()">
@@ -184,6 +201,7 @@
     <script src="./js_game/cotrollerStroop.js"></script>
     <script src="./js_game/controllerProcSpeed.js"></script>
     <script src="./js_game/controllerBlock.js"></script>
+    <script src="./js_game/controllerDigitSpan.js"></script>
 </body>
 </html>
 
