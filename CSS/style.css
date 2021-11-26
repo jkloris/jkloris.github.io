@@ -5,6 +5,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
 body{
     height: 100vh;
@@ -35,6 +36,7 @@ h1{
     background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center; 
+    text-shadow: 1px 1px rgb(255, 255, 255);
 }
 
 #buttonContainer :nth-child(2){
@@ -42,8 +44,9 @@ h1{
     background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center; 
-    -webkit-text-stroke: 1px white;
-    color: black;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
 }
 
 #buttonContainer :nth-child(3){
@@ -60,7 +63,7 @@ h1{
     background-position: center center; 
 }
 .button{
-    margin: 1em;
+    margin: 3.7vw;
     margin-top: 3vh;
     margin-bottom: 3vh;
     width: 18vw;
@@ -88,4 +91,10 @@ h1{
     top: 0;
     z-index: 2;
     display: none;
+}
+
+#nameInput, #ageInput{
+    height: 2em;
+    font-size: 15px;
+    font-style: italic;
 }

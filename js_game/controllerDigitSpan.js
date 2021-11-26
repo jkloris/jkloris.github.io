@@ -4,7 +4,6 @@ class DigitSpan{
     }
 }
 
-
 function game2instr(){
     homepageDiv.style.display = "none"
     document.getElementById("buttonInstrGame2").style.display = "block"
