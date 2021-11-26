@@ -36,6 +36,23 @@ class BlockData{
 
     }
 
+    setImgsInstr(){
+        var stimulN = 0
+        console.log(stimulN)
+        var vzor = document.getElementById("game4_vzorA")
+        var pathVzor = "url(../imgs/game4/VZOR/OBRÁZOK_HORE.png)"
+        vzor.style.backgroundImage = pathVzor
+
+        var moznosti = document.getElementById("game4_choices").children
+        for(var i = 0; i < 4; i++){
+            
+            var path = "url(../imgs/game4/VZOR/0-"+(i+1)+".png)"
+            moznosti[i].style.backgroundImage = path
+                
+        }
+
+    }
+
     next(){
         document.getElementById("game4").style.display = "none"
         this.stage++
@@ -87,7 +104,26 @@ function game4instr() {
     homepageDiv.style.display = "none"
     game1p1.style.display ="none"
     document.getElementById("buttonInstrGame4").style.display = "block"
+    var instrAdio = new Audio('/sounds/game4/4-1.mp3')
+    // instrAdio.play()
 }
+
+function game4instr2(){
+    var instrAdio = new Audio('/sounds/game4/4-2.mp3')
+    instrAdio.play()
+    var instrBut = document.getElementById("buttonInstrGame4")
+    instrBut.style.backgroundImage = "url(./imgs/game4/instr1.png)"
+    instrBut.innerHTML = ""
+    instrBut.onclick = null
+    setTimeout( function() {
+        instrBut.style.backgroundImage = "url(./imgs/game4/instr2.png)" 
+        setTimeout( function() {
+            instrBut.onclick = startGame4
+        } , 20000);
+    } , 9500);
+}
+
+
 
 function sleep(milliseconds) {
 
@@ -101,6 +137,9 @@ function sleep(milliseconds) {
 function startGame4() {
     document.getElementById("game4").style.display = "block"
     document.getElementById("endGame").style.display = "block"
+    document.getElementById("buttonInstrGame4").onclick = game4instr2
+    document.getElementById("buttonInstrGame4").innerHTML = "Táto hra sa niekedy nazýva Kocky. Hore na obrazovke uvidíš obrázok, ktorý bude vytvorený použitím niekoľkých kociek. Tvojou úlohou bude vybrať také kocky, ktoré keby sme naspäť zložili, vytvárali by rovnaký obrázok ako ten hore. Najprv ti to však názorne ukážem. Prosím, klikni kdekoľvek na obrazovku."
+    document.getElementById("buttonInstrGame4").style.background = null
     document.getElementById("buttonInstrGame4").style.display = "none"
     blockData = new BlockData()
     gameManager.score.game4.part1 = []
