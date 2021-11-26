@@ -105,7 +105,7 @@ function game4instr() {
     game1p1.style.display ="none"
     document.getElementById("buttonInstrGame4").style.display = "block"
     var instrAdio = new Audio('/sounds/game4/4-1.mp3')
-    // instrAdio.play()
+    instrAdio.play()
 }
 
 function game4instr2(){
