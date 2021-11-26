@@ -110,10 +110,68 @@ function game3part1instr() {
     homepageDiv.style.display = "none"
     game1p1.style.display ="none"
     document.getElementById("buttonInstrGame3").style.display = "block"
-    // document.getElementById("buttonInstrGame3").onclick = 
+    document.getElementById("buttonInstrGame3").style.background = null
+    document.getElementById("buttonInstrGame3").innerHTML = "Zahráme si hru, ktorá sa niekedy nazýva aj Kódovanie. Ak chceš vedieť, čo bude tvojou úlohou, klikni kdekoľvek na obrazovku."
+    document.getElementById("buttonInstrGame3").onclick = game3part2instr
+    var instrAdio = new Audio('/sounds/game3/3-1.mp3')
+    instrAdio.play()
     console.log("start game 3...")
 }
 
+function game3part2instr() {
+    var instrBut  = document.getElementById("buttonInstrGame3")
+    instrBut.innerHTML = ""
+    instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_1.png)"
+    instrBut.onclick = null   
+    var instrAdio = new Audio('/sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3')
+    instrAdio.play()
+    
+    setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_2.png)" 
+        setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_3.png)" 
+            setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_4.png)" 
+                setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_1.png)" 
+                    setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_5.png)" 
+                        setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_6.png)" 
+                            setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_7.png)" 
+                                setTimeout( function() {game3part3instr()  
+                
+                                } , 7500);
+                            } , 3000);
+                        } , 4000);
+                    } , 15000);
+                } , 4000);
+            } , 2500);
+        } , 5000);
+    } , 10000);
+    
+   
+    
+}
+
+var imgCounter = 8
+function game3part3instr() {
+    if( imgCounter >= 25){
+        game3part4instr()
+        return
+    }
+    var instrBut  = document.getElementById("buttonInstrGame3")
+    console.log(imgCounter)
+    setTimeout( function(){
+        instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_"+ imgCounter+".png)" 
+        imgCounter+=1     
+        game3part3instr()  
+    } , 1000);
+}
+
+function game3part4instr() {
+    var instrAdio = new Audio('/sounds/game3/3-3.mp3')
+    instrAdio.play()
+    var instrBut  = document.getElementById("buttonInstrGame3")
+    setTimeout( function(){
+        instrBut.onclick = startGame3  
+    } , 34000);    
+     
+}
 
 // function interactivInstr_game3() {
 //     document.getElementById("buttonInstrGame3").onclick = "none"
