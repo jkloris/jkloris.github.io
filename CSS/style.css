@@ -31,7 +31,7 @@ h1{
     padding-top: 10vh;
     display: none;
 }
-#buttonContainer :nth-child(1){
+/* #buttonContainer :nth-child(1){
     background-image: url(/imgs/stroop.jpg);
     background-size: cover;
     background-repeat:   no-repeat;
@@ -61,7 +61,8 @@ h1{
     background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center; 
-}
+} */
+
 .button{
     margin: 3.7vw;
     margin-top: 3vh;

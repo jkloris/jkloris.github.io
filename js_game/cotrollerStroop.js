@@ -44,7 +44,7 @@ class ColorManager{
             case 3:
                 return "YELLOW"
             case 4:
-                return "GREEN"     
+                return "rgb(21, 194, 21)"     
             default:
                 break;
         }
