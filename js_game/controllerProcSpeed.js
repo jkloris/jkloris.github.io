@@ -1,4 +1,4 @@
-alert("Test zvuku: zufaly pokus3")
+alert("Test zvuku: zufaly pokus4!!!")
 
 
 window.addEventListener('touchstart', function() {
