@@ -1,4 +1,4 @@
-alert("Test zvuku: zufaly pokus4!!!")
+alert("Test zvuku: Posledny pokus, ak to nepojde, kupim ti tablet od normalnej FUNKČNEJ značky...")
 
 
 window.addEventListener('touchstart', function() {
