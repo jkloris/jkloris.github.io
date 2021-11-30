@@ -1,4 +1,4 @@
-alert("Test zvuku: pokus1")
+alert("Test zvuku: pokus2")
 const soundEffect = new Audio();
 soundEffect.autoplay = true;
 soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
@@ -121,7 +121,8 @@ function game3part1instr() {
     document.getElementById("buttonInstrGame3").onclick = game3part2instr
     // var instrAdio = new Audio('/sounds/game3/3-1.mp3')
     // instrAdio.play()
-    soundEffect.src ='/sounds/game3/3-1.mp3'
+    soundEffect.src ='./sounds/game3/3-1.mp3'
+    console.log(soundEffect)
     console.log("start game 3...")
 }
 
@@ -132,7 +133,7 @@ function game3part2instr() {
     instrBut.onclick = null   
     // var instrAdio = new Audio('/sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3')
     // instrAdio.play()
-    soundEffect.src = '/sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3'
+    soundEffect.src = './sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3'
     
     setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_2.png)" 
         setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_3.png)" 
