@@ -1,3 +1,9 @@
+alert("Test zvuku: pokus1")
+const soundEffect = new Audio();
+soundEffect.autoplay = true;
+soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
+
+
 th_keys = document.getElementsByClassName("th_key")
 td_keys = document.getElementsByClassName("td_key")
 th_sifra = document.getElementsByClassName("th_sifra")
@@ -113,8 +119,9 @@ function game3part1instr() {
     document.getElementById("buttonInstrGame3").style.background = null
     document.getElementById("buttonInstrGame3").innerHTML = "Zahráme si hru, ktorá sa niekedy nazýva aj Kódovanie. Ak chceš vedieť, čo bude tvojou úlohou, klikni kdekoľvek na obrazovku."
     document.getElementById("buttonInstrGame3").onclick = game3part2instr
-    var instrAdio = new Audio('/sounds/game3/3-1.mp3')
-    instrAdio.play()
+    // var instrAdio = new Audio('/sounds/game3/3-1.mp3')
+    // instrAdio.play()
+    soundEffect.src ='/sounds/game3/3-1.mp3'
     console.log("start game 3...")
 }
 
@@ -123,8 +130,9 @@ function game3part2instr() {
     instrBut.innerHTML = ""
     instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_1.png)"
     instrBut.onclick = null   
-    var instrAdio = new Audio('/sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3')
-    instrAdio.play()
+    // var instrAdio = new Audio('/sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3')
+    // instrAdio.play()
+    soundEffect.src = '/sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3'
     
     setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_2.png)" 
         setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_3.png)" 
