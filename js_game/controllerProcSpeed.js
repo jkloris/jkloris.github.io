@@ -1,4 +1,4 @@
-alert("Test zvuku: Posledny pokus, ak to nepojde, kupim ti tablet od normalnej FUNKČNEJ značky...")
+alert("Test zvuku: pokus 5, transformacia")
 
 
 window.addEventListener('touchstart', function() {
@@ -138,7 +138,8 @@ function game3part1instr() {
     document.getElementById("buttonInstrGame3").onclick = game3part2instr
     // var instrAdio = new Audio('/sounds/game3/3-1.mp3')
     // instrAdio.play()
-    soundEffect.src ='./sounds/game3/3-1.mp3'
+    // soundEffect.src ='./sounds/game3/3-1.mp3'
+    soundEffect.src ='https://www.computerhope.com/jargon/m/example.mp3'
     console.log(soundEffect)
     console.log("start game 3...")
 }
