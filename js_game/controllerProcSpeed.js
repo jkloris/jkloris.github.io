@@ -1,5 +1,3 @@
-alert("Test zvuku: pokus #6")
-
 
 window.addEventListener('touchstart', function() {
 
@@ -16,9 +14,9 @@ window.addEventListener('touchstart', function() {
 
 }, false);
 
-const soundEffect = new Audio();
-soundEffect.autoplay = true;
-soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
+// const soundEffect = new Audio();
+// soundEffect.autoplay = true;
+// soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
 
 
 th_keys = document.getElementsByClassName("th_key")
@@ -136,11 +134,8 @@ function game3part1instr() {
     document.getElementById("buttonInstrGame3").style.background = null
     document.getElementById("buttonInstrGame3").innerHTML = "Zahráme si hru, ktorá sa niekedy nazýva aj Kódovanie. Ak chceš vedieť, čo bude tvojou úlohou, klikni kdekoľvek na obrazovku."
     document.getElementById("buttonInstrGame3").onclick = game3part2instr
-    // var instrAdio = new Audio('/sounds/game3/3-1.mp3')
-    // instrAdio.play()
-    // soundEffect.src ='./sounds/game3/3-1.mp3'
-    soundEffect.src ='https://www.computerhope.com/jargon/m/example.mp3'
-    console.log(soundEffect)
+    var instrAdio = new Audio('./sounds/game3/3-1.m4a')
+    instrAdio.play()
     console.log("start game 3...")
 }
 
@@ -149,9 +144,8 @@ function game3part2instr() {
     instrBut.innerHTML = ""
     instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_1.png)"
     instrBut.onclick = null   
-    // var instrAdio = new Audio('/sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3')
-    // instrAdio.play()
-    soundEffect.src = './sounds/game3/3-2 (1) - rýchlejšie - odporúčam.mp3'
+    var instrAdio = new Audio('./sounds/game3/3-2 (1) - rýchlejšie - odporúčam.m4a')
+    instrAdio.play()
     
     setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_2.png)" 
         setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_3.png)" 
@@ -191,7 +185,7 @@ function game3part3instr() {
 }
 
 function game3part4instr() {
-    var instrAdio = new Audio('/sounds/game3/3-3.mp3')
+    var instrAdio = new Audio('./sounds/game3/3-3.m4a')
     instrAdio.play()
     var instrBut  = document.getElementById("buttonInstrGame3")
     setTimeout( function(){

@@ -135,7 +135,7 @@ function game1part1instr() {
     homepageDiv.style.display = "none"
     game1p1.style.display ="none"
     instrBut.style.display = "block";
-    var instrAdio = new Audio('/sounds/game1/1-1.mp3')
+    var instrAdio = new Audio('./sounds/game1/1-1.m4a')
     instrAdio.play()
 }
 
@@ -161,7 +161,7 @@ function game1part2instr() {
     console.log(gameManager.score)
     document.getElementById("buttonInstr2").style.display = "block";
     game1p1.style.display= "none"
-    var instrAdio = new Audio('/sounds/game1/1-2.mp3')
+    var instrAdio = new Audio('./sounds/game1/1-2.m4a')
     instrAdio.play()
     
 }
@@ -190,7 +190,7 @@ function game1part3instr() {
     console.log(gameManager.score)
     document.getElementById("buttonInstr3").style.display = "block";
     game1p1.style.display= "none"
-    var instrAdio = new Audio('/sounds/game1/1-3.mp3')
+    var instrAdio = new Audio('./sounds/game1/1-3.m4a')
     instrAdio.play()
 }
 
