@@ -6,6 +6,8 @@ butContainer = document.getElementById("buttonContainer")
 game1Div = document.getElementById("game1Div")
 homepageDiv = document.getElementById("container")
 
+var endButton = document.getElementById("endGame")
+
 QSIZE = 24
 
 class GameManager{
@@ -110,9 +112,9 @@ class Score{
         this.name = name
         this.age = age
         this.game1 = {
-            part1 : [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
-            part2 : [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
-            part3 : [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+            part1 : [],
+            part2 : [],
+            part3 : [],
             time1 : null,
             time2 : null,
             time3 : null
@@ -141,7 +143,8 @@ function game1part1instr() {
 
 //########### game1
 function startGame1() {
-    console.log(gameManager)
+
+    endButton.onclick = finishGame1
 
     instrBut.style.display = "none"
     game1p1.style.display="block"
@@ -225,9 +228,11 @@ function retOther(num) {
 
 function redClicked1() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 1){
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part1.push(1)
     }else{
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part1.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -239,9 +244,11 @@ function redClicked1() {
 }
 function blueClicked1() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 2){
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part1.push(1)
     }else{
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part1.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -253,9 +260,11 @@ function blueClicked1() {
 }
 function greenClicked1() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 4){
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part1.push(1)
     }else{
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part1.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -267,9 +276,11 @@ function greenClicked1() {
 }
 function yellowClicked1() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] ==3){
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part1.push(1)
     }else{
-        gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part1[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part1.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -283,9 +294,11 @@ function yellowClicked1() {
 //#########
 function redClicked2() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 1){
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part2.push(1)
     }else{
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part2.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -297,9 +310,11 @@ function redClicked2() {
 }
 function blueClicked2() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 2){
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part2.push(1)
     }else{
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part2.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -311,9 +326,11 @@ function blueClicked2() {
 }
 function greenClicked2() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 4){
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part2.push(1)
     }else{
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part2.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -325,9 +342,11 @@ function greenClicked2() {
 }
 function yellowClicked2() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] ==3){
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part2.push(1)
     }else{
-        gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part2[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part2.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -341,9 +360,11 @@ function yellowClicked2() {
 //##########
 function redClicked3() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 1){
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part3.push(1)
     }else{
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part3.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -356,9 +377,11 @@ function redClicked3() {
 }
 function blueClicked3() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 2){
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part3.push(1)
     }else{
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part3.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -371,9 +394,11 @@ function blueClicked3() {
 }
 function greenClicked3() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] == 4){
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part3.push(1)
     }else{
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part3.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -386,9 +411,11 @@ function greenClicked3() {
 }
 function yellowClicked3() {
     if (gameManager.colorManager.selected[0][gameManager.colorManager.selected[1]] ==3){
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 1
+        gameManager.score.game1.part3.push(1)
     }else{
-        gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        // gameManager.score.game1.part3[gameManager.colorManager.selected[1]] = 0
+        gameManager.score.game1.part3.push(0)
     }
 
     gameManager.colorManager.selected[1]++
@@ -426,16 +453,21 @@ function setButtonOnClickGame1p3() {
 gameManager = new GameManager()
 
 function finishGame1() {
+    if (gameManager.score.time2 == null)
+        gameManager.score.time1 = Date.now() - gameManager.score.time1
+    if (gameManager.score.time3 == null)
+        gameManager.score.time2 = Date.now() - gameManager.score.time2
     gameManager.score.time3 = Date.now() - gameManager.score.time3
-
  
     alert("Koniec úlohy!\nVýsledky budú stiahnuté")
     var text = "" + gameManager.score.name + " " + gameManager.score.age
     console.log(text)
     text += "\nHra Stroop:\n"
-    text +="Cast2: " + calcSuccess(gameManager.score.game1.part2, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part2, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time2/QSIZE) + "ms \n" 
-    text +="Cast3: " + calcSuccess(gameManager.score.game1.part3, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part3, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time3/QSIZE) + "ms \n" 
-    text +="Cast1: " + calcSuccess(gameManager.score.game1.part1, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part1, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time1/QSIZE) + "ms \n" 
+    text +="Cast1: " + calcSuccess(gameManager.score.game1.part1, gameManager.score.game1.part1.length) + "/"+gameManager.score.game1.part1.length+" (" + Math.floor(calcSuccess(gameManager.score.game1.part1, gameManager.score.game1.part1.length)/gameManager.score.game1.part1.length*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time1/gameManager.score.game1.part1.length) + " ms \n" 
+    text +="Cast2: " + calcSuccess(gameManager.score.game1.part2, gameManager.score.game1.part2.length) + "/"+gameManager.score.game1.part2.length+" (" + Math.floor(calcSuccess(gameManager.score.game1.part2, gameManager.score.game1.part2.length)/gameManager.score.game1.part2.length*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time2/gameManager.score.game1.part2.length) + " ms \n" 
+    text +="Cast3: " + calcSuccess(gameManager.score.game1.part3, gameManager.score.game1.part3.length) + "/"+gameManager.score.game1.part3.length+" (" + Math.floor(calcSuccess(gameManager.score.game1.part3, gameManager.score.game1.part3.length)/gameManager.score.game1.part3.length*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time3/gameManager.score.game1.part3.length) + " ms \n" 
+    // text +="Cast2: " + calcSuccess(gameManager.score.game1.part2, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part2, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time2/QSIZE) + "ms \n" 
+    // text +="Cast3: " + calcSuccess(gameManager.score.game1.part3, QSIZE) + "/"+QSIZE+" (" + Math.floor(calcSuccess(gameManager.score.game1.part3, QSIZE)/QSIZE*100) + "%); priemerny cas: " + Math.floor(gameManager.score.time3/QSIZE) + "ms \n" 
     
     download(gameManager.score.name+"_Stroop", text)
     goHome()

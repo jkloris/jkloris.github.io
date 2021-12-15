@@ -1,18 +1,5 @@
 
-window.addEventListener('touchstart', function() {
 
-	// create empty buffer
-	var buffer = myContext.createBuffer(1, 1, 22050);
-	var source = myContext.createBufferSource();
-	source.buffer = buffer;
-
-	// connect to output (your speakers)
-	source.connect(myContext.destination);
-
-	// play the file
-	source.noteOn(0);
-
-}, false);
 
 // const soundEffect = new Audio();
 // soundEffect.autoplay = true;
@@ -224,11 +211,15 @@ function startGame3() {
 }
 
 function generateSifra(num, seq) {
-    
+    var lastr = -1
     for(var i = 0; i < num; i++){
         r = Math.floor(Math.random()*9)
+        while (r == lastr ){
+            r = Math.floor(Math.random()*9)
+        }        
         th_sifra[i].innerHTML = seq[r]
         td_sifra[i].innerHTML = ''
+        lastr = r        
     }
 }
 
