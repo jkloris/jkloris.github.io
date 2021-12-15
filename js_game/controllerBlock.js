@@ -135,6 +135,7 @@ function sleep(milliseconds) {
 }
 
 function startGame4() {
+    endButton.onclick = finishGame4
     document.getElementById("game4").style.display = "block"
     document.getElementById("endGame").style.display = "block"
     document.getElementById("buttonInstrGame4").onclick = game4instr2
@@ -149,14 +150,14 @@ function startGame4() {
 
 
 function finishGame4() {
-    time = (Date.now() - gameManager.score.game4.time -17*500)
+    time = (Date.now() - gameManager.score.game4.time -gameManager.score.game4.part1.length*500 + 500)
     alert("Koniec hryl!\nVýsledky budú stiahnuté")
     var text = "" + gameManager.score.name + " " + gameManager.score.age
 
     succ = calcSuccess(gameManager.score.game4.part1, gameManager.score.game4.part1.length)
     text += "\nBlock Design:\n"
     text +="Uspesnost " + succ + "/"+gameManager.score.game4.part1.length+" (" + Math.floor(succ/gameManager.score.game4.part1.length*100) + "%); \n" 
-    text +="Priemerny cas: " + time/18 + "ms"
+    text +="Priemerny cas: " + time/gameManager.score.game4.part1.length + "ms"
     download(gameManager.score.name+"_Block Design", text)
     goHome()
 }
