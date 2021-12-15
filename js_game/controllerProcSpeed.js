@@ -195,6 +195,8 @@ function game3part4instr() {
 // }
 
 function startGame3() {
+    endButton.onclick = finishGame3
+
     document.getElementById("endGame").style.display = "block"
     document.getElementById("game3").style.display = "block"
     document.getElementById("buttonInstrGame3").style.display = "none"
@@ -237,7 +239,7 @@ function checkGame3(num) {
     if( Date.now() - gameManager.score.game3.time  > 1000 * 120){
         console.log(gameManager.score.game3.part1)
         console.log("Game Over")
-        finishGame2()
+        finishGame3()
     }
 
     if(th_sifra[data.sifraN].innerHTML ==  data.code[num-1]){
@@ -249,7 +251,7 @@ function checkGame3(num) {
     
 }
 
-function finishGame2() {
+function finishGame3() {
     alert("Čas vypršal!\nVýsledky budú stiahnuté")
     var text = "" + gameManager.score.name + " " + gameManager.score.age
     console.log(text)
