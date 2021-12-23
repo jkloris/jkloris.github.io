@@ -4,7 +4,13 @@
     display: none;
 }
 
-#keys{
+#game3_instr{
+    background: rgb(1, 1, 65);
+    height: 100%;
+    display: none;
+}
+
+#keys, #keys_instr{
     display: block;
     height: 30vh;
     text-align: center;
@@ -12,7 +18,7 @@
 
 }
 
-#sifra{
+#sifra, #sifra_instr{
     display: block;
     height: 40vh;
     text-align: center;
@@ -51,33 +57,18 @@
     width:5vw;
     height: 4vw;
 }
-/* .tg .tg-k7le{
-    color:#ffffff;
-    font-size:15px;
-    font-weight:bold;
-    text-align:center;
-    border-color:inherit;
-    vertical-align:top;
+.th_sifra, .th_key{
+    font-size: 1.4em;
 }
-.tg .tg-qo0q{
-    color:#ffffff;
-    font-family:"Times New Roman", Times, serif !important;
-    font-size:15px;
-    font-weight:bold;
-    text-align:center;
-    border-color:inherit;
-vertical-align:top}
-.tg .tg-0pky{border-color:inherit;
-text-align:left;
-vertical-align:top} */
 
-#numKeyboard{
+
+#numKeyboard, #numKeyboard_instr{
     display: block;
     height: 15vh;
     text-align: center;
 }
 
-#numKeyboard button{
+#numKeyboard button, #numKeyboard_instr button{
     width: 10vw;
     height: 10vw;
     font-family: 'Times New Roman', Times, serif;

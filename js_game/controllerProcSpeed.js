@@ -6,10 +6,18 @@ soundEffect.autoplay = true;
 // soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
 
 
-th_keys = document.getElementsByClassName("th_key")
-td_keys = document.getElementsByClassName("td_key")
-th_sifra = document.getElementsByClassName("th_sifra")
-td_sifra = document.getElementsByClassName("td_sifra")
+th_keys = document.getElementsByClassName("th_gkey")
+td_keys = document.getElementsByClassName("td_gkey")
+th_sifra = document.getElementsByClassName("th_gsifra")
+td_sifra = document.getElementsByClassName("td_gsifra")
+
+th_keys_instr = document.getElementsByClassName("th_ikey")
+td_keys_instr = document.getElementsByClassName("td_ikey")
+th_sifra_instr = document.getElementsByClassName("th_isifra")
+td_sifra_instr = document.getElementsByClassName("td_isifra")
+buttons_instr =  document.getElementsByClassName("ikeyButton")
+
+var imgCounter = 8
 
 class Data{
     constructor(){
@@ -27,7 +35,7 @@ class Data{
 
 class Buttons{
     constructor(){
-        this.buttons = document.getElementsByClassName("keyButton")
+        this.buttons = document.getElementsByClassName("gkeyButton")
         this.setButton1()
         this.setButton2()
         this.setButton3()
@@ -117,89 +125,208 @@ function shuffle(array) {
 function game3part1instr() {
     homepageDiv.style.display = "none"
     game1p1.style.display ="none"
+    document.getElementById("endGame").style.display = "none"
     document.getElementById("buttonInstrGame3").style.display = "block"
     document.getElementById("buttonInstrGame3").style.background = null
     document.getElementById("buttonInstrGame3").innerHTML = "Zahráme si hru, ktorá sa niekedy nazýva aj Kódovanie. Ak chceš vedieť, čo bude tvojou úlohou, klikni kdekoľvek na obrazovku."
     document.getElementById("buttonInstrGame3").onclick = game3part2instr
-    var instrAdio = new Audio('./sounds/game3/3-1.m4a')
-    instrAdio.play()
+    soundEffect.src = './sounds/game3/3-1.m4a'
+    // instrAdio.play()
     console.log("start game 3...")
 }
 
 function game3part2instr() {
     var instrBut  = document.getElementById("buttonInstrGame3")
+    instrBut.style.backgroundColor="#a68c7800"
+    instrBut.style.position="fixed";
+    instrBut.style.zIndex="5"
     instrBut.innerHTML = ""
-    instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_1.png)"
-    instrBut.onclick = null   
-    var instrAdio = new Audio('./sounds/game3/3-2 (1) - rýchlejšie - odporúčam.m4a')
-    instrAdio.play()
+    instrBut.style.display = "none"
+    instrBut.onclick = null 
+
+    var game3_instr = document.getElementById("game3_instr")
+    game3_instr.style.display = "block"
+
+    soundEffect.src = './sounds/game3/3-2 (1) - rýchlejšie - odporúčam.m4a'
+    // instrAdio.play()
     
-    setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_2.png)" 
-        setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_3.png)" 
-            setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_4.png)" 
-                setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_1.png)" 
-                    setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_5.png)" 
-                        setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_6.png)" 
-                            setTimeout( function() {instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_7.png)" 
-                                setTimeout( function() {game3part3instr()  
-                
-                                } , 7500);
-                            } , 3000);
-                        } , 4000);
-                    } , 15000);
+    for(var t in td_sifra_instr){
+        td_sifra_instr[t].innerHTML = ""
+        
+    }
+
+    setTimeout( function() {
+        th_keys_instr[0].style.backgroundColor = "yellow"
+        setTimeout( function() {
+            th_keys_instr[0].style.backgroundColor = "white"
+            td_keys_instr[0].style.backgroundColor = "yellow"
+            setTimeout( function() {
+                td_keys_instr[0].style.backgroundColor = "white"
+                document.getElementById("tg_sifra_instr").style.backgroundColor="yellow"
+                setTimeout( function() {
+                    document.getElementById("tg_sifra_instr").style.backgroundColor="white"
+                    setTimeout( function() {
+                        th_keys_instr[3].style.backgroundColor = "yellow"
+                        th_sifra_instr[0].style.backgroundColor = "yellow"
+                        td_keys_instr[3].style.backgroundColor = "yellow"
+                        setTimeout( function() {
+                         
+                            setTimeout( function() {
+                                th_keys_instr[3].style.backgroundColor = "white"
+                                th_sifra_instr[0].style.backgroundColor = "white"
+                                buttons_instr[3].style.backgroundColor = "yellow"
+                                td_keys_instr[3].style.backgroundColor = "white"
+                                setTimeout( function() {
+                                    buttons_instr[3].style.backgroundColor = "rgb(2, 157, 247)"
+                                    td_sifra_instr[0].style.backgroundColor = "yellow"
+                                    td_sifra_instr[0].innerHTML = 4
+                                    setTimeout( function() {game3part3instr()  
+                                        imgCounter = 8
+                                        } , 7500);
+                                } , 2000);
+                            }, 2000);
+                        } , 2000);
+                    } , 14000);
                 } , 4000);
             } , 2500);
         } , 5000);
     } , 10000);
     
-   
+
     
 }
 
-var imgCounter = 8
+
 function game3part3instr() {
+    console.log(imgCounter)
     if( imgCounter >= 25){
         game3part4instr()
+        imgCounter = 8
         return
     }
+
     var instrBut  = document.getElementById("buttonInstrGame3")
-    console.log(imgCounter)
+    var butColor = "rgb(2, 157, 247)"
+
+    
     setTimeout( function(){
-        instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_"+ imgCounter+".png)" 
+
+        // instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_"+ imgCounter+".png)" 
+        switch (imgCounter) {
+            case 8:
+                th_sifra_instr[1].style.backgroundColor = "yellow"
+                td_sifra_instr[0].style.backgroundColor = "white"
+                break;
+            case 9:
+                th_keys_instr[2].style.backgroundColor = "yellow"
+                td_keys_instr[2].style.backgroundColor = "yellow"
+                break;
+            case 10:
+                th_sifra_instr[1].style.backgroundColor = "white"
+                th_keys_instr[2].style.backgroundColor = "white"
+                td_keys_instr[2].style.backgroundColor = "white"
+                buttons_instr[2].style.backgroundColor = "yellow"
+                break;
+            case 11:
+                buttons_instr[2].style.backgroundColor = butColor
+                td_sifra_instr[1].style.backgroundColor = "yellow"
+                td_sifra_instr[1].innerHTML = 3
+                break;
+            case 12:
+                td_sifra_instr[1].style.backgroundColor = "white"
+                th_sifra_instr[2].style.backgroundColor = "yellow"
+                break;
+            case 13:
+                th_keys_instr[4].style.backgroundColor = "yellow"
+                td_keys_instr[4].style.backgroundColor = "yellow"
+                break;
+            case 14:
+                th_keys_instr[4].style.backgroundColor = "white"
+                td_keys_instr[4].style.backgroundColor = "white"
+                th_sifra_instr[2].style.backgroundColor = "white"
+                buttons_instr[4].style.backgroundColor = "yellow"
+                break;
+            case 15:
+                buttons_instr[4].style.backgroundColor = butColor
+                td_sifra_instr[2].style.backgroundColor = "yellow"
+                td_sifra_instr[2].innerHTML = 5
+                break;
+            case 16:
+                td_sifra_instr[2].style.backgroundColor = "white"
+                th_sifra_instr[3].style.backgroundColor = "yellow"
+                break;
+            case 17:
+                th_keys_instr[1].style.backgroundColor = "yellow"
+                td_keys_instr[1].style.backgroundColor = "yellow"
+                break;
+            case 18:
+                th_keys_instr[1].style.backgroundColor = "white"
+                td_keys_instr[1].style.backgroundColor = "white"
+                th_sifra_instr[3].style.backgroundColor = "white"
+                buttons_instr[1].style.backgroundColor = "yellow"
+                break;
+            case 19:
+                buttons_instr[1].style.backgroundColor = butColor
+                td_sifra_instr[3].style.backgroundColor = "yellow"
+                td_sifra_instr[3].innerHTML = 2
+                break;
+            case 20:
+                td_sifra_instr[3].style.backgroundColor = "white"
+                th_sifra_instr[4].style.backgroundColor = "yellow"
+                break;
+            case 21:
+                th_keys_instr[0].style.backgroundColor = "yellow"
+                td_keys_instr[0].style.backgroundColor = "yellow"
+                break;
+            case 22:
+                th_keys_instr[0].style.backgroundColor = "white"
+                td_keys_instr[0].style.backgroundColor = "white"
+                th_sifra_instr[4].style.backgroundColor = "white"
+                buttons_instr[0].style.backgroundColor = "yellow"
+                break;
+            case 23:
+                buttons_instr[0].style.backgroundColor = butColor
+                td_sifra_instr[4].style.backgroundColor = "yellow"
+                td_sifra_instr[4].innerHTML = 1
+                break;
+            case 24:
+                td_sifra_instr[4].style.backgroundColor = "white"
+                break;
+            default:
+                break;
+        }
+    
+
         imgCounter+=1     
         game3part3instr()  
     } , 1000);
 }
 
 function game3part4instr() {
-    var instrAdio = new Audio('./sounds/game3/3-3.m4a')
-    instrAdio.play()
+    soundEffect.src =  './sounds/game3/3-3.m4a'
+    // instrAdio.play()
     var instrBut  = document.getElementById("buttonInstrGame3")
     setTimeout( function(){
         instrBut.onclick = startGame3  
+        instrBut.style.display = "block"
+        instrBut.style.backgroundColor="#a68c7800"
+        instrBut.style.position="fixed";
+        instrBut.style.zIndex="5"
     } , 34000);    
      
 }
 
-// function interactivInstr_game3() {
-//     document.getElementById("buttonInstrGame3").onclick = "none"
-//     document.getElementById("buttonInstrGame3").innerHTML = ""
-//     document.getElementById("buttonInstrGame3").style.backgroundImage = "url(./imgs/game3Instr_1.png)"
-//     document.getElementById("buttonInstrGame3").style.backgroundImage = "url(./imgs/game3Instr_2.png)"
-//     alert("Teraz ti to názorne ukážem. Hore na obrazovke vidíme kľúč – v ňom sa nachádzajú symboly, pričom každý má priradené svoje číslo. Napríklad tento symbol /prvý v rade/..")
-//     document.getElementById("buttonInstrGame3").style.backgroundImage = "url(./imgs/game3Instr_3.png)"
-//     alert("„„..má pridelené číslo 1.")
-//     document.getElementById("buttonInstrGame3").style.backgroundImage = "url(./imgs/game3Instr_4.png)"
-//     alert("Teraz sa pozri na stredný rad")
 
-// }
 
 function startGame3() {
     endButton.onclick = finishGame3
 
+
     document.getElementById("endGame").style.display = "block"
     document.getElementById("game3").style.display = "block"
     document.getElementById("buttonInstrGame3").style.display = "none"
+    document.getElementById("game3_instr").style.display = "none"
+    
     seq = data.returnRandSymbols(9)
     for(var i in th_keys){
         th_keys[i].innerHTML = seq[i]

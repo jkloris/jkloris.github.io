@@ -114,34 +114,89 @@
 <!-- _______________________________________________GAME procesing speed_______________________ -->
     <button class="fullView" id="buttonInstrGame3" style="display: none;" onclick="game3part2instr()">
         Zahráme si hru, ktorá sa niekedy nazýva aj Kódovanie. Ak chceš vedieť, čo bude tvojou úlohou, klikni kdekoľvek na obrazovku.    </button>
-    <div id="game3">
+    
+    <div id="game3_instr">
       
+        <div id="keys_instr">
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="th_key th_ikey">∞</th>
+                        <th class="th_key th_ikey">*</th>
+                        <th class="th_key th_ikey">#</th>
+                        <th class="th_key th_ikey">@</th>
+                        <th class="th_key th_ikey">&</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td class="td_key td_ikey">1</td>
+                        <td class="td_key td_ikey">2</td>
+                        <td class="td_key td_ikey">3</td>
+                        <td class="td_key td_ikey">4</td>
+                        <td class="td_key td_ikey">5</td>
+                    </tr>
+                  </tbody>
+                  </table>
+            </div>
+            <div id="sifra_instr">
+                <table class="tg" id="tg_sifra_instr">
+                    <thead>
+                      <tr>
+                        <th class="th_sifra th_isifra">@</th>
+                        <th class="th_sifra th_isifra">#</th>
+                        <th class="th_sifra th_isifra">&</th>
+                        <th class="th_sifra th_isifra">*</th>
+                        <th class="th_sifra th_isifra">∞</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="td_sifra td_isifra"></td>
+                        <td class="td_sifra td_isifra"></td>
+                        <td class="td_sifra td_isifra"></td>
+                        <td class="td_sifra td_isifra"></td>
+                        <td class="td_sifra td_isifra"></td>
+                      </tr>
+                    </tbody>
+                    </table>
+            </div>
+            <div id=numKeyboard_instr>
+                <button class="keyButton ikeyButton">1</button>
+                <button class="keyButton ikeyButton">2</button>
+                <button class="keyButton ikeyButton">3</button>
+                <button class="keyButton ikeyButton">4</button>
+                <button class="keyButton ikeyButton">5</button>
+            </div>
+    </div>   
+
+    <div id="game3">
         <div id="keys">
             <table class="tg">
             <thead>
                 <tr>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
-                    <th class="th_key"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
+                    <th class="th_key th_gkey"></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
-                    <td class="td_key"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
+                    <td class="td_key td_gkey"></td>
                 </tr>
               </tbody>
               </table>
@@ -150,54 +205,54 @@
             <table class="tg">
                 <thead>
                   <tr>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
-                    <th class="th_sifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
+                    <th class="th_sifra th_gsifra"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
-                    <td class="td_sifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
+                    <td class="td_sifra td_gsifra"></td>
                   </tr>
                 </tbody>
                 </table>
         </div>
         <div id=numKeyboard>
-            <button class="keyButton">1</button>
-            <button class="keyButton">2</button>
-            <button class="keyButton">3</button>
-            <button class="keyButton">4</button>
-            <button class="keyButton">5</button>
-            <button class="keyButton">6</button>
-            <button class="keyButton">7</button>
-            <button class="keyButton">8</button>
-            <button class="keyButton">9</button>
+            <button class="keyButton gkeyButton">1</button>
+            <button class="keyButton gkeyButton">2</button>
+            <button class="keyButton gkeyButton">3</button>
+            <button class="keyButton gkeyButton">4</button>
+            <button class="keyButton gkeyButton">5</button>
+            <button class="keyButton gkeyButton">6</button>
+            <button class="keyButton gkeyButton">7</button>
+            <button class="keyButton gkeyButton">8</button>
+            <button class="keyButton gkeyButton">9</button>
         </div>
     </div>
     <!-- ______________game 4____________________________________________- -->
