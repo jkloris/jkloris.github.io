@@ -111,13 +111,15 @@ function game4instr() {
     document.getElementById("endGame").style.display = "none"
     game1p1.style.display ="none"
     document.getElementById("buttonInstrGame4").style.display = "block"
-    var instrAdio = new Audio('./sounds/game4/4-1.m4a')
-    instrAdio.play()
+    soundEffect.src = './sounds/game4/4-1.m4a'
+    // var instrAdio = new Audio('./sounds/game4/4-1.m4a')
+    // instrAdio.play()
 }
 
 function game4instr2(){
-    var instrAdio = new Audio('./sounds/game4/4-2.m4a')
-    instrAdio.play()
+    soundEffect.src = './sounds/game4/4-2.m4a'
+    // var instrAdio = new Audio('./sounds/game4/4-2.m4a')
+    // instrAdio.play()
     var instrBut = document.getElementById("buttonInstrGame4")
     // instrBut.style.backgroundImage = "url(./imgs/game4/instr1.png)"
     instrBut.style.display = "none"
@@ -139,8 +141,8 @@ function game4instr2(){
             instrBut.style.zIndex="5"
             instrBut.onclick = startGame4
             
-        } , 2000);
-    } , 950);
+        } , 20000);
+    } , 9500);
 
     
 }
