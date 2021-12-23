@@ -28,3 +28,13 @@
     position: flex;
     margin: 3vw;
 }
+#circle{
+    border: 6px solid red;
+    border-radius: 50%;
+    width: 24vw;
+    height: 24vw;
+    position: absolute;
+    z-index: 10;
+    bottom: 5vw;
+    right: 7.5vw;
+}

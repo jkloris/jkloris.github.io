@@ -13,7 +13,7 @@ class BlockData{
         shuffle(this.parts.p3)
         this.parts.all = this.parts.p1.concat(this.parts.p2, this.parts.p3)
 
-        this.setButtons()
+        
     }
 
     setImgs(stimulN){
@@ -37,8 +37,7 @@ class BlockData{
     }
 
     setImgsInstr(){
-        var stimulN = 0
-        console.log(stimulN)
+       
         var vzor = document.getElementById("game4_vzorA")
         var pathVzor = "url(../imgs/game4/VZOR/OBRÁZOK_HORE.png)"
         vzor.style.backgroundImage = pathVzor
@@ -95,6 +94,13 @@ class BlockData{
             this.next()
         }  
     }
+    nullButtons(){
+        var buttons = document.getElementsByClassName("game4_button")   
+        buttons[0].onclick = null
+        buttons[1].onclick = null
+        buttons[2].onclick = null
+        buttons[3].onclick =null
+    }
 
 
 
@@ -102,6 +108,7 @@ class BlockData{
 
 function game4instr() {
     homepageDiv.style.display = "none"
+    document.getElementById("endGame").style.display = "none"
     game1p1.style.display ="none"
     document.getElementById("buttonInstrGame4").style.display = "block"
     var instrAdio = new Audio('./sounds/game4/4-1.m4a')
@@ -112,15 +119,30 @@ function game4instr2(){
     var instrAdio = new Audio('./sounds/game4/4-2.m4a')
     instrAdio.play()
     var instrBut = document.getElementById("buttonInstrGame4")
-    instrBut.style.backgroundImage = "url(./imgs/game4/instr1.png)"
+    // instrBut.style.backgroundImage = "url(./imgs/game4/instr1.png)"
+    instrBut.style.display = "none"
+    blockData = new BlockData()
+    document.getElementById("game4").style.display = "block"
+
+    blockData.setImgsInstr()
+    blockData.nullButtons()
     instrBut.innerHTML = ""
     instrBut.onclick = null
     setTimeout( function() {
-        instrBut.style.backgroundImage = "url(./imgs/game4/instr2.png)" 
+        circle = document.getElementById("circle")
+        circle.style.display="block"
         setTimeout( function() {
+            circle.style.display="none"
+            instrBut.style.display = "block"
+            instrBut.style.backgroundColor="#a68c7800"
+            instrBut.style.position="fixed";
+            instrBut.style.zIndex="5"
             instrBut.onclick = startGame4
-        } , 20000);
-    } , 9500);
+            
+        } , 2000);
+    } , 950);
+
+    
 }
 
 
@@ -140,11 +162,13 @@ function startGame4() {
     document.getElementById("endGame").style.display = "block"
     document.getElementById("buttonInstrGame4").onclick = game4instr2
     document.getElementById("buttonInstrGame4").innerHTML = "Táto hra sa niekedy nazýva Kocky. Hore na obrazovke uvidíš obrázok, ktorý bude vytvorený použitím niekoľkých kociek. Tvojou úlohou bude vybrať také kocky, ktoré keby sme naspäť zložili, vytvárali by rovnaký obrázok ako ten hore. Najprv ti to však názorne ukážem. Prosím, klikni kdekoľvek na obrazovku."
+    document.getElementById("buttonInstrGame4").style.backgroundColor = "white"
     document.getElementById("buttonInstrGame4").style.background = null
     document.getElementById("buttonInstrGame4").style.display = "none"
-    blockData = new BlockData()
+
     gameManager.score.game4.part1 = []
     gameManager.score.game4.time = Date.now()
+    blockData.setButtons()
     blockData.setImgs(blockData.parts.p1[0])
 }
 
