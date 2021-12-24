@@ -9,7 +9,6 @@ function game2instr(){
     document.getElementById("buttonInstrGame2").style.display = "block"
     soundEffect.src = './sounds/game2/nahrávka 2-1.m4a'
     soundEffect.play()
-    console.log(instrAdio)
 }
 
 function startGame2(){

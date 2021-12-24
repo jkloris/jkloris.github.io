@@ -123,7 +123,6 @@ function game4instr2(){
     soundEffect.src = './sounds/game4/4-2.m4a'
     soundEffect.play()
     var instrBut = document.getElementById("buttonInstrGame4")
-    // instrBut.style.backgroundImage = "url(./imgs/game4/instr1.png)"
     instrBut.style.display = "none"
     blockData = new BlockData()
     document.getElementById("game4").style.display = "block"
@@ -189,9 +188,6 @@ function finishGame4() {
     download(gameManager.score.name+"_Block Design", text)
     goHome()
 }
-
-
-
 
 
 blockData = null

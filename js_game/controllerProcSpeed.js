@@ -197,13 +197,11 @@ function game3part3instr() {
         return
     }
 
-    var instrBut  = document.getElementById("buttonInstrGame3")
     var butColor = "rgb(2, 157, 247)"
 
     
     setTimeout( function(){
 
-        // instrBut.style.backgroundImage = "url(./imgs/game3/game3Instr_"+ imgCounter+".png)" 
         switch (imgCounter) {
             case 8:
                 th_sifra_instr[1].style.backgroundColor = "yellow"
