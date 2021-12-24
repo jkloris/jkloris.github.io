@@ -38,3 +38,13 @@
     bottom: 5vw;
     right: 7.5vw;
 }
+
+#prekryv{
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 100;
+    display: none;
+}

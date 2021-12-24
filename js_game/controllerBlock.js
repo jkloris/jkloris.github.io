@@ -53,14 +53,18 @@ class BlockData{
     }
 
     next(){
-        document.getElementById("game4").style.display = "none"
+        // document.getElementById("game4").style.display = "none"
         this.stage++
         if (this.stage >= 18){
             finishGame4()
             return
         }
+        document.getElementById("prekryv").style.display = "block"
         this.setImgs(this.parts.all[this.stage])
-        setTimeout( function() {document.getElementById("game4").style.display = "block" } , 500);
+        setTimeout( function() {
+            // document.getElementById("game4").style.display = "block"
+            document.getElementById("prekryv").style.display = "none"
+        } , 500);
     }
 
 
