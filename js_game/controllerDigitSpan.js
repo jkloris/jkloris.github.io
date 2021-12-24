@@ -18,6 +18,7 @@ function startGame2(){
     document.getElementById("game2").style.display = "block"
     document.getElementById("endGame").style.display = "block"
     document.getElementById("buttonInstrGame2").style.display = "none"
+    document.getElementById("endGame").onclick = finishGame2
     soundEffect.src = './sounds/game2/nahrávka 2-2.m4a'
     soundEffect.play()
     digitSpan = new DigitSpan()
@@ -40,5 +41,8 @@ butContinue.onclick = ()=>{
     }
 }
 
-
+function finishGame2() {
+    soundEffect.pause()
+    goHome()
+}
 digitSpan = null

@@ -491,6 +491,7 @@ function calcSuccess(array, size) {
 
 function goHome() {
     game1Div.style.display = "none"
+    document.getElementById("endGame").style.display = "none"
     document.getElementById("game2").style.display = "none"
     document.getElementById("game3").style.display = "none"
     document.getElementById("game4").style.display = "none"
