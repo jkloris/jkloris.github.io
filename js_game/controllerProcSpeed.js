@@ -1,11 +1,3 @@
-
-
-
-const soundEffect = new Audio();
-soundEffect.autoplay = true;
-// soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
-
-
 th_keys = document.getElementsByClassName("th_gkey")
 td_keys = document.getElementsByClassName("td_gkey")
 th_sifra = document.getElementsByClassName("th_gsifra")
@@ -131,7 +123,7 @@ function game3part1instr() {
     document.getElementById("buttonInstrGame3").innerHTML = "Zahráme si hru, ktorá sa niekedy nazýva aj Kódovanie. Ak chceš vedieť, čo bude tvojou úlohou, klikni kdekoľvek na obrazovku."
     document.getElementById("buttonInstrGame3").onclick = game3part2instr
     soundEffect.src = './sounds/game3/3-1.m4a'
-    // instrAdio.play()
+    soundEffect.play()
     console.log("start game 3...")
 }
 
@@ -148,7 +140,7 @@ function game3part2instr() {
     game3_instr.style.display = "block"
 
     soundEffect.src = './sounds/game3/3-2 (1) - rýchlejšie - odporúčam.m4a'
-    // instrAdio.play()
+    soundEffect.play()
     
     for(var t in td_sifra_instr){
         td_sifra_instr[t].innerHTML = ""
@@ -304,7 +296,7 @@ function game3part3instr() {
 
 function game3part4instr() {
     soundEffect.src =  './sounds/game3/3-3.m4a'
-    // instrAdio.play()
+    soundEffect.play()
     var instrBut  = document.getElementById("buttonInstrGame3")
     setTimeout( function(){
         instrBut.onclick = startGame3  

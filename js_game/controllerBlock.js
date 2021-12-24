@@ -112,14 +112,12 @@ function game4instr() {
     game1p1.style.display ="none"
     document.getElementById("buttonInstrGame4").style.display = "block"
     soundEffect.src = './sounds/game4/4-1.m4a'
-    // var instrAdio = new Audio('./sounds/game4/4-1.m4a')
-    // instrAdio.play()
+    soundEffect.play()
 }
 
 function game4instr2(){
     soundEffect.src = './sounds/game4/4-2.m4a'
-    // var instrAdio = new Audio('./sounds/game4/4-2.m4a')
-    // instrAdio.play()
+    soundEffect.play()
     var instrBut = document.getElementById("buttonInstrGame4")
     // instrBut.style.backgroundImage = "url(./imgs/game4/instr1.png)"
     instrBut.style.display = "none"

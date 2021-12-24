@@ -1,3 +1,6 @@
+const soundEffect = new Audio();
+// soundEffect.autoplay = true;
+
 instrBut = document.getElementById("buttonInstr");
 game1p1 = document.getElementById("game1p1");
 colorText = document.getElementById("colorText")
@@ -137,13 +140,13 @@ function game1part1instr() {
     homepageDiv.style.display = "none"
     game1p1.style.display ="none"
     instrBut.style.display = "block";
-    var instrAdio = new Audio('./sounds/game1/1-1.m4a')
-    instrAdio.play()
+    soundEffect.src = './sounds/game1/1-1.m4a'
+    soundEffect.play()
 }
 
 //########### game1
 function startGame1() {
-
+    soundEffect.pause()
     endButton.onclick = finishGame1
 
     instrBut.style.display = "none"
@@ -164,11 +167,12 @@ function game1part2instr() {
     console.log(gameManager.score)
     document.getElementById("buttonInstr2").style.display = "block";
     game1p1.style.display= "none"
-    var instrAdio = new Audio('./sounds/game1/1-2.m4a')
-    instrAdio.play()
+    soundEffect.src = './sounds/game1/1-2.m4a'
+    soundEffect.play()
     
 }
 function startGame1Part2() {
+    soundEffect.pause()
     console.log("part 2 started")
     document.getElementById("buttonInstr2").style.display = "none";
     game1p1.style.display = "block"
@@ -193,12 +197,12 @@ function game1part3instr() {
     console.log(gameManager.score)
     document.getElementById("buttonInstr3").style.display = "block";
     game1p1.style.display= "none"
-    var instrAdio = new Audio('./sounds/game1/1-3.m4a')
-    instrAdio.play()
+    soundEffect.src = './sounds/game1/1-3.m4a'
+    soundEffect.play()
 }
 
 function startGame1Part3() {
-    console.log(gameManager)
+    soundEffect.pause()
 
     document.getElementById("buttonInstr3").style.display = "none";
     game1p1.style.display="block"
