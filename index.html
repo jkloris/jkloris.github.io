@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EURO2020</title>
+    <title>WC Qatar22</title>
+    <link rel="stylesheet" href="CSS/style.css">
     
 </head>
-<body style="background: rgb(143,16,48);background: linear-gradient(180deg, rgba(143,16,48,1) 25%, rgba(24,4,7,1) 94%);" >
-    
-    <!-- <div id="canvas_container" style="text-align: center; margin: 40px ">
-        <canvas id="canvas" style="z-index: 10;"></canvas>
-        <h1 style="vertical-align: center; margin: auto; color: white">EURO 2020 - tipovanie</h1>
-    </div> -->
-    <div>
-        <a href="table.html">table</a>
-        <!-- <input style=" margin-left:40%; margin-bottom:20px " id="name" placeholder="Zadaj meno"/> -->
-        <!-- <input style=" margin-left:40%; margin-bottom:20px" id="winner" placeholder="Zadaj tip na víťaza (15b)"/> -->
+<body style="min-height: 100vh; background: rgb(143,16,48);background: linear-gradient(180deg, rgba(143,16,48,1) 25%, rgba(24,4,7,1) 94%);" >
+    <div class="navbar">
+        <a href="index.html">Vytvorenie tiketu</a>
+        <a href="table.html">Pravidlá</a>
+        <!-- <a href="#Výsledky">Výsledky</a> -->
+        <h1 style=" vertical-align: middle; color: white">| Tipovačka WC Qatar 2022 </h1>
+      </div>
+     
+    <div id="canvas_container" style="text-align: center; margin: 40px ">
+        
+    </div>
+    <div style="text-align: center; ">
+        <h2 style=" color: white; padding-top:20px;">Vyplň nasledovné kolonky prosím:</h1>
+        <input style="margin: auto; display: block; margin-bottom:20px" id="name" placeholder="Zadaj meno"/>
+       
     </div>
 
 
-    <div id="tableDiv">  </div>
+    <!-- <div id="tableDiv">  </div> -->
     <hr>
     <div id="list">    </div>
-    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: hidden;">Stiahni tiket</button>
 
-    <button id="calcBtn" style="margin-left:50%" >Calc</button> 
+    <div style="text-align: center;">
+        <h2 style=" color: white">Ostatné tipy</h1>
+            <input style="margin: auto; display: block; margin-bottom:20px" id="winner" placeholder="Zadaj tip na víťaza (20b)"/>
+            <input style="margin: auto; display: block; margin-bottom:20px" id="striker" placeholder="Zadaj tip na top strelca (15b)"/>
+    </div>
+    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: visible;">Stiahni tiket</button>
 
-    <div id="tipsDiv" style="text-align: center; color:white;">
+    <!-- <button id="calcBtn" style="margin-left:50%" >Calc</button>  -->
+
+    <!-- <div id="tipsDiv" style="text-align: center; color:white;">
         <hr>
         <br>
         <br>
@@ -48,7 +60,7 @@
             <br>
             <textarea id="textareaTicket" style="visibility: hidden;" rows = "20" cols="40"></textarea>
         
-    </div> 
+    </div>  -->
 
     <script src="./js_euro2020/match.js"></script>
     

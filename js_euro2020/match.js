@@ -1,66 +1,60 @@
-class Match{
-    constructor(teamH, teamA){
+class Match {
+    constructor(teamH, teamA) {
         this.teamH = teamH;
         this.teamA = teamA;
-        this.results = {H: null, A: null};
+        this.results = { H: null, A: null };
     }
-    setResult(H, A){
+    setResult(H, A) {
         this.results.H = H;
         this.results.A = A;
     }
 
-    getWinner(){
-
-        if(this.results.H > this.results.A)
-            return 1;
-        if(this.results.H < this.results.A)
-            return 2;
+    getWinner() {
+        if (this.results.H > this.results.A) return 1;
+        if (this.results.H < this.results.A) return 2;
         return 0;
     }
-
-    
 }
 
-
-class Competitor{
-    constructor(name){
+class Competitor {
+    constructor(name) {
         this.name = name;
         this.score = 0;
-        this.tips = {topScorer: null, w1: null, w2: null, m:[]};
+        this.tips = { topScorer: null, w1: null, w2: null, m: [] };
     }
 
-    calcScore(matchResults){
-        var sum = 0, a, b, score;
+    calcScore(matchResults) {
+        var sum = 0,
+            a,
+            b,
+            score;
         var tmpM, tmpMR;
-        for(var i in matchResults){
+        for (var i in matchResults) {
             this.score = sum;
-            if(matchResults[i].results.H == null)
-            return sum;
+            if (matchResults[i].results.H == null) return sum;
 
-            score = 4;
+            score = 5;
             a = Math.abs(matchResults[i].results.H - this.tips.m[i].results.H);
             b = Math.abs(matchResults[i].results.A - this.tips.m[i].results.A);
-            score = (score - a - b ) > 0 ? (score - a - b) : 0;
-            
+            score = score - a - b > 0 ? score - a - b : 0;
+
             tmpM = this.objToMatch(this.tips.m[i]);
             try {
-                if(tmpM.getWinner() == matchResults[i].getWinner())
-                    score++;
+                if (tmpM.getWinner() == matchResults[i].getWinner()) 
+                    score += 5;
             } catch (error) {
                 tmpMR = this.objToMatch(matchResults[i]);
-                if(tmpM.getWinner() == tmpMR.getWinner())
-                    score++;
+                if (tmpM.getWinner() == tmpMR.getWinner()) ň;
+                    score += 5;
             }
-            
-            
-            sum+=score;
+
+            sum += score;
             this.score = sum;
-            
         }
         return sum;
     }
 
-    objToMatch(matchPattern){
+    objToMatch(matchPattern) {
         var m = new Match(matchPattern.teamH, matchPattern.teamA);
         m.results.H = matchPattern.results.H;
         m.results.A = matchPattern.results.A;
@@ -69,51 +63,136 @@ class Competitor{
     }
 }
 
-
-
-
 //zapasy zakladnej skupiny
-var teamsA = ["Turkey", "Wales", "Denmark", "Belgium", "England", "Austria", "Netherlands", "Scotland", "Poland", "Spain", "Hungary", "France", "Finland", "Turkey", "Italy", "Ukraine", "Denmark", "Netherlands", "Sweden", "Croatia", "England", "Hungary", "Portugal", "Spain", "Italy", "Switzerland", "Ukraine", "North Macedonia", "Finland", "Russia", "Czech Republic", "Croatia", "Sweden", "Slovakia", "Germany", "Portugal"];
-var teamsB = ["Italy", "Switzerland", "Finland", "Russia", "Croatia", "North Macedonia", "Ukraine", "Czech Republic", "Slovakia", "Sweden", "Portugal", "Germany", "Russia", "Wales", "Switzerland", "North Macedonia", "Belgium", "Austria", "Slovakia", "Czech Republic", "Scotland", "France", "Germany", "Poland", "Wales", "Turkey", "Austria", "Netherlands", "Belgium", "Denmark", "England", "Scotland", "Poland", "Spain", "Hungary", "France"];
 
-//osemfinale
-var teamsA8 = ["Wales", "Italy", "Netherlands", "Belgium", "Croatia", "France", "England", "Sweden"]
-var teamsB8 = ["Denmark", "Austria", "Czech Republic", "Portugal", "Spain", "Switzerland", "Germany", "Ukraine"]
+var teamsA = [
+    "Qatar",
+    "England",
+    "Senegal",
+    "USA",
+    "Argentina",
+    "Denmark",
+    "Mexico",
+    "France",
+    "Morocco",
+    "Germany",
+    "Spain",
+    "Belgium",
+    "Switzerland",
+    "Uruguay",
+    "Portugal",
+    "Brazil",
+    "Wales",
+    "Qatar",
+    "Netherlands",
+    "England",
+    "Tunisia",
+    "Poland",
+    "France",
+    "Argentina",
+    "Japan",
+    "Belgium",
+    "Croatia",
+    "Spain",
+    "Cameroon",
+    "Korea Republic",
+    "Brazil",
+    "Portugal",
+    "Ecuador",
+    "Netherlands",
+    "Wales",
+    "Iran",
+    "Australia",
+    "Tunisia",
+    "Poland",
+    "Saudi Arabia",
+    "Croatia",
+    "Canada",
+    "Japan",
+    "Costa Rica",
+    "Ghana",
+    "Korea Republic",
+    "Serbia",
+    "Cameroon",
+];
+var teamsB = [
+    "Ecuador",
+    "Iran",
+    "Netherlands",
+    "Wales",
+    "Saudi Arabia",
+    "Tunisia",
+    "Poland",
+    "Australia",
+    "Croatia",
+    "Japan",
+    "Costa Rica",
+    "Canada",
+    "Cameroon",
+    "Korea Republic",
+    "Ghana",
+    "Serbia",
+    "Iran",
+    "Senegal",
+    "Ecuador",
+    "USA",
+    "Australia",
+    "Saudi Arabia",
+    "Denmark",
+    "Mexico",
+    "Costa Rica",
+    "Morocco",
+    "Canada",
+    "Germany",
+    "Serbia",
+    "Ghana",
+    "Switzerland",
+    "Uruguay",
+    "Senegal",
+    "Qatar",
+    "England",
+    "USA",
+    "Denmark",
+    "France",
+    "Argentina",
+    "Mexico",
+    "Belgium",
+    "Morocco",
+    "Spain",
+    "Germany",
+    "Uruguay",
+    "Portugal",
+    "Switzerland",
+    "Brazil",
+];
 
-var teamsA4 = ["Switzerland", "Belgium", "Czech Republic", "Ukraine", "Italy", "England", "Italy"];
-var teamsB4 = ["Spain", "Italy", "Denmark", "England", "Spain", "Denmark", "England"];
+// //osemfinale
+// var teamsA8 = ["Wales", "Italy", "Netherlands", "Belgium", "Croatia", "France", "England", "Sweden"]
+// var teamsB8 = ["Denmark", "Austria", "Czech Republic", "Portugal", "Spain", "Switzerland", "Germany", "Ukraine"]
 
-teamsA = teamsA.concat(teamsA8);
-teamsB = teamsB.concat(teamsB8);
+// var teamsA4 = ["Switzerland", "Belgium", "Czech Republic", "Ukraine", "Italy", "England", "Italy"];
+// var teamsB4 = ["Spain", "Italy", "Denmark", "England", "Spain", "Denmark", "England"];
 
-teamsA = teamsA.concat(teamsA4);
-teamsB = teamsB.concat(teamsB4);
+// teamsA = teamsA.concat(teamsA8);
+// teamsB = teamsB.concat(teamsB8);
 
+// teamsA = teamsA.concat(teamsA4);
+// teamsB = teamsB.concat(teamsB4);
 
-
-
-
-function setMatches(teamsA, teamsB){
+function setMatches(teamsA, teamsB) {
     var matchResults = [];
-    for(i in teamsA){
+    for (i in teamsA) {
         matchResults.push(new Match(teamsA[i], teamsB[i]));
     }
-    
+
     return matchResults;
 }
 
-
-
-
-
-
-
-
-function download(filename, text){
+function download(filename, text) {
     var e = document.createElement("a");
     e.style.display = "none";
-    e.setAttribute("href", 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    e.setAttribute('download', filename);
+    e.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(text));
+    e.setAttribute("download", filename);
 
     document.body.appendChild(e);
 
@@ -121,12 +200,6 @@ function download(filename, text){
 
     document.body.removeChild(e);
 }
-
-
-
-
-
-
 
 //sutaziaci
 let competitors = [];
@@ -139,13 +212,4 @@ let rio = new Competitor("Rio");
 let mato = new Competitor("Maťo");
 let tabak = new Competitor("Tabak");
 let ivo = new Competitor("Ivo");
-competitors.push( ondro, jergi, juro, jakub, rio, mato, tabak, ivo);
-
-
-
-
-
-
-
-
-
+competitors.push(ondro, jergi, juro, jakub, rio, mato, tabak, ivo);

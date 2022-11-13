@@ -5,90 +5,87 @@ var listDiv = document.getElementById("list");
 var p;
 var node;
 var submitBtn = document.getElementById("submitBtn");
-var canvas = new Canvas("canvas");
+// var canvas = new Canvas("canvas");
 
 function randomColor() {
-    var color = 'rgb(';
-    color += randomRGB() + ',';
-    color += randomRGB() + ',';
-    color += randomRGB() + ')';
-  
+    var color = "rgb(";
+    color += randomRGB() + ",";
+    color += randomRGB() + ",";
+    color += randomRGB() + ")";
+
     return color;
 }
 
-
-
 function randomRGB() {
-    return Math.floor(Math.random() * 256 );
+    return Math.floor(Math.random() * 256);
 }
 
 function drawPoints(matchResults_, competitors) {
     canvas.clear();
-    var x=0, y = 50;
+    var x = 0,
+        y = 50;
     var a;
-    var cpyResults ;
+    var cpyResults;
 
-    for(var i in competitors){            
+    for (var i in competitors) {
         canvas.ctx.beginPath();
         var clr = randomColor();
         canvas.ctx.font = "20px arial";
         canvas.ctx.strokeStyle = clr;
         canvas.ctx.fillStyle = clr;
         canvas.ctx.lineWidth = 3;
-        canvas.ctx.fillText(competitors[i].name, x+=60, y);
+        canvas.ctx.fillText(competitors[i].name, (x += 60), y);
 
-        console.log(canvas.ctx.strokeStyle)
+        console.log(canvas.ctx.strokeStyle);
         cpyResults = JSON.parse(JSON.stringify(matchResults_));
-        
-        a = competitors[i].calcScore(cpyResults)
+
+        a = competitors[i].calcScore(cpyResults);
         var e = matchResults_.length;
         var offset = 10;
-        canvas.ctx.moveTo(e * 18, canvas.ctx.canvas.height - a*4 + offset);
+        canvas.ctx.moveTo(e * 18, canvas.ctx.canvas.height - a * 4 + offset);
         e--;
-        
-        for(e; e>0; e-- ){
-            a = competitors[i].calcScore(cpyResults)
-            canvas.ctx.lineTo(e * 18, canvas.ctx.canvas.height -  a*4+offset);
-            cpyResults[e].results.H = null;
-            if(e == 36)
-                canvas.ctx.rect(e * 18, canvas.ctx.canvas.height -2-  a*4 + offset, 3,3)
 
+        for (e; e > 0; e--) {
+            a = competitors[i].calcScore(cpyResults);
+            canvas.ctx.lineTo(e * 18, canvas.ctx.canvas.height - a * 4 + offset);
+            cpyResults[e].results.H = null;
+            if (e == 36) canvas.ctx.rect(e * 18, canvas.ctx.canvas.height - 2 - a * 4 + offset, 3, 3);
         }
         canvas.ctx.stroke();
     }
-    
 }
-
 
 //generovanie inputov a p k zapasom
 function generateMatches(teamsA, teamsB) {
+    console.log("ASDSA");
     h2 = document.createElement("h2");
     h2.appendChild(document.createTextNode("Zápasy na tiket:"));
-    h2.style.fontSize = "30px";
+    // h2.style.fontSize = "30px";
     h2.style.fontWeight = "bold";
-    h2.style.fontFamily = "verdana";
-    h2.style.color = "#720a91";
+    // h2.style.fontFamily = "verdana";
+    h2.style.color = "white";
     h2.style.margin = "10px";
-    h2.style.marginTop = "5%";
+    h2.style.marginTop = "2%";
     listDiv.appendChild(h2);
     listDiv.style.textAlign = "center";
 
-    for(var i in teamsA){
+    for (var i in teamsA) {
         p = document.createElement("p");
+        p.style.fontSize = "20px";
         node = document.createTextNode(teamsA[i] + " vs " + teamsB[i]);
         input1 = document.createElement("input");
         input2 = document.createElement("input");
         div = document.createElement("div");
-        input1.type  = "number";
-        input1.min  = 0;
+        input1.type = "number";
+        input1.min = 0;
         input1.style.width = "30px";
-        input2.type  = "number";
-        input2.min  = 0;
+        input2.type = "number";
+        input2.min = 0;
         input2.style.width = "30px";
-    
+
         scoreA.push(input1);
         scoreB.push(input2);
-    
+
         p.appendChild(node);
         p.style.display = "inline-block";
         p.style.margin = "5px";
@@ -103,15 +100,12 @@ function generateMatches(teamsA, teamsB) {
         //     div.style.marginLeft = "40%";
         // else
         //     div.style.marginLeft = "10%";
-        
-    
+
         listDiv.appendChild(div);
     }
     listDiv.appendChild(document.createElement("hr"));
-
 }
-//generateMatches(teamsA4, teamsB4)
-
+generateMatches(teamsA, teamsB);
 
 function printMResults(matchResults) {
     h2 = document.createElement("h2");
@@ -125,32 +119,39 @@ function printMResults(matchResults) {
     listDiv.appendChild(h2);
     listDiv.style.textAlign = "center";
 
-    for(var i in matchResults){
+    for (var i in matchResults) {
         p = document.createElement("p");
-        if(matchResults[i].results.H == null)
+        if (matchResults[i].results.H == null)
             node = document.createTextNode(matchResults[i].teamH + " -- : -- " + matchResults[i].teamA);
         else
-            node = document.createTextNode(matchResults[i].teamH + " " + matchResults[i].results.H + " : " + matchResults[i].results.A + " " + matchResults[i].teamA);
-            
+            node = document.createTextNode(
+                matchResults[i].teamH +
+                    " " +
+                    matchResults[i].results.H +
+                    " : " +
+                    matchResults[i].results.A +
+                    " " +
+                    matchResults[i].teamA
+            );
+
         p.appendChild(node);
-        
-       //p.style.display = "inline-block";
+
+        //p.style.display = "inline-block";
         p.style.margin = "5px";
         p.style.fontWeight = "bold";
         p.style.color = "#fce8dd";
-        p.style.fontSize = "20px"
-        
+        p.style.fontSize = "20px";
+
         hr = document.createElement("hr");
         div = document.createElement("div");
         div.appendChild(p);
-        div.appendChild(hr);  
-        
+        div.appendChild(hr);
+
         div.style.width = "80%";
         div.style.textAlign = "center";
         div.style.margin = "auto";
 
         listDiv.appendChild(div);
-
     }
 }
 
@@ -161,8 +162,8 @@ function matchToString(match) {
 
 function tipsToString(man) {
     var s = "";
-    for(var i in man.tips.m){
-        s+=i*1+1+": "+ matchToString(man.tips.m[i]) + '\n';
+    for (var i in man.tips.m) {
+        s += i * 1 + 1 + ": " + matchToString(man.tips.m[i]) + "\n";
     }
     return s;
 }
@@ -172,8 +173,8 @@ function showTiket() {
     var div = document.getElementById("tipsDiv");
     var ta = document.getElementById("textareaTicket");
     ta.style.visibility = "visible";
-   // ta.value = "";
-    
+    // ta.value = "";
+
     switch (man.value) {
         case "Ondro":
             ta.value = tipsToString(ondro);
@@ -199,7 +200,7 @@ function showTiket() {
         case "Ivo":
             ta.value = tipsToString(ivo);
             break;
-    
+
         default:
             break;
     }
@@ -208,38 +209,35 @@ function showTiket() {
     div.appendChild(ta);
 }
 
-
-
 function printScoreTable(competitors) {
-   
-        // get the reference for the body
-        var div = document.getElementById("tableDiv");
-        div.style.width = "50%";
-        div.style.textAlign = "center";
-        div.style.margin = "auto";
-        div.style.paddingBottom = "10%";
+    // get the reference for the body
+    var div = document.getElementById("tableDiv");
+    div.style.width = "50%";
+    div.style.textAlign = "center";
+    div.style.margin = "auto";
+    div.style.paddingBottom = "10%";
 
-        h2 = document.createElement("h2");
-        h2.appendChild(document.createTextNode("Tabuľka bodov:"));
-        h2.style.fontSize = "30px";
-        h2.style.fontWeight = "bold";
-        h2.style.fontFamily = "verdana";
-        h2.style.color = "#720a91";
-        h2.style.margin = "10px";
-        h2.style.marginLeft = "10%";
-        div.appendChild(h2);
-      
-        // creates a <table> element and a <tbody> element
-        var tbl = document.createElement("table");
-        tbl.style.width  = "100%";
-        var tblBody = document.createElement("tbody");
-      
-        // creating all cells
-        for (var i = 0; i <=competitors.length ; i++) {
-          // creates a table row
-          var row = document.createElement("tr");
-      
-          for (var j = 0; j < 3; j++) {
+    h2 = document.createElement("h2");
+    h2.appendChild(document.createTextNode("Tabuľka bodov:"));
+    h2.style.fontSize = "30px";
+    h2.style.fontWeight = "bold";
+    h2.style.fontFamily = "verdana";
+    h2.style.color = "#720a91";
+    h2.style.margin = "10px";
+    h2.style.marginLeft = "10%";
+    div.appendChild(h2);
+
+    // creates a <table> element and a <tbody> element
+    var tbl = document.createElement("table");
+    tbl.style.width = "100%";
+    var tblBody = document.createElement("tbody");
+
+    // creating all cells
+    for (var i = 0; i <= competitors.length; i++) {
+        // creates a table row
+        var row = document.createElement("tr");
+
+        for (var j = 0; j < 3; j++) {
             // Create a <td> element and a text node, make the text
             // node the contents of the <td>, and put the <td> at
             // the end of the table row
@@ -247,73 +245,71 @@ function printScoreTable(competitors) {
             cell.style.fontSize = "20px";
             cell.style.color = "Black";
             cell.style.fontWeight = "bold";
-            var cellText =  document.createTextNode("");
-            if(j == 0 && i > 0){
-                cellText = document.createTextNode(i+".");
+            var cellText = document.createTextNode("");
+            if (j == 0 && i > 0) {
+                cellText = document.createTextNode(i + ".");
                 cell.style.color = "white";
-            }
-            else if(j == 1 && i > 0)
-                cellText = document.createTextNode(competitors[i-1].name);
-            else if(j == 2 && i > 0)
-                cellText = document.createTextNode(competitors[i-1].score);
-            else if(j == 1 && i == 0){
+            } else if (j == 1 && i > 0) cellText = document.createTextNode(competitors[i - 1].name);
+            else if (j == 2 && i > 0) cellText = document.createTextNode(competitors[i - 1].score);
+            else if (j == 1 && i == 0) {
                 cellText = document.createTextNode("Meno");
                 cell.style.fontSize = "25px";
                 cell.style.color = "white";
-            }
-            else if(j == 2 && i == 0){
+            } else if (j == 2 && i == 0) {
                 cellText = document.createTextNode("Body");
                 cell.style.fontSize = "25px";
                 cell.style.color = "white";
             }
             cell.appendChild(cellText);
             row.appendChild(cell);
-            
-          }
-      
-          // add the row to the end of the table body
-          tblBody.appendChild(row);
         }
-      
-        // put the <tbody> in the <table>
-        tbl.appendChild(tblBody);
-        // appends <table> into <body>
-        div.appendChild(tbl);
-        // sets the border attribute of tbl to 2;
-        tbl.setAttribute("border", "1");
-      
+
+        // add the row to the end of the table body
+        tblBody.appendChild(row);
+    }
+
+    // put the <tbody> in the <table>
+    tbl.appendChild(tblBody);
+    // appends <table> into <body>
+    div.appendChild(tbl);
+    // sets the border attribute of tbl to 2;
+    tbl.setAttribute("border", "1");
 }
-
-
-
-
-
-
-
 
 var Jergo = new Competitor(Jergo);
 
-submitBtn.onclick = ()=>{
-    var a,b, m;
+submitBtn.onclick = () => {
+    var a, b, m;
     Jergo.tips.m = [];
-    for(var i in scoreA){
-        a = (scoreA[i].value != "") ? scoreA[i].value:0  ;
-        b = (scoreB[i].value != "") ? scoreB[i].value:0  ;
-        
+    for (var i in scoreA) {
+        a = scoreA[i].value != "" ? scoreA[i].value : 0;
+        b = scoreB[i].value != "" ? scoreB[i].value : 0;
+
         //set team array
-        m = new Match(teamsA4[i], teamsB4[i]);
-        m.setResult(a,b);
+        m = new Match(teamsA[i], teamsB[i]);
+        m.setResult(a, b);
         Jergo.tips.m.push(m);
     }
 
-  //  Jergo.tips.w2 = document.getElementById("winner").value;
+    Jergo.tips.w1 = document.getElementById("winner").value;
+    Jergo.tips.topScorer = document.getElementById("striker").value;
 
-    var text = JSON.stringify(Jergo.tips.m, null, 2);
+    var text = JSON.stringify(Jergo.tips, null, 2);
     var filename = document.getElementById("name").value;
-    console.log(filename);
+    console.log(text);
+    if (Jergo.tips.w1 == "") {
+        alert("Vyplň prosím aj tip na celkového víťaza.");
+        return;
+    }
 
-    download(filename+'_3', text);
-}
+    if (Jergo.tips.topscorer == "") {
+        alert("Vyplň prosím aj tip na najlepšieho strelca.");
+        return;
+    }
+    if (filename == "") {
+        alert("Doplň prosím svoje meno.");
+        return;
+    }
 
-
-
+    download(filename + "_1", text);
+};

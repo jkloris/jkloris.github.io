@@ -4,81 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EURO2020</title>
+    <title>WC Qatar22</title>
+    <link rel="stylesheet" href="CSS/style.css">
     
 </head>
-<body style="background: rgb(89,160,48);background: linear-gradient(180deg, rgb(231, 189, 200) 25%, rgba(4, 34, 125, 0.416) 94%);" >
-    
-    <!-- <div id="canvas_container" style="text-align: center; margin: 40px ">
-        <canvas id="canvas" style="z-index: 10;"></canvas>
-        <h1 style="vertical-align: center; margin: auto; color: white">EURO 2020 - tipovanie</h1>
-    </div> -->
-    <div>
-        <!-- <input style=" margin-left:40%; margin-bottom:20px " id="name" placeholder="Zadaj meno"/> -->
-        <!-- <input style=" margin-left:40%; margin-bottom:20px" id="winner" placeholder="Zadaj tip na víťaza (15b)"/> -->
+<body style="min-height: 100vh; background: rgb(143,16,48);background: linear-gradient(180deg, rgba(143,16,48,1) 25%, rgba(24,4,7,1) 94%);" >
+    <div class="navbar">
+        <a href="index.html">Vytvorenie tiketu</a>
+        <a href="table.html">Pravidlá</a> 
+        <h1 style=" vertical-align: middle; color: white">| Tipovačka WC Qatar 2022 </h1>
     </div>
-
-
-    <div id="tableDiv">  </div>
-    <hr>
-    <div id="list">    </div>
-    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: hidden;">Stiahni tiket</button>
-
-    <button id="calcBtn" style="margin-left:50%">Calc</button> -->
-
-    <div id="tipsDiv" style="text-align: center; color:white;">
-        <hr>
-        <br>
-        <br>
-       
-            <label for="man">Vyber si hráča, ktorého tiket chceš zobraziť:</label>
-            <select name="man" id="tips">
-                <option value="Ondro">Ondro</option>
-                <option value="Jergi">Jergi</option>
-                <option value="Plcho">Plcho</option>
-                <option value="Rio">Rio</option>
-                <option value="Maťo">Maťo</option>
-                <option value="Tabak">Tabak</option>
-                <option value="Ivo">Ivo</option>
-                <option value="Kubo">Kubo</option>
-            </select>
-            
-            <a id="tiketLink" onclick="showTiket()" target="_blank" style="font-size: 20px; text-decoration: underline; font-weight: bold; color: rgb(4, 16, 88); font-style: italic;">Potvrdiť</a>
-            <br>
-            <textarea id="textareaTicket" style="visibility: hidden;" rows = "20" cols="40"></textarea>
-        
-    </div> 
-
-    <script src="./js_euro2020/match.js"></script>
-    
-    <script src="./tips/NIKE.js"></script>
-    <script src="./tips/Ondrej-Hlavatovič.js"></script>
-    <script src="./tips/Jergi.js"></script>
-    <script src="./tips/Mato.js"></script>
-    <script src="./tips/Jakub.js"></script>
-    <script src="./tips/Rio.js"></script>
-    <script src="./tips/Juro.js"></script>
-    <script src="./tips/Tabak.js"></script>
-    <script src="./tips/Ivo.js"></script>
-
-    <script src="./js/Canvas.js"></script>
-    <script src="./js_euro2020/postupCalc.js"></script>
-    <script src="./js_euro2020/view.js"></script>
-    <script src="./js_euro2020/results.js"></script>
-
-
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/HTML5Utils.js"></script>
-    <script src="./js/Scene.js"></script>
-    <script src="./js/SceneWindow.js"></script>
-    <script src="./js/SceneStart.js"></script>
-    <script src="./js/SceneFin.js"></script>
-    <script src="./js/SceneWindow.js"></script>
-    <script src="./js/SceneBetween.js"></script>
-    <script src="./js/AssetsLoader.js"></script>
-    <script src="./js/Timer.js"></script>
-    <script src="./js/Controller.js"></script>  -->
-        
+    <div id="canvas_container" style="text-align: center; margin: 40px "> </div>
+<div style="color: white; width: 70vw; margin-left: auto; margin-right: auto; padding-top: 40px;">
+    <h1 style='margin-top:8.9pt;margin-right:0cm;margin-bottom:0cm;margin-left:5.0pt;font-size:15px;'>Syst&eacute;my hodnotenia z&aacute;pasov:</h1>
+    <br>
+    <ul style="list-style-type: disc;">
+        <li>Z&aacute;kladn&aacute; odmena: 5 bodov/z&aacute;pas</li>
+        <li>Z odmeny sa odpoč&iacute;ta rozdiel tipovan&yacute;ch a strelen&yacute;ch g&oacute;lov jednotliv&yacute;ch mužstiev v jednom z&aacute;pase.</li>
+        <li>V pr&iacute;pade spr&aacute;vneho tipu v&iacute;ťaza/rem&iacute;zy sa pripoč&iacute;ta 5&nbsp;bod</li>
+        <li>Pr&iacute;klad: Janko tipol v&yacute;sledok 2:1. Z&aacute;pas skončil 2:3 -&gt; 5b &ndash; (2-2) &ndash; (3-1) =&nbsp;3b</li>
+        <li>Pr&iacute;klad: tip 3:1, v&yacute;sledok 2:0 -&gt; 5b &ndash; (3-2) &ndash; (1-0) + 5b (spr&aacute;vny tip v&iacute;ťaza) =&nbsp;7b</li>
+    </ul>
+    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:15px;'><span style="font-size:19px;">&nbsp;</span></p>
+    <p style='margin-top:.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;font-size:15px;'><span style="font-size:15px;">&nbsp;</span><strong>Bonusov&eacute; tipy</strong><span style='font-family:"Trebuchet MS",sans-serif;'><strong>:</strong></span></p>
+    <br>
+    <ul style="list-style-type: disc;">
+        <li>Pred skupinovou f&aacute;zou:&nbsp;20b</li>
+        <li>Pred pav&uacute;kom: 10b</li>
+        <li>Tip na najlep&scaron;ieho strelca: 15b</li>
+    </ul>
+    <p style='margin-top:.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;font-size:15px;'><span style="font-size:15px;">&nbsp;</span></p>
+    <h1 style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.0pt;font-size:15px;'>Postup tipovania:</h1>
+    <br>
+    <ul style="list-style-type: disc;">
+        <li>Do začatia turnaja z&uacute;častnen&iacute; natipuj&uacute; v&scaron;etky z&aacute;pasy z&aacute;kladnej skupiny a celkov&eacute;ho&nbsp;v&iacute;ťaza.</li>
+        <li>Po skončen&iacute; skupinovej f&aacute;zy a pred prv&yacute;m z&aacute;pasom pav&uacute;ka maj&uacute; možnosť druh&eacute;ho&nbsp;tipu</li>
+    </ul>
+    <p style='margin-top:1.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:41.0pt;font-size:15px;'>celkov&eacute;ho v&iacute;ťaza (za menej bodov)</p>
+    <ul style="list-style-type: disc;">
+        <li>Z&aacute;pasy pav&uacute;ka sa tipuj&uacute; vždy pred odohran&iacute;m prv&eacute;ho z&aacute;pasu dan&eacute;ho&nbsp;kola.<ul style="list-style-type: disc;">
+                <li>Osemfin&aacute;le &ndash; 8&nbsp;z&aacute;pasov</li>
+                <li>&Scaron;tvrťfin&aacute;le &ndash; 4&nbsp;z&aacute;pasy</li>
+                <li>Semifin&aacute;le &ndash; 2&nbsp;z&aacute;pasy</li>
+                <li>Fin&aacute;le &ndash; 1&nbsp;z&aacute;pas</li>
+            </ul>
+        </li>
+    </ul>
+    <br><br>
+    <p style='margin:0cm;font-size:15px;'><strong>V&yacute;hry:</strong></p>
+    <br>
+    <ol style="list-style-type: decimal;">
+        <li>Miesto: 50% kapit&aacute;lu + možno pohár + sponzorsk&eacute;&nbsp;dary</li>
+        <li>Miesto 30% kapit&aacute;lu + sponzorsk&eacute;&nbsp;dary</li>
+        <li>Miesto 20% kapit&aacute;lu + sponzorsk&eacute;&nbsp;dary</li>
+    </ol>
+    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:15px;'>&nbsp;</p>
+    <p style='margin-top:.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;font-size:15px;'><span style="font-size:19px;">&nbsp;</span></p>
+    <h1 style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.0pt;font-size:15px;'>Podm<span style='font-family:"Trebuchet MS",sans-serif;'>ienky s&uacute;ťaže</span></h1>
+    <br>  
+    <ul style="list-style-type: disc;">
+        <li>V&scaron;etky tipu musia byť ukončen&eacute; do stanoven&eacute;ho&nbsp;term&iacute;nu</li>
+        <li>V pr&iacute;pade, že &uacute;častn&iacute;k netipne z&aacute;pas, automaticky sa ako v&yacute;sledok vyznač&iacute; v&yacute;sledok&nbsp;0:0</li>
+        <li>V pr&iacute;pade, že &uacute;častn&iacute;k netipne celkov&eacute;ho v&iacute;ťaza, tip vygeneruje n&aacute;hodn&yacute; gener&aacute;tor&nbsp;M4t3jD1v15</li>
+        <li>Kapit&aacute;l je celkov&aacute; vyzbieran&aacute; suma zo vstupn&yacute;ch vkladov m&iacute;nus cena v&yacute;hier (poh&aacute;r stoj&iacute; 5e, medaile dokopy max&nbsp;1,5e)</li>
+        <li>Vstupn&yacute; vklad je pre každ&eacute;ho &uacute;častn&iacute;ka rovnak&yacute;. Hodnota sa upresn&iacute; po dohode.</li>
+    </ul>
+</div>
         
 </body>
 </html>
