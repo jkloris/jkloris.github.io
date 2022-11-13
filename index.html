@@ -4,280 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emka Bakalarka</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/styleHra.css">
-    <link rel="stylesheet" href="./CSS/styleHra2.css">
-    <link rel="stylesheet" href="./CSS/styleHra3.css">
-    <link rel="stylesheet" href="./CSS/styleHra4.css">
+    <title>EURO2020</title>
+    
 </head>
-<body>
-  
-    <!-- NOPE -->
-     <!-- <audio controls
-        src="./sounds/game3/3-1.wav"  style="width:100%;">
-            Your browser does not support the
-            <code>audio</code> 
-    </audio>
-
-    <audio controls
-        src="./sounds/game3/3-1.mp3"  style="width:100%;">
-    </audio> -->
-
-    <!-- TOTO HEJ -->
-    <!-- <audio controls>
-        <source src="./sounds/game4/vlastoo.mp3">
-      </audio> -->
-
-    <div id="container">
-
-        <header>
-            <h1>Úlohy na kognitívne procesy</h1>
-            <h3>
-                výlučne pre účely bakalárskej práce 
-            </h3>                
-        </header>
-        <div id="inputDiv">
-
-            <input id="nameInput" type="text" placeholder="   Meno">
-            <input id="ageInput" type="text" placeholder="   Vek">
-        </div>
-        <div>
-            <button id="submitBut" onclick="submitUserId()">Potvrdiť</button>
-        </div>
-
-        <div id="buttonContainer">
-            <button class="button" onclick="game1part1instr()">Stroop </button>
-            <button class="button" onclick="game2instr()">Digit Span Backwards</button>
-            <button class="button" onclick="game3part1instr()">Processing Speed Test</button>
-            <button class="button" onclick="game4instr()">Reversed Block Design </button>
-        </div>
-    </div>
+<body style="background: rgb(143,16,48);background: linear-gradient(180deg, rgba(143,16,48,1) 25%, rgba(24,4,7,1) 94%);" >
+    
+    <!-- <div id="canvas_container" style="text-align: center; margin: 40px ">
+        <canvas id="canvas" style="z-index: 10;"></canvas>
+        <h1 style="vertical-align: center; margin: auto; color: white">EURO 2020 - tipovanie</h1>
+    </div> -->
     <div>
-        <button id="endGame" onclick="goHome()">X</button>
-    </div>
-    <div id="game1Div" style="display: none;">
-
-
-        <button class="fullView" id="buttonInstr" style="display: none;" onclick="startGame1()">Táto hra bude mať 3 časti. Teraz skúsime
-            prvú časť. Hore v strede na obrazovke uvidíš napísané slovo, napríklad červená. Tvojou
-            úlohou je, aby si čo najrýchlejšie klikol na jeden zo štvorcov zobrazených dole na obrazovke,
-            pričom každý z týchto štvorcov bude inej farby – červený, zelený, modrý a žltý. Ak sa hore na
-            obrazovke zobrazí teda slovo červená, musíš kliknúť na červený štvorec. Ak sa zobrazí slovo
-            modrá, musíš kliknúť na modrý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
-            obrazovku
-        </button>
-
-        <button class="fullView" id="buttonInstr2" style="display: none;" onclick="startGame1Part2()">Teraz prejdeme na
-            druhú časť. Teraz bude tvojou úlohou kliknúť na ten zo štvorcov, ktorý bude mať rovnakú
-            farbu ako kruh, ktorý sa na malú chvíľu zobrazí v strede hornej časti obrazovky. Ak sa hore na
-            obrazovke zobrazí teda červený kruh, musíš kliknúť na červený štvorec. Ak sa zobrazí modrý
-            kruh, musíš kliknúť na modrý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
-            obrazovku.
-        </button>
-        <button class="fullView" id="buttonInstr3" style="display: none;" onclick="startGame1Part3()">Prejdeme na poslednú časť. Teraz bude tvojou úlohou
-            kliknúť na ten zo štvorcov, ktorý bude mať rovnakú farbu akou bude napísané slovo, ktoré sa
-            zobrazí v strede hornej časti obrazovky. Ak sa hore na obrazovke zobrazí teda slovo červená
-            napísané zelenou farbou, musíš kliknúť na zelený štvorec. Ak sa zobrazí slovo modrá napísané
-            žltou farbou, musíš kliknúť na žltý štvorec. Ak rozumieš a môžeme začať, klikni kdekoľvek na
-            obrazovku.
-        </button>
-
-        <div id="game1p1" >
-            <p id="colorText">FARBA</p>
-            <div>
-
-                <button id="redBut" class="red"></button>
-                <button id="greenBut" class="green"></button>
-                <button id="blueBut" class="blue"></button>
-                <button id="yellowBut" class="yellow"></button>
-            </div>
-        </div>
-    </div>
-    <!-- _______________________________Game 2 Digit Span__________________________________________ -->
-    
-    <button class="fullView" id="buttonInstrGame2" style="display: none;" onclick="startGame2()">
-        V tejto úlohe budem nahlas hovoriť nejaké čísla. Prosím, skús si ich zapamätať. Akonáhle ich dopoviem, tvojou úlohou bude ich povedať v opačnom poradí. Napríklad, ak poviem 5-6, musíš povedať 6-5. Ak poviem 1-8-2, musíš povedať 2-8-1. Ak rozumieš a môžeme začať, klikni kdekoľvek na obrazovku
-    </button>
-    
-    <div id="game2" style="display: none;">
-        <div class="view50">
-            <div id="soundIcon"></div>
-        </div>
-        <div class="view50">
-            <button id="butContinue">Pokračovat</button>
-        </div>
+        <a href="table.html">table</a>
+        <!-- <input style=" margin-left:40%; margin-bottom:20px " id="name" placeholder="Zadaj meno"/> -->
+        <!-- <input style=" margin-left:40%; margin-bottom:20px" id="winner" placeholder="Zadaj tip na víťaza (15b)"/> -->
     </div>
 
 
+    <div id="tableDiv">  </div>
+    <hr>
+    <div id="list">    </div>
+    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: hidden;">Stiahni tiket</button>
 
-<!-- _______________________________________________GAME procesing speed_______________________ -->
-    <button class="fullView" id="buttonInstrGame3" style="display: none;" onclick="game3part2instr()">
-        Zahráme si hru, ktorá sa niekedy nazýva aj Kódovanie. Ak chceš vedieť, čo bude tvojou úlohou, klikni kdekoľvek na obrazovku.    </button>
-    
-    <div id="game3_instr">
-      
-        <div id="keys_instr">
-            <table class="tg">
-                <thead>
-                    <tr>
-                        <th class="th_key th_ikey">∞</th>
-                        <th class="th_key th_ikey">*</th>
-                        <th class="th_key th_ikey">#</th>
-                        <th class="th_key th_ikey">@</th>
-                        <th class="th_key th_ikey">&</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td class="td_key td_ikey">1</td>
-                        <td class="td_key td_ikey">2</td>
-                        <td class="td_key td_ikey">3</td>
-                        <td class="td_key td_ikey">4</td>
-                        <td class="td_key td_ikey">5</td>
-                    </tr>
-                  </tbody>
-                  </table>
-            </div>
-            <div id="sifra_instr">
-                <table class="tg" id="tg_sifra_instr">
-                    <thead>
-                      <tr>
-                        <th class="th_sifra th_isifra">@</th>
-                        <th class="th_sifra th_isifra">#</th>
-                        <th class="th_sifra th_isifra">&</th>
-                        <th class="th_sifra th_isifra">*</th>
-                        <th class="th_sifra th_isifra">∞</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="td_sifra td_isifra"></td>
-                        <td class="td_sifra td_isifra"></td>
-                        <td class="td_sifra td_isifra"></td>
-                        <td class="td_sifra td_isifra"></td>
-                        <td class="td_sifra td_isifra"></td>
-                      </tr>
-                    </tbody>
-                    </table>
-            </div>
-            <div id=numKeyboard_instr>
-                <button class="keyButton ikeyButton">1</button>
-                <button class="keyButton ikeyButton">2</button>
-                <button class="keyButton ikeyButton">3</button>
-                <button class="keyButton ikeyButton">4</button>
-                <button class="keyButton ikeyButton">5</button>
-            </div>
-    </div>   
+    <button id="calcBtn" style="margin-left:50%" >Calc</button> 
 
-    <div id="game3">
-        <div id="keys">
-            <table class="tg">
-            <thead>
-                <tr>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                    <th class="th_key th_gkey"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                    <td class="td_key td_gkey"></td>
-                </tr>
-              </tbody>
-              </table>
-        </div>
-        <div id="sifra">
-            <table class="tg">
-                <thead>
-                  <tr>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                    <th class="th_sifra th_gsifra"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                    <td class="td_sifra td_gsifra"></td>
-                  </tr>
-                </tbody>
-                </table>
-        </div>
-        <div id=numKeyboard>
-            <button class="keyButton gkeyButton">1</button>
-            <button class="keyButton gkeyButton">2</button>
-            <button class="keyButton gkeyButton">3</button>
-            <button class="keyButton gkeyButton">4</button>
-            <button class="keyButton gkeyButton">5</button>
-            <button class="keyButton gkeyButton">6</button>
-            <button class="keyButton gkeyButton">7</button>
-            <button class="keyButton gkeyButton">8</button>
-            <button class="keyButton gkeyButton">9</button>
-        </div>
-    </div>
-    <!-- ______________game 4____________________________________________- -->
-    <button class="fullView" id="buttonInstrGame4" style="display: none;" onclick="game4instr2()">
-        Táto hra sa niekedy nazýva Kocky. Hore na obrazovke uvidíš obrázok, ktorý bude vytvorený použitím niekoľkých kociek. Tvojou úlohou bude vybrať také kocky, ktoré keby sme naspäť zložili, vytvárali by rovnaký obrázok ako ten hore. Najprv ti to však názorne ukážem. Prosím, klikni kdekoľvek na obrazovku. 
-    </button>
-    <div id="game4" style="display: none;">
+    <div id="tipsDiv" style="text-align: center; color:white;">
+        <hr>
+        <br>
+        <br>
+       
+            <label for="man">Vyber si hráča, ktorého tiket chceš zobraziť:</label>
+            <select name="man" id="tips">
+                <option value="Ondro">Ondro</option>
+                <option value="Jergi">Jergi</option>
+                <option value="Plcho">Plcho</option>
+                <option value="Rio">Rio</option>
+                <option value="Maťo">Maťo</option>
+                <option value="Tabak">Tabak</option>
+                <option value="Ivo">Ivo</option>
+                <option value="Kubo">Kubo</option>
+            </select>
+            
+            <a id="tiketLink" onclick="showTiket()" target="_blank" style="font-size: 20px; text-decoration: underline; font-weight: bold; color: rgb(4, 16, 88); font-style: italic;">Potvrdiť</a>
+            <br>
+            <textarea id="textareaTicket" style="visibility: hidden;" rows = "20" cols="40"></textarea>
         
-        <div id="game4_vzor">
-            <div id="game4_vzorA"></div>
-        </div>
-        <div id="game4_choices">
+    </div> 
 
-            <button class="game4_button" ></button>
-            <button class="game4_button" ></button>
-            <button class="game4_button" ></button>
-            <button class="game4_button" ></button>
-            <div id="circle" style="display: none;"></div>
-        </div>
-        <div id="prekryv" class="fullView"></div>
-    </div>
-    <script src="./js_game/cotrollerStroop.js"></script>
-    <script src="./js_game/controllerProcSpeed.js"></script>
-    <script src="./js_game/controllerBlock.js"></script>
-    <script src="./js_game/controllerDigitSpan.js"></script>
+    <script src="./js_euro2020/match.js"></script>
+    
+    <script src="./tips/NIKE.js"></script>
+    <script src="./tips/Ondrej-Hlavatovič.js"></script>
+    <script src="./tips/Jergi.js"></script>
+    <script src="./tips/Mato.js"></script>
+    <script src="./tips/Jakub.js"></script>
+    <script src="./tips/Rio.js"></script>
+    <script src="./tips/Juro.js"></script>
+    <script src="./tips/Tabak.js"></script>
+    <script src="./tips/Ivo.js"></script>
+
+    <script src="./js/Canvas.js"></script>
+    <script src="./js_euro2020/postupCalc.js"></script>
+    <script src="./js_euro2020/view.js"></script>
+    <script src="./js_euro2020/results.js"></script>
+
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/HTML5Utils.js"></script>
+    <script src="./js/Scene.js"></script>
+    <script src="./js/SceneWindow.js"></script>
+    <script src="./js/SceneStart.js"></script>
+    <script src="./js/SceneFin.js"></script>
+    <script src="./js/SceneWindow.js"></script>
+    <script src="./js/SceneBetween.js"></script>
+    <script src="./js/AssetsLoader.js"></script>
+    <script src="./js/Timer.js"></script>
+    <script src="./js/Controller.js"></script>  -->
+        
+        
 </body>
 </html>
-
