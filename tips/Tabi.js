@@ -1,22 +1,22 @@
-ivo.tips = {
-    topScorer: "Kylian Mbappe",
-    w1: "Brazil",
+tabak.tips = {
+    topScorer: "Messi",
+    w1: "Argentina",
     w2: null,
     m: [
         {
             teamH: "Qatar",
             teamA: "Ecuador",
             results: {
-                H: "0",
-                A: "1",
+                H: "1",
+                A: "2",
             },
         },
         {
             teamH: "England",
             teamA: "Iran",
             results: {
-                H: "2",
-                A: "1",
+                H: "3",
+                A: "0",
             },
         },
         {
@@ -24,7 +24,7 @@ ivo.tips = {
             teamA: "Netherlands",
             results: {
                 H: "0",
-                A: "2",
+                A: "1",
             },
         },
         {
@@ -39,7 +39,7 @@ ivo.tips = {
             teamH: "Argentina",
             teamA: "Saudi Arabia",
             results: {
-                H: "3",
+                H: "2",
                 A: "0",
             },
         },
@@ -55,16 +55,16 @@ ivo.tips = {
             teamH: "Mexico",
             teamA: "Poland",
             results: {
-                H: "2",
-                A: "1",
+                H: "1",
+                A: "2",
             },
         },
         {
             teamH: "France",
             teamA: "Australia",
             results: {
-                H: "3",
-                A: "0",
+                H: "4",
+                A: "1",
             },
         },
         {
@@ -72,14 +72,14 @@ ivo.tips = {
             teamA: "Croatia",
             results: {
                 H: "0",
-                A: "2",
+                A: "1",
             },
         },
         {
             teamH: "Germany",
             teamA: "Japan",
             results: {
-                H: "2",
+                H: "3",
                 A: "0",
             },
         },
@@ -88,7 +88,7 @@ ivo.tips = {
             teamA: "Costa Rica",
             results: {
                 H: "2",
-                A: "1",
+                A: "0",
             },
         },
         {
@@ -96,7 +96,7 @@ ivo.tips = {
             teamA: "Canada",
             results: {
                 H: "3",
-                A: "1",
+                A: "0",
             },
         },
         {
@@ -104,7 +104,7 @@ ivo.tips = {
             teamA: "Cameroon",
             results: {
                 H: "2",
-                A: "0",
+                A: "1",
             },
         },
         {
@@ -112,22 +112,22 @@ ivo.tips = {
             teamA: "Korea Republic",
             results: {
                 H: "2",
-                A: "1",
+                A: "0",
             },
         },
         {
             teamH: "Portugal",
             teamA: "Ghana",
             results: {
-                H: "3",
-                A: "0",
+                H: "2",
+                A: "1",
             },
         },
         {
             teamH: "Brazil",
             teamA: "Serbia",
             results: {
-                H: "3",
+                H: "2",
                 A: "1",
             },
         },
@@ -136,14 +136,14 @@ ivo.tips = {
             teamA: "Iran",
             results: {
                 H: "1",
-                A: "1",
+                A: "0",
             },
         },
         {
             teamH: "Qatar",
             teamA: "Senegal",
             results: {
-                H: "1",
+                H: "0",
                 A: "2",
             },
         },
@@ -151,7 +151,7 @@ ivo.tips = {
             teamH: "Netherlands",
             teamA: "Ecuador",
             results: {
-                H: "3",
+                H: "2",
                 A: "1",
             },
         },
@@ -159,8 +159,8 @@ ivo.tips = {
             teamH: "England",
             teamA: "USA",
             results: {
-                H: "2",
-                A: "0",
+                H: "3",
+                A: "1",
             },
         },
         {
@@ -168,15 +168,15 @@ ivo.tips = {
             teamA: "Australia",
             results: {
                 H: "1",
-                A: "0",
+                A: "1",
             },
         },
         {
             teamH: "Poland",
             teamA: "Saudi Arabia",
             results: {
-                H: "1",
-                A: "0",
+                H: "2",
+                A: "1",
             },
         },
         {
@@ -191,8 +191,8 @@ ivo.tips = {
             teamH: "Argentina",
             teamA: "Mexico",
             results: {
-                H: "3",
-                A: "1",
+                H: "2",
+                A: "0",
             },
         },
         {
@@ -208,7 +208,7 @@ ivo.tips = {
             teamA: "Morocco",
             results: {
                 H: "3",
-                A: "1",
+                A: "0",
             },
         },
         {
@@ -216,14 +216,14 @@ ivo.tips = {
             teamA: "Canada",
             results: {
                 H: "2",
-                A: "1",
+                A: "0",
             },
         },
         {
             teamH: "Spain",
             teamA: "Germany",
             results: {
-                H: "3",
+                H: "2",
                 A: "2",
             },
         },
@@ -231,7 +231,7 @@ ivo.tips = {
             teamH: "Cameroon",
             teamA: "Serbia",
             results: {
-                H: "0",
+                H: "1",
                 A: "2",
             },
         },
@@ -240,7 +240,7 @@ ivo.tips = {
             teamA: "Ghana",
             results: {
                 H: "1",
-                A: "1",
+                A: "2",
             },
         },
         {
@@ -263,7 +263,7 @@ ivo.tips = {
             teamH: "Ecuador",
             teamA: "Senegal",
             results: {
-                H: "0",
+                H: "01",
                 A: "1",
             },
         },
@@ -271,7 +271,7 @@ ivo.tips = {
             teamH: "Netherlands",
             teamA: "Qatar",
             results: {
-                H: "4",
+                H: "3",
                 A: "0",
             },
         },
@@ -280,7 +280,7 @@ ivo.tips = {
             teamA: "England",
             results: {
                 H: "1",
-                A: "2",
+                A: "3",
             },
         },
         {
@@ -288,7 +288,7 @@ ivo.tips = {
             teamA: "USA",
             results: {
                 H: "1",
-                A: "1",
+                A: "2",
             },
         },
         {
@@ -296,7 +296,7 @@ ivo.tips = {
             teamA: "Denmark",
             results: {
                 H: "0",
-                A: "3",
+                A: "2",
             },
         },
         {
@@ -304,7 +304,7 @@ ivo.tips = {
             teamA: "France",
             results: {
                 H: "0",
-                A: "4",
+                A: "3",
             },
         },
         {
@@ -312,14 +312,14 @@ ivo.tips = {
             teamA: "Argentina",
             results: {
                 H: "1",
-                A: "3",
+                A: "2",
             },
         },
         {
             teamH: "Saudi Arabia",
             teamA: "Mexico",
             results: {
-                H: "0",
+                H: "1",
                 A: "2",
             },
         },
@@ -328,22 +328,22 @@ ivo.tips = {
             teamA: "Belgium",
             results: {
                 H: "2",
-                A: "3",
+                A: "2",
             },
         },
         {
             teamH: "Canada",
             teamA: "Morocco",
             results: {
-                H: "2",
-                A: "1",
+                H: "1",
+                A: "2",
             },
         },
         {
             teamH: "Japan",
             teamA: "Spain",
             results: {
-                H: "1",
+                H: "0",
                 A: "3",
             },
         },
@@ -351,7 +351,7 @@ ivo.tips = {
             teamH: "Costa Rica",
             teamA: "Germany",
             results: {
-                H: "1",
+                H: "0",
                 A: "4",
             },
         },
@@ -375,8 +375,8 @@ ivo.tips = {
             teamH: "Serbia",
             teamA: "Switzerland",
             results: {
-                H: "2",
-                A: "2",
+                H: "1",
+                A: "1",
             },
         },
         {

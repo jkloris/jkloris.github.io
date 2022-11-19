@@ -40,12 +40,11 @@ class Competitor {
 
             tmpM = this.objToMatch(this.tips.m[i]);
             try {
-                if (tmpM.getWinner() == matchResults[i].getWinner()) 
-                    score += 5;
+                if (tmpM.getWinner() == matchResults[i].getWinner()) score += 5;
             } catch (error) {
                 tmpMR = this.objToMatch(matchResults[i]);
                 if (tmpM.getWinner() == tmpMR.getWinner()) ň;
-                    score += 5;
+                score += 5;
             }
 
             sum += score;
@@ -208,8 +207,10 @@ let ondro = new Competitor("Ondro");
 let jergi = new Competitor("Jergi");
 let juro = new Competitor("Plcho");
 let jakub = new Competitor("Kubo");
-let rio = new Competitor("Rio");
+let farkyA = new Competitor("Farky A.");
 let mato = new Competitor("Maťo");
-let tabak = new Competitor("Tabak");
+let tabak = new Competitor("Tabi");
 let ivo = new Competitor("Ivo");
-competitors.push(ondro, jergi, juro, jakub, rio, mato, tabak, ivo);
+let miro = new Competitor("Miro K.");
+let farkyM = new Competitor("Farky M.");
+competitors.push(ondro, jergi, juro, jakub, mato, tabak, ivo, farkyA, farkyM, miro);

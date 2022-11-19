@@ -46,25 +46,20 @@ matchResults = setMatches(teamsA, teamsB);
 // matchResults[42].setResult(2, 0);
 // matchResults[43].setResult(1, 1);
 // matchResults[44].setResult(1, 1);
-// matchResults[45].setResult(1, 2);
-// matchResults[46].setResult(1, 2);
-// matchResults[47].setResult(0, 4);
-// matchResults[48].setResult(1, 1);
-// matchResults[49].setResult(1, 1);
-// matchResults[50].setResult(1, 1);
+// matchResults[45].setResult(1, 1);
+// matchResults[46].setResult(1, 1);
+// matchResults[47].setResult(1, 1);
 
 //console.log(matchResults);
 //matchResults = nike.tips.m;
 //pocitanie bodov
 
 competitors.forEach((e) => e.calcScore(matchResults));
-tabak.score += 15;
-jergi.score += 15;
 competitors.sort((a, b) => (a.score < b.score ? 1 : b.score < a.score ? -1 : 0));
 competitors.forEach((e) => console.log(e.name + ": " + e.score));
 
-// printMResults(matchResults);
-// printScoreTable(competitors);
+printMResults(matchResults);
+printScoreTable(competitors);
 
 //alert("NOVINKA! Pozri si tikety ostatných jednym kliknutím. Stačí ísť na spodok stránky")
 
@@ -82,6 +77,6 @@ function fillTables() {
 
 fillTables();
 
-//promotionCalc.simulateMatches(matchResults);
+// promotionCalc.simulateMatches(matchResults);
 
 // drawPoints(matchResults, competitors)

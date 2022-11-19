@@ -10,8 +10,8 @@
 </head>
 <body style="min-height: 100vh; background: rgb(143,16,48);background: linear-gradient(180deg, rgba(143,16,48,1) 25%, rgba(24,4,7,1) 94%);" >
     <div class="navbar">
-        <a href="index.html">Vytvorenie tiketu</a>
-        <a href="table.html">Pravidlá</a>
+        <a href="index.html">Tabuľka bodov</a>
+        <a href="rules.html">Pravidlá</a>
         <!-- <a href="#Výsledky">Výsledky</a> -->
         <!-- <h1 style=" vertical-align: middle; color: white">| Tipovačka WC Qatar 2022 </h1> -->
       </div>
@@ -19,27 +19,27 @@
     <div id="canvas_container" style="text-align: center; margin: 40px ">
         
     </div>
-    <div style="text-align: center; ">
+    <!-- <div style="text-align: center; ">
         <h2 style=" color: white; padding-top:20px;">Vyplň nasledovné kolonky prosím:</h1>
         <input style="margin: auto; display: block; margin-bottom:20px" id="name" placeholder="Zadaj meno"/>
        
-    </div>
+    </div> -->
 
 
-    <!-- <div id="tableDiv">  </div> -->
+    <div id="tableDiv">  </div>
     <hr>
     <div id="list">    </div>
 
-    <div style="text-align: center;">
+    <!-- <div style="text-align: center;">
         <h2 style=" color: white">Ostatné tipy</h1>
             <input style="margin: auto; display: block; margin-bottom:20px" id="winner" placeholder="Zadaj tip na víťaza (20b)"/>
             <input style="margin: auto; display: block; margin-bottom:20px" id="striker" placeholder="Zadaj tip na top strelca (15b)"/>
     </div>
-    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: visible;">Stiahni tiket</button>
+    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: visible;">Stiahni tiket</button> -->
 
     <!-- <button id="calcBtn" style="margin-left:50%" >Calc</button>  -->
 
-    <!-- <div id="tipsDiv" style="text-align: center; color:white;">
+    <div id="tipsDiv" style="text-align: center; color:white;">
         <hr>
         <br>
         <br>
@@ -49,30 +49,34 @@
                 <option value="Ondro">Ondro</option>
                 <option value="Jergi">Jergi</option>
                 <option value="Plcho">Plcho</option>
-                <option value="Rio">Rio</option>
+                <option value="Miro">Miro</option>
                 <option value="Maťo">Maťo</option>
-                <option value="Tabak">Tabak</option>
+                <option value="Tabak">Tabi</option>
                 <option value="Ivo">Ivo</option>
                 <option value="Kubo">Kubo</option>
+                <option value="Farky_M">Farky M.</option>
+                <option value="Farky_A">Farky A.</option>
             </select>
             
-            <a id="tiketLink" onclick="showTiket()" target="_blank" style="font-size: 20px; text-decoration: underline; font-weight: bold; color: rgb(4, 16, 88); font-style: italic;">Potvrdiť</a>
+            <a id="tiketLink" onclick="showTiket()" target="_blank" style="font-size: 20px; text-decoration: underline; padding: 5px; border-radius: 10%; background-color: aliceblue; font-weight: bold; color: rgb(0, 0, 252); font-style: italic;">Potvrdiť</a>
             <br>
-            <textarea id="textareaTicket" style="visibility: hidden;" rows = "20" cols="40"></textarea>
+            <textarea id="textareaTicket" style="visibility: visible;" rows = "20" cols="40"></textarea>
         
-    </div>  -->
+    </div> 
 
     <script src="./js_euro2020/match.js"></script>
     
-    <script src="./tips/NIKE.js"></script>
-    <script src="./tips/Ondrej-Hlavatovič.js"></script>
+    <script src="./tips/Nike.js"></script>
+    <script src="./tips/Ondrej.js"></script>
     <script src="./tips/Jergi.js"></script>
-    <script src="./tips/Mato.js"></script>
-    <script src="./tips/Jakub.js"></script>
-    <script src="./tips/Rio.js"></script>
-    <script src="./tips/Juro.js"></script>
-    <script src="./tips/Tabak.js"></script>
+    <script src="./tips/Bc. Matej Diviš.js"></script>
+    <script src="./tips/Kubo.js"></script>
+    <script src="./tips/Miro.js"></script>
+    <script src="./tips/Plcho.js"></script>
+    <script src="./tips/Tabi.js"></script>
     <script src="./tips/Ivo.js"></script>
+    <script src="./tips/Farky.js"></script>
+    <script src="./tips/Marek-Farkaš.js"></script>
 
     <script src="./js/Canvas.js"></script>
     <script src="./js_euro2020/postupCalc.js"></script>

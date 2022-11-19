@@ -105,7 +105,7 @@ function generateMatches(teamsA, teamsB) {
     }
     listDiv.appendChild(document.createElement("hr"));
 }
-generateMatches(teamsA, teamsB);
+// generateMatches(teamsA, teamsB);
 
 function printMResults(matchResults) {
     h2 = document.createElement("h2");
@@ -113,7 +113,7 @@ function printMResults(matchResults) {
     h2.style.fontSize = "30px";
     h2.style.fontWeight = "bold";
     h2.style.fontFamily = "verdana";
-    h2.style.color = "#720a91";
+    h2.style.color = "white";
     h2.style.margin = "10px";
     h2.style.marginTop = "5%";
     listDiv.appendChild(h2);
@@ -191,14 +191,20 @@ function showTiket() {
         case "Plcho":
             ta.value = tipsToString(juro);
             break;
-        case "Rio":
-            ta.value = tipsToString(rio);
+        case "Miro":
+            ta.value = tipsToString(miro);
             break;
         case "Kubo":
             ta.value = tipsToString(jakub);
             break;
         case "Ivo":
             ta.value = tipsToString(ivo);
+            break;
+        case "Farky_A":
+            ta.value = tipsToString(farkyA);
+            break;
+        case "Farky_M":
+            ta.value = tipsToString(farkyM);
             break;
 
         default:
@@ -222,9 +228,11 @@ function printScoreTable(competitors) {
     h2.style.fontSize = "30px";
     h2.style.fontWeight = "bold";
     h2.style.fontFamily = "verdana";
-    h2.style.color = "#720a91";
+    h2.style.color = "white";
     h2.style.margin = "10px";
+    h2.style.paddingTop = "40px";
     h2.style.marginLeft = "10%";
+
     div.appendChild(h2);
 
     // creates a <table> element and a <tbody> element
@@ -243,12 +251,12 @@ function printScoreTable(competitors) {
             // the end of the table row
             var cell = document.createElement("td");
             cell.style.fontSize = "20px";
-            cell.style.color = "Black";
+            cell.style.color = "white";
             cell.style.fontWeight = "bold";
             var cellText = document.createTextNode("");
             if (j == 0 && i > 0) {
                 cellText = document.createTextNode(i + ".");
-                cell.style.color = "white";
+                cell.style.color = "hite";
             } else if (j == 1 && i > 0) cellText = document.createTextNode(competitors[i - 1].name);
             else if (j == 2 && i > 0) cellText = document.createTextNode(competitors[i - 1].score);
             else if (j == 1 && i == 0) {
