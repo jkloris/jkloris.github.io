@@ -1,7 +1,7 @@
 //manulane nasvavovanie vysledkov zapasu
 matchResults = setMatches(teamsA, teamsB);
 
-matchResults[0].setResult(0, "2*");
+matchResults[0].setResult(0, 2);
 // matchResults[1].setResult(1, 1);
 // matchResults[2].setResult(0, 1);
 // matchResults[3].setResult(3, 0);
