@@ -213,4 +213,6 @@ let tabak = new Competitor("Tabi");
 let ivo = new Competitor("Ivo");
 let miro = new Competitor("Miro K.");
 let farkyM = new Competitor("Farky M.");
-competitors.push(ondro, jergi, juro, jakub, mato, tabak, ivo, farkyA, farkyM, miro);
+let gavo = new Competitor("Gavo");
+let dano = new Competitor("Dano");
+competitors.push(ondro, jergi, juro, jakub, mato, tabak, ivo, farkyA, farkyM, miro, dano, gavo);

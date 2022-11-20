@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WC Qatar22</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+</head>
+<body style="min-height: 100vh; background: rgb(143,16,48);background: linear-gradient(180deg, rgba(143,16,48,1) 25%, rgba(24,4,7,1) 94%);" >
+    <div class="navbar">
+        <a href="index.html">Tabuľka bodov</a>
+        <a href="rules.html">Pravidlá</a>
+        <a href="tikety.html">Tikety hráčov</a>
+      </div>        
+    </div>
+
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <div id="tipsDiv" style="text-align: center; color:white;">
+      
+            <label for="man">Vyber si hráča, ktorého tiket chceš zobraziť:</label>
+            <br>
+            <select name="man" id="tips">
+                <option value="Ondro">Ondro</option>
+                <option value="Jergi">Jergi</option>
+                <option value="Plcho">Plcho</option>
+                <option value="Miro">Miro</option>
+                <option value="Maťo">Maťo</option>
+                <option value="Tabak">Tabi</option>
+                <option value="Ivo">Ivo</option>
+                <option value="Kubo">Kubo</option>
+                <option value="Farky_M">Farky M.</option>
+                <option value="Farky_A">Farky A.</option>
+                <option value="Dano">Dano</option>
+                <option value="Gavo">Gavo</option>
+            </select>
+            <div class="space"></div>
+            <a id="tiketLink" onclick="showTiket()" target="_blank" style="font-size: 20px;  padding: 5px; border-radius: 10%; background-color: aliceblue; font-weight: bold; color: rgb(0, 0, 252); font-style: italic;">Potvrdiť</a>
+            <div class="space"></div>
+            <textarea id="textareaTicket" style="visibility: visible;" rows = "40" cols="40"></textarea>
+        
+    </div> 
+
+    <script src="./js_euro2020/match.js"></script>
+    
+    <script src="./tips/Nike.js"></script>
+    <script src="./tips/Ondrej.js"></script>
+    <script src="./tips/Jergi.js"></script>
+    <script src="./tips/Bc. Matej Diviš.js"></script>
+    <script src="./tips/Kubo.js"></script>
+    <script src="./tips/Miro.js"></script>
+    <script src="./tips/Plcho.js"></script>
+    <script src="./tips/Tabi.js"></script>
+    <script src="./tips/Ivo.js"></script>
+    <script src="./tips/Gavo.js"></script>
+    <script src="./tips/Dano.js"></script>
+    <script src="./tips/Farky.js"></script>
+    <script src="./tips/Marek-Farkaš.js"></script>
+
+    <script src="./js/Canvas.js"></script>
+    <script src="./js_euro2020/postupCalc.js"></script>
+    <script src="./js_euro2020/view.js"></script>
+    <script src="./js_euro2020/results.js"></script>
+
+
+        
+</body>
+</html>

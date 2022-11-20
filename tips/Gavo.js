@@ -1,13 +1,13 @@
-ondro.tips = {
-    topScorer: "Messi",
-    w1: "Argentína",
+gavo.tips = {
+    topScorer: "Mbappe",
+    w1: "Argentina",
     w2: null,
     m: [
         {
             teamH: "Qatar",
             teamA: "Ecuador",
             results: {
-                H: "0",
+                H: "1",
                 A: "2",
             },
         },
@@ -16,7 +16,7 @@ ondro.tips = {
             teamA: "Iran",
             results: {
                 H: "2",
-                A: "1",
+                A: "0",
             },
         },
         {
@@ -24,7 +24,7 @@ ondro.tips = {
             teamA: "Netherlands",
             results: {
                 H: "1",
-                A: "3",
+                A: "2",
             },
         },
         {
@@ -39,16 +39,16 @@ ondro.tips = {
             teamH: "Argentina",
             teamA: "Saudi Arabia",
             results: {
-                H: "4",
-                A: "0",
+                H: "3",
+                A: "1",
             },
         },
         {
             teamH: "Denmark",
             teamA: "Tunisia",
             results: {
-                H: "2",
-                A: "0",
+                H: "1",
+                A: "1",
             },
         },
         {
@@ -56,15 +56,15 @@ ondro.tips = {
             teamA: "Poland",
             results: {
                 H: "1",
-                A: "2",
+                A: "1",
             },
         },
         {
             teamH: "France",
             teamA: "Australia",
             results: {
-                H: "3",
-                A: "0",
+                H: "2",
+                A: "1",
             },
         },
         {
@@ -72,7 +72,7 @@ ondro.tips = {
             teamA: "Croatia",
             results: {
                 H: "0",
-                A: "2",
+                A: "1",
             },
         },
         {
@@ -80,22 +80,22 @@ ondro.tips = {
             teamA: "Japan",
             results: {
                 H: "2",
-                A: "1",
+                A: "0",
             },
         },
         {
             teamH: "Spain",
             teamA: "Costa Rica",
             results: {
-                H: "3",
-                A: "1",
+                H: "2",
+                A: "0",
             },
         },
         {
             teamH: "Belgium",
             teamA: "Canada",
             results: {
-                H: "4",
+                H: "2",
                 A: "1",
             },
         },
@@ -111,7 +111,7 @@ ondro.tips = {
             teamH: "Uruguay",
             teamA: "Korea Republic",
             results: {
-                H: "3",
+                H: "2",
                 A: "1",
             },
         },
@@ -119,15 +119,15 @@ ondro.tips = {
             teamH: "Portugal",
             teamA: "Ghana",
             results: {
-                H: "3",
-                A: "0",
+                H: "1",
+                A: "1",
             },
         },
         {
             teamH: "Brazil",
             teamA: "Serbia",
             results: {
-                H: "2",
+                H: "3",
                 A: "1",
             },
         },
@@ -135,7 +135,7 @@ ondro.tips = {
             teamH: "Wales",
             teamA: "Iran",
             results: {
-                H: "2",
+                H: "1",
                 A: "0",
             },
         },
@@ -151,7 +151,7 @@ ondro.tips = {
             teamH: "Netherlands",
             teamA: "Ecuador",
             results: {
-                H: "3",
+                H: "2",
                 A: "1",
             },
         },
@@ -159,7 +159,7 @@ ondro.tips = {
             teamH: "England",
             teamA: "USA",
             results: {
-                H: "3",
+                H: "2",
                 A: "1",
             },
         },
@@ -168,14 +168,14 @@ ondro.tips = {
             teamA: "Australia",
             results: {
                 H: "1",
-                A: "2",
+                A: "1",
             },
         },
         {
             teamH: "Poland",
             teamA: "Saudi Arabia",
             results: {
-                H: "2",
+                H: "1",
                 A: "0",
             },
         },
@@ -191,7 +191,7 @@ ondro.tips = {
             teamH: "Argentina",
             teamA: "Mexico",
             results: {
-                H: "3",
+                H: "2",
                 A: "1",
             },
         },
@@ -200,7 +200,7 @@ ondro.tips = {
             teamA: "Costa Rica",
             results: {
                 H: "1",
-                A: "0",
+                A: "1",
             },
         },
         {
@@ -208,7 +208,7 @@ ondro.tips = {
             teamA: "Morocco",
             results: {
                 H: "2",
-                A: "0",
+                A: "1",
             },
         },
         {
@@ -231,8 +231,8 @@ ondro.tips = {
             teamH: "Cameroon",
             teamA: "Serbia",
             results: {
-                H: "0",
-                A: "2",
+                H: "1",
+                A: "1",
             },
         },
         {
@@ -240,7 +240,7 @@ ondro.tips = {
             teamA: "Ghana",
             results: {
                 H: "1",
-                A: "2",
+                A: "1",
             },
         },
         {
@@ -256,7 +256,7 @@ ondro.tips = {
             teamA: "Uruguay",
             results: {
                 H: "1",
-                A: "2",
+                A: "1",
             },
         },
         {
@@ -279,7 +279,7 @@ ondro.tips = {
             teamH: "Wales",
             teamA: "England",
             results: {
-                H: "0",
+                H: "1",
                 A: "2",
             },
         },
@@ -296,7 +296,7 @@ ondro.tips = {
             teamA: "Denmark",
             results: {
                 H: "1",
-                A: "3",
+                A: "1",
             },
         },
         {
@@ -304,14 +304,14 @@ ondro.tips = {
             teamA: "France",
             results: {
                 H: "1",
-                A: "4",
+                A: "3",
             },
         },
         {
             teamH: "Poland",
             teamA: "Argentina",
             results: {
-                H: "1",
+                H: "0",
                 A: "2",
             },
         },
@@ -319,8 +319,8 @@ ondro.tips = {
             teamH: "Saudi Arabia",
             teamA: "Mexico",
             results: {
-                H: "1",
-                A: "2",
+                H: "0",
+                A: "1",
             },
         },
         {
@@ -335,8 +335,8 @@ ondro.tips = {
             teamH: "Canada",
             teamA: "Morocco",
             results: {
-                H: "1",
-                A: "0",
+                H: "2",
+                A: "1",
             },
         },
         {
@@ -351,7 +351,7 @@ ondro.tips = {
             teamH: "Costa Rica",
             teamA: "Germany",
             results: {
-                H: "0",
+                H: "1",
                 A: "3",
             },
         },
@@ -359,8 +359,8 @@ ondro.tips = {
             teamH: "Ghana",
             teamA: "Uruguay",
             results: {
-                H: "0",
-                A: "3",
+                H: "1",
+                A: "1",
             },
         },
         {
@@ -368,7 +368,7 @@ ondro.tips = {
             teamA: "Portugal",
             results: {
                 H: "1",
-                A: "3",
+                A: "1",
             },
         },
         {
@@ -376,7 +376,7 @@ ondro.tips = {
             teamA: "Switzerland",
             results: {
                 H: "2",
-                A: "2",
+                A: "1",
             },
         },
         {

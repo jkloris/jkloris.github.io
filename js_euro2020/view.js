@@ -161,7 +161,7 @@ function matchToString(match) {
 }
 
 function tipsToString(man) {
-    var s = "";
+    var s = "Celkový víťaz: " + man.tips.w1 + "\nNajlepší strelec: " + man.tips.topScorer + "\n\n";
     for (var i in man.tips.m) {
         s += i * 1 + 1 + ": " + matchToString(man.tips.m[i]) + "\n";
     }
@@ -205,6 +205,12 @@ function showTiket() {
             break;
         case "Farky_M":
             ta.value = tipsToString(farkyM);
+            break;
+        case "Dano":
+            ta.value = tipsToString(dano);
+            break;
+        case "Gavo":
+            ta.value = tipsToString(gavo);
             break;
 
         default:

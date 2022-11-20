@@ -1,5 +1,5 @@
 miro.tips = {
-    topScorer: "Benzema",
+    topScorer: "Neymar",
     w1: "Brazil",
     w2: null,
     m: [

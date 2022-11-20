@@ -12,6 +12,7 @@
     <div class="navbar">
         <a href="index.html">Tabuľka bodov</a>
         <a href="rules.html">Pravidlá</a>
+        <a href="tikety.html">Tikety hráčov</a>
         <!-- <a href="#Výsledky">Výsledky</a> -->
         <!-- <h1 style=" vertical-align: middle; color: white">| Tipovačka WC Qatar 2022 </h1> -->
       </div>
@@ -34,12 +35,12 @@
         <h2 style=" color: white">Ostatné tipy</h1>
             <input style="margin: auto; display: block; margin-bottom:20px" id="winner" placeholder="Zadaj tip na víťaza (20b)"/>
             <input style="margin: auto; display: block; margin-bottom:20px" id="striker" placeholder="Zadaj tip na top strelca (15b)"/>
-    </div>
-    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: visible;">Stiahni tiket</button> -->
+    </div>-->
+    <button id="submitBtn" style=" margin: 40px; margin-left:30%; width: 40%; height: 40px; visibility: hidden;">Stiahni tiket</button> -->
 
     <!-- <button id="calcBtn" style="margin-left:50%" >Calc</button>  -->
 
-    <div id="tipsDiv" style="text-align: center; color:white;">
+    <div id="tipsDiv" style="text-align: center; color:white; visibility: hidden;">
         <hr>
         <br>
         <br>
@@ -56,11 +57,13 @@
                 <option value="Kubo">Kubo</option>
                 <option value="Farky_M">Farky M.</option>
                 <option value="Farky_A">Farky A.</option>
+                <option value="Dano">Dano</option>
+                <option value="Gavo">Gavo</option>
             </select>
             
             <a id="tiketLink" onclick="showTiket()" target="_blank" style="font-size: 20px; text-decoration: underline; padding: 5px; border-radius: 10%; background-color: aliceblue; font-weight: bold; color: rgb(0, 0, 252); font-style: italic;">Potvrdiť</a>
             <br>
-            <textarea id="textareaTicket" style="visibility: visible;" rows = "20" cols="40"></textarea>
+            <textarea id="textareaTicket" style="visibility: hidden;" rows = "20" cols="40"></textarea>
         
     </div> 
 
@@ -75,6 +78,8 @@
     <script src="./tips/Plcho.js"></script>
     <script src="./tips/Tabi.js"></script>
     <script src="./tips/Ivo.js"></script>
+    <script src="./tips/Gavo.js"></script>
+    <script src="./tips/Dano.js"></script>
     <script src="./tips/Farky.js"></script>
     <script src="./tips/Marek-Farkaš.js"></script>
 
