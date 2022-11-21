@@ -128,7 +128,7 @@ jergi.tips = {
             teamA: "Serbia",
             results: {
                 H: "3",
-                A: "0",
+                A: "2",
             },
         },
         {
