@@ -4,7 +4,7 @@ matchResults = setMatches(teamsA, teamsB);
 matchResults[0].setResult(0, 2);
 matchResults[1].setResult(6, 2);
 matchResults[2].setResult(0, 2);
-// matchResults[3].setResult(3, 0);
+matchResults[3].setResult(1, 1);
 // matchResults[4].setResult(1, 0);
 // matchResults[5].setResult(3, 1);
 // matchResults[6].setResult(3, 2);
