@@ -8,7 +8,7 @@ matchResults[3].setResult(1, 1);
 matchResults[4].setResult(1, 2);
 matchResults[5].setResult(0, 0);
 matchResults[6].setResult(0, 0);
-// matchResults[7].setResult(2, 1);    
+matchResults[7].setResult(4, 1);    
 // matchResults[8].setResult(1, 2);
 // matchResults[9].setResult(0, 0);
 // matchResults[10].setResult(0, 3);
