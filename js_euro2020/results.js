@@ -23,7 +23,7 @@ matchResults[18].setResult(1, 1);
 matchResults[19].setResult(0, 0);
 matchResults[20].setResult(0, 1);
 matchResults[21].setResult(2, 0);
-// matchResults[22].setResult(2, 4);
+ matchResults[22].setResult(2, 1);
 // matchResults[23].setResult(1, 1);
 // matchResults[24].setResult(1, 0);
 // matchResults[25].setResult(3, 1);
