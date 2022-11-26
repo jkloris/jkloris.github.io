@@ -24,7 +24,7 @@ matchResults[19].setResult(0, 0);
 matchResults[20].setResult(0, 1);
 matchResults[21].setResult(2, 0);
 matchResults[22].setResult(2, 1);
-matchResults[23].setResult(1, 0);
+matchResults[23].setResult(2, 0);
 // matchResults[24].setResult(1, 0);
 // matchResults[25].setResult(3, 1);
 // matchResults[26].setResult(0, 1);
@@ -55,7 +55,6 @@ matchResults[23].setResult(1, 0);
 //pocitanie bodov
 
 competitors.forEach((e) => e.calcScore(matchResults));
-ivo.score=160
 competitors.sort((a, b) => (a.score < b.score ? 1 : b.score < a.score ? -1 : 0));
 competitors.forEach((e) => console.log(e.name + ": " + e.score));
 printMResults(matchResults);
