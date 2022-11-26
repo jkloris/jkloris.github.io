@@ -263,7 +263,7 @@ tabak.tips = {
             teamH: "Ecuador",
             teamA: "Senegal",
             results: {
-                H: "01",
+                H: "1",
                 A: "1",
             },
         },
