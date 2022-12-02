@@ -2,6 +2,7 @@ var scoreA = [];
 var scoreB = [];
 
 var listDiv = document.getElementById("list");
+var listTicketDiv = document.getElementById("listTicket");
 var p;
 var node;
 var submitBtn = document.getElementById("submitBtn");
@@ -66,8 +67,8 @@ function generateMatches(teamsA, teamsB) {
     h2.style.color = "white";
     h2.style.margin = "10px";
     h2.style.marginTop = "2%";
-    listDiv.appendChild(h2);
-    listDiv.style.textAlign = "center";
+    listTicketDiv.appendChild(h2);
+    listTicketDiv.style.textAlign = "center";
 
     for (var i in teamsA) {
         p = document.createElement("p");
@@ -101,11 +102,10 @@ function generateMatches(teamsA, teamsB) {
         // else
         //     div.style.marginLeft = "10%";
 
-        listDiv.appendChild(div);
+        listTicketDiv.appendChild(div);
     }
-    listDiv.appendChild(document.createElement("hr"));
+    listTicketDiv.appendChild(document.createElement("hr"));
 }
-// generateMatches(teamsA, teamsB);
 
 function printMResults(matchResults) {
     h2 = document.createElement("h2");
@@ -300,13 +300,13 @@ submitBtn.onclick = () => {
         b = scoreB[i].value != "" ? scoreB[i].value : 0;
 
         //set team array
-        m = new Match(teamsA[i], teamsB[i]);
+        m = new Match(teamsA8[i], teamsB8[i]);
         m.setResult(a, b);
         Jergo.tips.m.push(m);
     }
 
-    Jergo.tips.w1 = document.getElementById("winner").value;
-    Jergo.tips.topScorer = document.getElementById("striker").value;
+    Jergo.tips.w1 = document.getElementById("winner2").value;
+    // Jergo.tips.topScorer = document.getElementById("striker").value;
 
     var text = JSON.stringify(Jergo.tips, null, 2);
     var filename = document.getElementById("name").value;
@@ -325,5 +325,10 @@ submitBtn.onclick = () => {
         return;
     }
 
-    download(filename + "_1", text);
+    download(filename + "_2", text);
 };
+
+generateMatches(teamsA8, teamsB8);
+alert(
+    "Vyplň prosím nový tiket pre osemfinále. Tiket sa vypĺňa v 'Tvorenie tiketu'\nTiež by som chcel poprosiť neplatičov, aby poslali 10€ na účet uvedený naspodku v pravidlách. Diky <3"
+);

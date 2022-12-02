@@ -166,14 +166,14 @@ var teamsB = [
 ];
 
 // //osemfinale
-// var teamsA8 = ["Wales", "Italy", "Netherlands", "Belgium", "Croatia", "France", "England", "Sweden"]
-// var teamsB8 = ["Denmark", "Austria", "Czech Republic", "Portugal", "Spain", "Switzerland", "Germany", "Ukraine"]
+var teamsA8 = ["Netherlands", "Argentina", "Japan", "Brasil", "France", "England", "Marocco", "Portugal"];
+var teamsB8 = ["USA", "Australia", "Croatia", "Korea Republic", "Poland", "Senegal", "Spain", "Switzerland"];
 
 // var teamsA4 = ["Switzerland", "Belgium", "Czech Republic", "Ukraine", "Italy", "England", "Italy"];
 // var teamsB4 = ["Spain", "Italy", "Denmark", "England", "Spain", "Denmark", "England"];
 
-// teamsA = teamsA.concat(teamsA8);
-// teamsB = teamsB.concat(teamsB8);
+teamsA = teamsA.concat(teamsA8);
+teamsB = teamsB.concat(teamsB8);
 
 // teamsA = teamsA.concat(teamsA4);
 // teamsB = teamsB.concat(teamsB4);
