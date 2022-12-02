@@ -330,5 +330,5 @@ submitBtn.onclick = () => {
 
 generateMatches(teamsA8, teamsB8);
 alert(
-    "Vyplň prosím nový tiket pre osemfinále. Tiket sa vypĺňa v 'Tvorenie tiketu'\nTiež by som chcel poprosiť neplatičov, aby poslali 10€ na účet uvedený naspodku v pravidlách. Diky <3"
+    "Vyplň prosím nový tiket pre osemfinále. Tiket sa vypĺňa v 'Tvorenie tiketu'\nTipuje sa výsledok zápasu v riadnom hracom čase (90min + nastavenie) bez predĺženia.\nTiež by som chcel poprosiť neplatičov, aby poslali 10€ na účet uvedený naspodku v pravidlách. Diky <3"
 );
