@@ -1,7 +1,7 @@
 miro.tips = {
     topScorer: "Neymar",
     w1: "Brazil",
-    w2: null,
+    w2: "Brazil",
     m: [
         {
             teamH: "Qatar",
@@ -385,6 +385,71 @@ miro.tips = {
             results: {
                 H: "0",
                 A: "7",
+            },
+        },
+        {
+            teamH: "Netherlands",
+            teamA: "USA",
+            results: {
+                H: "0",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "Australia",
+            results: {
+                H: "2",
+                A: "0",
+            },
+        },
+        {
+            teamH: "France",
+            teamA: "Poland",
+            results: {
+                H: "3",
+                A: "0",
+            },
+        },
+        {
+            teamH: "England",
+            teamA: "Senegal",
+            results: {
+                H: "3",
+                A: "0",
+            },
+        },
+        {
+            teamH: "Japan",
+            teamA: "Croatia",
+            results: {
+                H: "1",
+                A: "2",
+            },
+        },
+        {
+            teamH: "Brasil",
+            teamA: "Korea Republic",
+            results: {
+                H: "2",
+                A: "0",
+            },
+        },
+
+        {
+            teamH: "Marocco",
+            teamA: "Spain",
+            results: {
+                H: "0",
+                A: "0",
+            },
+        },
+        {
+            teamH: "Portugal",
+            teamA: "Switzerland",
+            results: {
+                H: "2",
+                A: "1",
             },
         },
     ],

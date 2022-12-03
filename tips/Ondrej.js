@@ -1,7 +1,7 @@
 ondro.tips = {
     topScorer: "Messi",
     w1: "Argentína",
-    w2: null,
+    w2: "Argentína",
     m: [
         {
             teamH: "Qatar",
@@ -385,6 +385,71 @@ ondro.tips = {
             results: {
                 H: "1",
                 A: "3",
+            },
+        },
+        {
+            teamH: "Netherlands",
+            teamA: "USA",
+            results: {
+                H: "1",
+                A: "0",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "Australia",
+            results: {
+                H: "2",
+                A: "0",
+            },
+        },
+        {
+            teamH: "France",
+            teamA: "Poland",
+            results: {
+                H: "2",
+                A: "0",
+            },
+        },
+        {
+            teamH: "England",
+            teamA: "Senegal",
+            results: {
+                H: "2",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Japan",
+            teamA: "Croatia",
+            results: {
+                H: "2",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Brasil",
+            teamA: "Korea Republic",
+            results: {
+                H: "3",
+                A: "0",
+            },
+        },
+
+        {
+            teamH: "Marocco",
+            teamA: "Spain",
+            results: {
+                H: "0",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Portugal",
+            teamA: "Switzerland",
+            results: {
+                H: "2",
+                A: "0",
             },
         },
     ],

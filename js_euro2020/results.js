@@ -49,11 +49,122 @@ matchResults[44].setResult(0, 2);
 matchResults[45].setResult(2, 1);
 matchResults[46].setResult(2, 3);
 matchResults[47].setResult(1, 0);
+matchResults[48].setResult(3, 1);
+matchResults[49].setResult(2, 1);
+// matchResults[50].setResult(2, 0);
+// matchResults[51].setResult(2, 0);
+// matchResults[52].setResult(1, 1);
+// matchResults[53].setResult(2, 0);
+// matchResults[54].setResult(1, 2);
+// matchResults[55].setResult(2, 1);
 
 //console.log(matchResults);
 //matchResults = nike.tips.m;
-//pocitanie bodov
 
+//predikovanie ---------------
+function median(values) {
+    if (values.length === 0) throw new Error("No inputs");
+
+    values.sort(function (a, b) {
+        return a - b;
+    });
+
+    var half = Math.floor(values.length / 2);
+
+    if (values.length % 2) return values[half];
+
+    return (values[half - 1] + values[half]) / 2.0;
+}
+
+function mode(a) {
+    a = a.slice().sort((x, y) => x - y);
+
+    var bestStreak = 1;
+    var bestElem = a[0];
+    var currentStreak = 1;
+    var currentElem = a[0];
+
+    for (let i = 1; i < a.length; i++) {
+        if (a[i - 1] !== a[i]) {
+            if (currentStreak > bestStreak) {
+                bestStreak = currentStreak;
+                bestElem = currentElem;
+            }
+
+            currentStreak = 0;
+            currentElem = a[i];
+        }
+
+        currentStreak++;
+    }
+
+    return currentStreak > bestStreak ? currentElem : bestElem;
+}
+
+function predictMode(comps) {
+    var predict = new Competitor("predictMode");
+    var H, A;
+    predict.tips = JSON.parse(JSON.stringify(comps[0].tips));
+    for (var z = 0; z < 48; z++) {
+        H = [parseInt(predict.tips.m[0].results.H)];
+        A = [parseInt(predict.tips.m[0].results.A)];
+        for (var i = 1; i < comps.length; i++) {
+            H.push(parseInt(comps[i].tips.m[z].results.H));
+            A.push(parseInt(comps[i].tips.m[z].results.A));
+        }
+        console.log(mode(A), mode(H));
+        predict.tips.m[z].results.H = mode(H);
+        predict.tips.m[z].results.A = mode(A);
+    }
+    return predict;
+}
+
+function predictMedian(comps) {
+    var predict = new Competitor("predictMedian");
+    var H, A;
+    predict.tips = JSON.parse(JSON.stringify(comps[0].tips));
+    for (var z = 0; z < 48; z++) {
+        H = [parseInt(predict.tips.m[0].results.H)];
+        A = [parseInt(predict.tips.m[0].results.A)];
+        for (var i = 1; i < comps.length; i++) {
+            H.push(parseInt(comps[i].tips.m[z].results.H));
+            A.push(parseInt(comps[i].tips.m[z].results.A));
+        }
+        // console.log(median(A), median(H));
+        predict.tips.m[z].results.H = median(H);
+        predict.tips.m[z].results.A = median(A);
+    }
+    return predict;
+}
+
+function predict(comps) {
+    var predict = new Competitor("predictAvg");
+    var H, A;
+    predict.tips = JSON.parse(JSON.stringify(comps[0].tips));
+    for (var z = 0; z < 48; z++) {
+        H = parseInt(predict.tips.m[0].results.H);
+        A = parseInt(predict.tips.m[0].results.A);
+        for (var i = 1; i < comps.length; i++) {
+            H += parseInt(comps[i].tips.m[z].results.H);
+            A += parseInt(comps[i].tips.m[z].results.A);
+        }
+        // console.log(Math.round(H / competitors.length), Math.round(H / competitors.length));
+        predict.tips.m[z].results.H = Math.round(H / comps.length);
+        predict.tips.m[z].results.A = Math.round(A / comps.length);
+    }
+    console.log(predict);
+    return predict;
+}
+
+// var predictAvg = predict(competitors);
+// var predictMed = predictMedian(competitors);
+// var predictMod = predictMode(competitors);
+// competitors.push(predictAvg);
+// competitors.push(predictMed);
+// competitors.push(predictMod);
+
+//---------------------
+//pocitanie bodov
 competitors.forEach((e) => e.calcScore(matchResults));
 competitors.sort((a, b) => (a.score < b.score ? 1 : b.score < a.score ? -1 : 0));
 competitors.forEach((e) => console.log(e.name + ": " + e.score));

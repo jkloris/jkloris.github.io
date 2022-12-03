@@ -166,8 +166,8 @@ var teamsB = [
 ];
 
 // //osemfinale
-var teamsA8 = ["Netherlands", "Argentina", "Japan", "Brasil", "France", "England", "Marocco", "Portugal"];
-var teamsB8 = ["USA", "Australia", "Croatia", "Korea Republic", "Poland", "Senegal", "Spain", "Switzerland"];
+var teamsA8 = ["Netherlands", "Argentina", "France", "England", "Japan", "Brasil", "Marocco", "Portugal"];
+var teamsB8 = ["USA", "Australia", "Poland", "Senegal", "Croatia", "Korea Republic", "Spain", "Switzerland"];
 
 // var teamsA4 = ["Switzerland", "Belgium", "Czech Republic", "Ukraine", "Italy", "England", "Italy"];
 // var teamsB4 = ["Spain", "Italy", "Denmark", "England", "Spain", "Denmark", "England"];
@@ -215,4 +215,4 @@ let miro = new Competitor("Miro K.");
 let farkyM = new Competitor("Farky M.");
 let gavo = new Competitor("Gavo");
 let dano = new Competitor("Dano");
-competitors.push(ondro, jergi, juro, jakub, mato, tabak, ivo, farkyA, farkyM, miro, dano, gavo);
+competitors.push(ondro, jergi, juro, jakub, mato, tabak, ivo, farkyA, farkyM, miro, gavo, dano); //dano

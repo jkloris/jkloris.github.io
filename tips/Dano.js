@@ -1,7 +1,7 @@
 dano.tips = {
     topScorer: "Mbappé Kylian",
     w1: "Portugalsko",
-    w2: null,
+    w2: "Portugalsko",
     m: [
         {
             teamH: "Qatar",
@@ -385,6 +385,70 @@ dano.tips = {
             results: {
                 H: "1",
                 A: "4",
+            },
+        },
+        {
+            teamH: "Netherlands",
+            teamA: "USA",
+            results: {
+                H: "0",
+                A: "0",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "Australia",
+            results: {
+                H: "4",
+                A: "0",
+            },
+        },
+        {
+            teamH: "Japan",
+            teamA: "Croatia",
+            results: {
+                H: "0",
+                A: "2",
+            },
+        },
+        {
+            teamH: "Brasil",
+            teamA: "Korea Republic",
+            results: {
+                H: "3",
+                A: "0",
+            },
+        },
+        {
+            teamH: "France",
+            teamA: "Poland",
+            results: {
+                H: "4",
+                A: "0",
+            },
+        },
+        {
+            teamH: "England",
+            teamA: "Senegal",
+            results: {
+                H: "0",
+                A: "0",
+            },
+        },
+        {
+            teamH: "Marocco",
+            teamA: "Spain",
+            results: {
+                H: "1",
+                A: "3",
+            },
+        },
+        {
+            teamH: "Portugal",
+            teamA: "Switzerland",
+            results: {
+                H: "2",
+                A: "2",
             },
         },
     ],

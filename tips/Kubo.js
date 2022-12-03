@@ -1,7 +1,7 @@
 jakub.tips = {
     topScorer: "mbappe",
     w1: "Brazília",
-    w2: null,
+    w2: "Brazília",
     m: [
         {
             teamH: "Qatar",
@@ -385,6 +385,71 @@ jakub.tips = {
             results: {
                 H: "0",
                 A: "2",
+            },
+        },
+        {
+            teamH: "Netherlands",
+            teamA: "USA",
+            results: {
+                H: "1",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "Australia",
+            results: {
+                H: "3",
+                A: "0",
+            },
+        },
+        {
+            teamH: "France",
+            teamA: "Poland",
+            results: {
+                H: "2",
+                A: "0",
+            },
+        },
+        {
+            teamH: "England",
+            teamA: "Senegal",
+            results: {
+                H: "1",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Japan",
+            teamA: "Croatia",
+            results: {
+                H: "1",
+                A: "2",
+            },
+        },
+        {
+            teamH: "Brasil",
+            teamA: "Korea Republic",
+            results: {
+                H: "3",
+                A: "0",
+            },
+        },
+
+        {
+            teamH: "Marocco",
+            teamA: "Spain",
+            results: {
+                H: "0",
+                A: "2",
+            },
+        },
+        {
+            teamH: "Portugal",
+            teamA: "Switzerland",
+            results: {
+                H: "3",
+                A: "1",
             },
         },
     ],
