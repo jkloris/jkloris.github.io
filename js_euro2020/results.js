@@ -53,8 +53,8 @@ matchResults[48].setResult(3, 1);
 matchResults[49].setResult(2, 1);
 matchResults[50].setResult(3, 1);
 matchResults[51].setResult(3, 0);
-// matchResults[52].setResult(1, 1);
-// matchResults[53].setResult(2, 0);
+matchResults[52].setResult(1, 1);
+matchResults[53].setResult(4, 1);
 // matchResults[54].setResult(1, 2);
 // matchResults[55].setResult(2, 1);
 
