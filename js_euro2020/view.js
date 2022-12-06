@@ -300,35 +300,33 @@ submitBtn.onclick = () => {
         b = scoreB[i].value != "" ? scoreB[i].value : 0;
 
         //set team array
-        m = new Match(teamsA8[i], teamsB8[i]);
+        m = new Match(teamsA4[i], teamsB4[i]);
         m.setResult(a, b);
         Jergo.tips.m.push(m);
     }
 
-    Jergo.tips.w1 = document.getElementById("winner2").value;
+    // Jergo.tips.w1 = document.getElementById("winner2").value;
     // Jergo.tips.topScorer = document.getElementById("striker").value;
 
     var text = JSON.stringify(Jergo.tips, null, 2);
     var filename = document.getElementById("name").value;
     console.log(text);
-    if (Jergo.tips.w1 == "") {
-        alert("Vyplň prosím aj tip na celkového víťaza.");
-        return;
-    }
+    // if (Jergo.tips.w1 == "") {
+    //     alert("Vyplň prosím aj tip na celkového víťaza.");
+    //     return;
+    // }
 
-    if (Jergo.tips.topscorer == "") {
-        alert("Vyplň prosím aj tip na najlepšieho strelca.");
-        return;
-    }
+    // if (Jergo.tips.topscorer == "") {
+    //     alert("Vyplň prosím aj tip na najlepšieho strelca.");
+    //     return;
+    // }
     if (filename == "") {
         alert("Doplň prosím svoje meno.");
         return;
     }
 
-    download(filename + "_2", text);
+    download(filename + "_3", text);
 };
 
-generateMatches(teamsA8, teamsB8);
-// alert(
-//     "Vyplň prosím nový tiket pre osemfinále. Tiket sa vypĺňa v 'Tvorenie tiketu'\nTipuje sa výsledok zápasu v riadnom hracom čase (90min + nastavenie) bez predĺženia.\nTiež by som chcel poprosiť neplatičov, aby poslali 10€ na účet uvedený naspodku v pravidlách. Diky <3"
-// );
+generateMatches(teamsA4, teamsB4);
+alert("Vytvorte nový tiket na štvrťfinále ");

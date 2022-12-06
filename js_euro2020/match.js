@@ -169,14 +169,14 @@ var teamsB = [
 var teamsA8 = ["Netherlands", "Argentina", "France", "England", "Japan", "Brasil", "Marocco", "Portugal"];
 var teamsB8 = ["USA", "Australia", "Poland", "Senegal", "Croatia", "Korea Republic", "Spain", "Switzerland"];
 
-// var teamsA4 = ["Switzerland", "Belgium", "Czech Republic", "Ukraine", "Italy", "England", "Italy"];
-// var teamsB4 = ["Spain", "Italy", "Denmark", "England", "Spain", "Denmark", "England"];
+var teamsA4 = ["Croatia", "Netherlands", "England", "Marocco"];
+var teamsB4 = ["Brasil", "Argentina", "France", "Portugal"];
 
 teamsA = teamsA.concat(teamsA8);
 teamsB = teamsB.concat(teamsB8);
 
-// teamsA = teamsA.concat(teamsA4);
-// teamsB = teamsB.concat(teamsB4);
+teamsA = teamsA.concat(teamsA4);
+teamsB = teamsB.concat(teamsB4);
 
 function setMatches(teamsA, teamsB) {
     var matchResults = [];
