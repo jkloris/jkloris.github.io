@@ -329,4 +329,4 @@ submitBtn.onclick = () => {
 };
 
 generateMatches(teamsA4, teamsB4);
-alert("Vytvorte nový tiket na štvrťfinále ");
+// alert("Vytvorte nový tiket na štvrťfinále ");

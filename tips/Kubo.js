@@ -452,5 +452,37 @@ jakub.tips = {
                 A: "1",
             },
         },
+        {
+            teamH: "Croatia",
+            teamA: "Brasil",
+            results: {
+                H: "0",
+                A: "2",
+            },
+        },
+        {
+            teamH: "Netherlands",
+            teamA: "Argentina",
+            results: {
+                H: "0",
+                A: "0",
+            },
+        },
+        {
+            teamH: "England",
+            teamA: "France",
+            results: {
+                H: "1",
+                A: "2",
+            },
+        },
+        {
+            teamH: "Marocco",
+            teamA: "Portugal",
+            results: {
+                H: "0",
+                A: "2",
+            },
+        },
     ],
 };

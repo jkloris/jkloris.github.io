@@ -57,6 +57,7 @@ matchResults[52].setResult(1, 1);
 matchResults[53].setResult(4, 1);
 matchResults[54].setResult(0, 0);
 matchResults[55].setResult(6, 1);
+matchResults[56].setResult(0, 0);
 
 //console.log(matchResults);
 //matchResults = nike.tips.m;
