@@ -161,7 +161,14 @@ function matchToString(match) {
 }
 
 function tipsToString(man) {
-    var s = "Celkový víťaz: " + man.tips.w1 + "\nNajlepší strelec: " + man.tips.topScorer + "\n\n";
+    var s =
+        "Celkový víťaz (20b): " +
+        man.tips.w1 +
+        "\nCelkový víťaz2 (10b):" +
+        man.tips.w2 +
+        "\nNajlepší strelec: " +
+        man.tips.topScorer +
+        "\n\n";
     for (var i in man.tips.m) {
         s += i * 1 + 1 + ": " + matchToString(man.tips.m[i]) + "\n";
     }
