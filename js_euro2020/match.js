@@ -169,8 +169,8 @@ var teamsB = [
 var teamsA8 = ["Netherlands", "Argentina", "France", "England", "Japan", "Brasil", "Marocco", "Portugal"];
 var teamsB8 = ["USA", "Australia", "Poland", "Senegal", "Croatia", "Korea Republic", "Spain", "Switzerland"];
 
-var teamsA4 = ["Croatia", "Netherlands", "England", "Marocco"];
-var teamsB4 = ["Brasil", "Argentina", "France", "Portugal"];
+var teamsA4 = ["Croatia", "Netherlands", "England", "Marocco", "Argentina", "France"];
+var teamsB4 = ["Brasil", "Argentina", "France", "Portugal", "Croatia", "Morocco"];
 
 teamsA = teamsA.concat(teamsA8);
 teamsB = teamsB.concat(teamsB8);
