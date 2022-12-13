@@ -484,5 +484,21 @@ nike.tips = {
                 A: "1",
             },
         },
+        {
+            teamH: "Argentina",
+            teamA: "Croatia",
+            results: {
+                H: "1",
+                A: "0",
+            },
+        },
+        {
+            teamH: "France",
+            teamA: "Marocco",
+            results: {
+                H: "1",
+                A: "0",
+            },
+        },
     ],
 };

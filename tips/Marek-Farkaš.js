@@ -484,5 +484,21 @@ farkyM.tips = {
                 A: "2",
             },
         },
+        {
+            teamH: "Argentina",
+            teamA: "Croatia",
+            results: {
+                H: "1",
+                A: "1",
+            },
+        },
+        {
+            teamH: "France",
+            teamA: "Marocco",
+            results: {
+                H: "1",
+                A: "1",
+            },
+        },
     ],
 };

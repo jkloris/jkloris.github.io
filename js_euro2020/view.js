@@ -336,4 +336,4 @@ submitBtn.onclick = () => {
 };
 
 generateMatches(teamsA4, teamsB4);
-alert("Tipy na semifinále a finále mi píšte do chatu. Nebude sa vytvárať tiket");
+// alert("Tipy na semifinále a finále mi píšte do chatu. Nebude sa vytvárať tiket");
