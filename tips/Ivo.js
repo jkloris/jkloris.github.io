@@ -500,5 +500,21 @@ ivo.tips = {
                 A: "1",
             },
         },
+        {
+            teamH: "Croatia",
+            teamA: "Marocco",
+            results: {
+                H: "2",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "France",
+            results: {
+                H: "2",
+                A: "3",
+            },
+        },
     ],
 };

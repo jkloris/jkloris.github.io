@@ -500,5 +500,21 @@ miro.tips = {
                 A: "0",
             },
         },
+        {
+            teamH: "Croatia",
+            teamA: "Marocco",
+            results: {
+                H: "5",
+                A: "5",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "France",
+            results: {
+                H: "1",
+                A: "8",
+            },
+        },
     ],
 };

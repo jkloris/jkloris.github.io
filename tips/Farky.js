@@ -500,5 +500,21 @@ farkyA.tips = {
                 A: "0",
             },
         },
+        {
+            teamH: "Croatia",
+            teamA: "Marocco",
+            results: {
+                H: "0",
+                A: "0",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "France",
+            results: {
+                H: "0",
+                A: "0",
+            },
+        },
     ],
 };

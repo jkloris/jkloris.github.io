@@ -501,5 +501,21 @@ tabak.tips = {
                 A: "0",
             },
         },
+        {
+            teamH: "Croatia",
+            teamA: "Marocco",
+            results: {
+                H: "0",
+                A: "1",
+            },
+        },
+        {
+            teamH: "Argentina",
+            teamA: "France",
+            results: {
+                H: "2",
+                A: "1",
+            },
+        },
     ],
 };
