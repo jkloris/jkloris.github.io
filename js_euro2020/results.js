@@ -64,6 +64,7 @@ matchResults[59].setResult(1, 0);
 matchResults[60].setResult(3, 0);
 matchResults[61].setResult(2, 0);
 matchResults[62].setResult(2, 1);
+matchResults[63].setResult(2, 2);
 
 //console.log(matchResults);
 //matchResults = nike.tips.m;
@@ -173,12 +174,24 @@ function predict(comps) {
 //---------------------
 //pocitanie bodov
 competitors.forEach((e) => e.calcScore(matchResults));
+
+//body za globalne tipy:
+ondro.score += 30;
+tabak.score += 30;
+ivo.score += 15;
+jakub.score += 15;
+farkyM.score += 15;
+farkyA.score += 15;
+dano.score += 15;
+gavo.score += 35;
+
 competitors.sort((a, b) => (a.score < b.score ? 1 : b.score < a.score ? -1 : 0));
 competitors.forEach((e) => console.log(e.name + ": " + e.score));
+
 printMResults(matchResults);
 printScoreTable(competitors);
 
-//alert("NOVINKA! Pozri si tikety ostatných jednym kliknutím. Stačí ísť na spodok stránky")
+console.log(competitors);
 
 //posutpova calkulacka
 function fillTables() {
