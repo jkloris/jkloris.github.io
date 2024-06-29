@@ -1409,12 +1409,12 @@ export const euro ={
           "date": "2024-06-30",
           "time": "18:00",
           "team1": {
-            "name": "England",
-            "code": "ENG"
-          },
-          "team2": {
             "name": "Slovakia",
             "code": "SVK"
+          },
+          "team2": {
+            "name": "England",
+            "code": "ENG"
           },
           "score": {
           }
